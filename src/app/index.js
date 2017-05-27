@@ -1,4 +1,5 @@
 require ('../sass/main.scss');
+require ('./utilities/backgroundAnim.js')
 
 import React from "react";
 import ReactDOM from "react-dom";

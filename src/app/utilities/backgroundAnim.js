@@ -87,18 +87,24 @@ function MousePointeur(p) {
 	}
 }
 
+function resize(){
+	let canvas = document.getElementById("scene");
+	width 	= canvas.width 	= window.innerWidth;
+	height 	= canvas.height = window.innerHeight;
+}
+
+window.onresize = function(e){
+	resize();
+}
 
 
 window.onload = function () {
-	var canvas = document.getElementById("scene");
+	let canvas = document.getElementById("scene");
 	let c = canvas.getContext("2d");
 
 	document.body.appendChild(canvas);
 
-	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
-	width =  canvas.width;
-	height =  canvas.height;
+	resize();
 	var nbPoints = Math.floor(width /12.5);
 	c.fillStyle = "black";
 	c.fillRect(0, 0, width, height);
@@ -148,8 +154,6 @@ window.onload = function () {
 		var y = Math.floor((event.clientY-(height/2))/75);
 		document.querySelector(".title h1").style.textShadow = x + "px " + y + "px #bd00f6"
 	})
-
-
 }
 
 

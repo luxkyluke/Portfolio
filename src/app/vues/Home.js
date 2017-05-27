@@ -16,10 +16,10 @@ export default class Home extends React.Component{
 			<div id="home" className="page"> 
 		        <Header/>
 		      		<div className="middle">
-					<div className="title">
-						<h1>Antoine	Demiere</h1>
+						<div className="title">
+							<h1>Antoine	Demiere</h1>
+						</div>
 					</div>
-				</div>
 		        <Footer/>
 			</div>
 		);
