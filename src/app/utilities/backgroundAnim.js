@@ -1,6 +1,6 @@
 const DISTANCE = 200;
 const OVERFLOW = 20;
-const MAX_ALPHA = 0.2;
+const MAX_ALPHA = 0.5;
 
 var mousePointer = new MousePointeur(new Point(0, 0));
 var width, height;
@@ -120,13 +120,13 @@ function createPoints(){
 
 function initCanvas(c){
 	resizeCanvas();
-	c.fillStyle = "black";
+	c.fillStyle = "#000819";
 	c.fillRect(0, 0, width, height);
 }
 
 function animCanvas(c){
 	setInterval(function(){
-		c.fillStyle = "black";
+		c.fillStyle = "#000819";
 		c.fillRect(0, 0, width, height);
 
 		for(i=0; i<points.length; i++){

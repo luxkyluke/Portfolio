@@ -9,7 +9,7 @@ import Scroll	from "../components/assets/Scroll.jsx"
 import BurgerMenu	from "../components/assets/BurgerMenu.jsx"
 
 
-export default class Home extends React.Component{
+export default class Projects extends React.Component{
 	constructor(props){
 		super(props);
 	}
@@ -18,7 +18,7 @@ export default class Home extends React.Component{
 
 	render(){	
 		return(
-			<div id="home" className="page"> 
+			<div id="projects" className="page"> 
 		        <Header/>
 		      	<Banniere/>
 		      	<Scroll black={false}/>

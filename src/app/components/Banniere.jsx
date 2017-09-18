@@ -12,8 +12,10 @@ export default class Banniere extends React.Component {
 		document.addEventListener("mousemove", function(event){
 			const width = window.innerWidth;
 			const height = window.innerHeight;
-			const x = Math.floor((event.clientX-(width/2))/100);
-			const y = Math.floor((event.clientY+150-(height/2))/75);
+			let x = Math.floor((event.clientX-(width/2))/100);
+			x = (Math.abs(x) > 5) ? (x>0 ? 5 : -5) : x;
+			let y = Math.floor((event.clientY+150-(height/2))/75);
+			y = (Math.abs(y) > 6) ? (y>0 ? 6 : -6) : y;
 			document.querySelector(".title h1")
 					.style.textShadow = (x) + "px " + (y) + "px #bd00f6"
 		});
@@ -31,11 +33,11 @@ export default class Banniere extends React.Component {
 
     render() { 
     	return(  
-	    	<div id="banniere" className="center_center" onMouseMove={this.handleMouseMove}>
+	    	<div className="banniere" onMouseMove={this.handleMouseMove}>
 				<div className="title">
 					<h1>Antoine Demiere</h1>
 				</div>
-				<div id="rubriques">
+				<div className="banniere__rubriques">
 		      		<Button label = "Projects"
 		      				property = ""
 		      				callback = {this.handleEnterBtnClick}

@@ -1,0 +1,13 @@
+@keyframes scrollArrow {
+  from {
+    -ms-transform: translateY(0); /* IE 9 */
+    -webkit-transform: translateY(0); /* Chrome, Safari, Opera */
+    transform: translateY(0);
+  }
+
+  to {
+    -ms-transform: translateY(10px); /* IE 9 */
+    -webkit-transform: translateY(10px); /* Chrome, Safari, Opera */
+    transform: translateY(10px);
+  }
+}

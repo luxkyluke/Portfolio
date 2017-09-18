@@ -27,8 +27,10 @@ export default class Button extends React.Component {
     render() {
         const myClass = this.state.toggled ? "button toggled" : "button not-toggled";
         return(
-            <a onClick={this.handleClick} className={myClass}>
-                {this.props.label}
+            <a onClick={this.handleClick} >
+                <div className={myClass}>
+                    {this.props.label}
+                </div>
             </a>
         );
     }

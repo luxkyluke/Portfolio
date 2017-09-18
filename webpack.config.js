@@ -1,5 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
+var LiveReloadPlugin = require('webpack-livereload-plugin');
+
 
 var DIST_DIR = path.resolve(__dirname, "dist");
 var SRC_DIR = path.resolve(__dirname, "src");
@@ -11,7 +13,11 @@ var config = {
         filename: "bundle.js",
         publicPath: "/app/"
     },
+    plugins: [
+        new LiveReloadPlugin()
+    ],
     module: {
+        
         loaders: [
             {
                 test: /\.js?/,  
