@@ -5,7 +5,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, hashHistory } from 'react-router-dom';
 
-import Home from "./vues/Home.js";
+import Home from "./vues/Home.jsx";
 
 const app = document.getElementById('app');
 

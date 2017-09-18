@@ -4,6 +4,8 @@ const MAX_ALPHA = 0.2;
 
 var mousePointer = new MousePointeur(new Point(0, 0));
 var width, height;
+var points =[];	
+var links = [];
 
 
 function Point (x, y) {
@@ -22,7 +24,7 @@ function Point (x, y) {
 
 	this.init();
 
-	this.draw = function(c, radius=3){
+	this.draw = function(c, radius=1){
 		c.fillStyle = "rgba(255, 255, 255,"+ MAX_ALPHA +")";;
 		c.beginPath();
 		c.arc(this.x, this.y, radius, 0, Math.PI*2, false);
@@ -87,40 +89,24 @@ function MousePointeur(p) {
 	}
 }
 
-function resize(){
+function resizeCanvas(){
 	let canvas = document.getElementById("scene");
 	width 	= canvas.width 	= window.innerWidth;
 	height 	= canvas.height = window.innerHeight;
 }
 
 window.onresize = function(e){
-	resize();
+	resizeCanvas();
 }
 
-
-window.onload = function () {
-	let canvas = document.getElementById("scene");
-	let c = canvas.getContext("2d");
-
-	document.body.appendChild(canvas);
-
-	resize();
-	var nbPoints = Math.floor(width /12.5);
-	c.fillStyle = "black";
-	c.fillRect(0, 0, width, height);
-
-/*	c.strokeLine = "#808080"; 
-	c.lineWidth = 3;*/
-
-	var posX = width/2; 
-	var posY = height/2;
-
-	var points =[];	
-	var links = [];
+function createPoints(){
+	let nbPoints = Math.floor(width /12);
+	let posX = width/2; 
+	let posY = height/2;
 
 	for(i=0; i<nbPoints; i++){
-		var x = getRandomArbitrary(0, width);
-		var y = getRandomArbitrary(0, height);
+		const x = getRandomArbitrary(0, width);
+		const y = getRandomArbitrary(0, height);
 		points.push(new Point(x, y));
 	}
 	cpt=0
@@ -130,7 +116,15 @@ window.onload = function () {
 		}
 		links[cpt++] = new Link(points[i], mousePointer);
 	}
+}
 
+function initCanvas(c){
+	resizeCanvas();
+	c.fillStyle = "black";
+	c.fillRect(0, 0, width, height);
+}
+
+function animCanvas(c){
 	setInterval(function(){
 		c.fillStyle = "black";
 		c.fillRect(0, 0, width, height);
@@ -150,10 +144,18 @@ window.onload = function () {
 
 	document.addEventListener("mousemove", function(event){
 		mousePointer.update(event.clientX, event.clientY);
-		var x = Math.floor((event.clientX-(width/2))/100);
-		var y = Math.floor((event.clientY-(height/2))/75);
-		document.querySelector(".title h1").style.textShadow = x + "px " + y + "px #bd00f6"
-	})
+	});
+}
+
+
+window.onload = function () {
+	let canvas = document.getElementById("scene");
+	let c = canvas.getContext("2d");
+	//document.body.appendChild(canvas);
+
+	initCanvas(c);
+	createPoints();
+	animCanvas(c);
 }
 
 

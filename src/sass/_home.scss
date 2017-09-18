@@ -1,0 +1,63 @@
+@import 'utility';
+
+
+.title{
+	/* margin: 50px; */
+	/* align-self: flex-start; */
+
+	h1{
+		font-family: 'Josefin Slab', sans-serif;
+		font-size: 5em;
+		color: $titleColor;
+		text-transform: uppercase;
+		letter-spacing: 11px;
+		text-shadow: 5px 5px $textShadowColor 
+	}
+}
+
+#home{
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+
+	.middle{
+		@extend .center_center;
+		top: 26%;
+		transform: translate(-50%, 0);
+		z-index:2;
+
+	}
+
+	#banniere{
+		flex-direction: column;
+		justify-content:center;
+		align-items: flex-end;
+		position: relative;
+	
+
+		.title{
+			/* align-self: flex-start; */
+		}
+
+		#rubriques{
+			/* align-self: flex-end; */
+		}
+
+		.button{
+			color: $titleColor;
+			text-transform: uppercase;
+			letter-spacing: 0.675rem;
+			padding: 20px 40px;
+			font-size:15px;	
+			background-color: rgba(255, 255, 255, 0.1);
+			margin:40px;
+			
+
+			&:hover{
+				background-color: rgba(255, 255, 255, 0.2);
+			}
+		}
+	}
+}
+

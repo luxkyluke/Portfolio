@@ -17,3 +17,22 @@
 .hidden {
     display: hidden;    
 }
+
+.center_center{
+	text-align: center;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+.button{
+	border: 2px solid #fff;
+}
+
+a{
+	cursor: pointer;
+	text-decoration: none;
+}

@@ -1,0 +1,1868 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"aling",
+				"align-items: "
+			],
+			[
+				"align",
+				"align-self: "
+			],
+			[
+				"flex",
+				"flex-direction"
+			],
+			[
+				"font",
+				"font-family: "
+			],
+			[
+				"font-",
+				"font-weight: "
+			],
+			[
+				"text-tr",
+				"text-decoration"
+			],
+			[
+				"back",
+				"background-color: "
+			],
+			[
+				"top",
+				"top\t = 'inherit' Style CSS"
+			],
+			[
+				"po",
+				"position\t = 'relative' Style CSS"
+			],
+			[
+				"console",
+				"console.log"
+			],
+			[
+				"sha",
+				"text-shadow: "
+			],
+			[
+				"preve",
+				"preventDefault\t(): void Event"
+			],
+			[
+				"hand",
+				"handleMouseMove"
+			],
+			[
+				"onMou",
+				"onmousemove\t: EventHandler Window"
+			],
+			[
+				"impro",
+				"import"
+			],
+			[
+				"setTi",
+				"setTimeout\t( handler: any, timeout?: long, arguments_..: any ): long Window"
+			],
+			[
+				"he",
+				"height\t = 'inherit' Style CSS"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"canv",
+				"canvas"
+			],
+			[
+				"can",
+				"canvas\tTag"
+			],
+			[
+				"classN",
+				"className\t: DOMString Element"
+			],
+			[
+				"FREQ",
+				"FREQ-SHIFT"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"han",
+				"handleClick"
+			],
+			[
+				"call",
+				"callBackUser"
+			],
+			[
+				"aff",
+				"affSuppBtn"
+			],
+			[
+				"sup",
+				"suppBtn"
+			],
+			[
+				"next",
+				"nextPage"
+			],
+			[
+				"tr",
+				"transition"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"che",
+				"challenge_min__title"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"con",
+				"console.log()"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"hour",
+				"hourVal"
+			],
+			[
+				"day",
+				"dayVal"
+			],
+			[
+				"id",
+				"idchallenge"
+			],
+			[
+				"Ut",
+				"Utility"
+			],
+			[
+				"cal",
+				"callback"
+			],
+			[
+				"ne",
+				"newPath"
+			],
+			[
+				"defau",
+				"defaultState"
+			],
+			[
+				"Rout",
+				"Route"
+			],
+			[
+				"Date",
+				"Date.now(): Date\tDate"
+			],
+			[
+				"comp",
+				"componentWillReceiveProps"
+			],
+			[
+				"prop",
+				"props"
+			],
+			[
+				"pre",
+				"preRender"
+			],
+			[
+				"ren",
+				"renderCnt"
+			],
+			[
+				"de",
+				"default"
+			],
+			[
+				"def",
+				"defaultUser"
+			],
+			[
+				"CONS",
+				"console.log()"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"sho",
+				"showUser"
+			],
+			[
+				"pa",
+				"params"
+			],
+			[
+				"COSN",
+				"console.log()"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"fex",
+				"flex-direction"
+			],
+			[
+				"margni",
+				"margin-left"
+			],
+			[
+				"fel",
+				"flex-start"
+			],
+			[
+				"cla",
+				"className: DOMString\tElement"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"fle",
+				"flex-direction"
+			],
+			[
+				"alin",
+				"align-self"
+			],
+			[
+				"wi",
+				"width\tStyle CSS"
+			],
+			[
+				"calss",
+				"className"
+			],
+			[
+				"unfo",
+				"unfollow"
+			],
+			[
+				"Follo",
+				"FollowBtn"
+			],
+			[
+				"Folo",
+				"FollowBtn"
+			],
+			[
+				"pr",
+				"preRender"
+			],
+			[
+				"backgr",
+				"background\tStyle CSS"
+			],
+			[
+				"follo",
+				"follow"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"sq",
+				"squareWidth"
+			],
+			[
+				"B",
+				"BackgroundImage"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"postB",
+				"postBGColor"
+			],
+			[
+				"pos",
+				"postBGColor"
+			],
+			[
+				"bol",
+				"border-color"
+			],
+			[
+				"al",
+				"align-content"
+			],
+			[
+				"spa",
+				"space-between"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"json",
+				"jsonPath"
+			],
+			[
+				"utili",
+				"utility"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"load",
+				"loadImg"
+			],
+			[
+				"pro",
+				"props\tReact: this.props."
+			],
+			[
+				"getR",
+				"getRandomImg"
+			],
+			[
+				"create",
+				"createHashHistory"
+			],
+			[
+				"re",
+				"refs\tReact: this.refs."
+			],
+			[
+				"sign",
+				"sign_up_form"
+			],
+			[
+				"psw",
+				"pswIsWrong"
+			],
+			[
+				"si",
+				"sign_up_form"
+			],
+			[
+				"widt",
+				"width"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"imp",
+				"import"
+			],
+			[
+				"form",
+				"formVisible"
+			],
+			[
+				"changeImg",
+				"changeImgBG"
+			],
+			[
+				"setI",
+				"setInterval( handler: any, timeout?: long, arguments...: any ): long\tWindow"
+			],
+			[
+				"backgro",
+				"backgroundPosition\tStyle CSS"
+			],
+			[
+				"balc",
+				"background-color"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"Bac",
+				"background\tStyle CSS"
+			],
+			[
+				"LoginB",
+				"LoginBox"
+			],
+			[
+				"Lo",
+				"LoginBox"
+			],
+			[
+				"Login",
+				"LoginForm"
+			],
+			[
+				"p",
+				"padding\tStyle CSS"
+			],
+			[
+				"resu",
+				"resultsHeight"
+			],
+			[
+				"resultsW",
+				"resultsWidth"
+			],
+			[
+				"loc",
+				"location"
+			],
+			[
+				"locai",
+				"location"
+			],
+			[
+				"min",
+				"minX"
+			],
+			[
+				"loca",
+				"locationHeight"
+			],
+			[
+				"locationWi",
+				"locationWidth"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"auto",
+				"autocomplete\tAttr"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"result",
+				"results"
+			],
+			[
+				"app",
+				"appendChild( node: Node ): Node\tNode"
+			],
+			[
+				"ci",
+				"cities"
+			],
+			[
+				"spl",
+				"split( separator: string, limit: int ): string\tString"
+			],
+			[
+				"parse",
+				"parseResponse"
+			],
+			[
+				"setTI",
+				"setTimeout( handler: any, timeout?: long, arguments...: any ): long\tWindow"
+			],
+			[
+				"loa",
+				"loadCities"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/app/index.js",
+			"settings":
+			{
+				"buffer_size": 539,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/vues/Home.jsx",
+			"settings":
+			{
+				"buffer_size": 529,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/components/Banniere.jsx",
+			"settings":
+			{
+				"buffer_size": 1241,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/components/Footer.jsx",
+			"settings":
+			{
+				"buffer_size": 403,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/components/Header.jsx",
+			"settings":
+			{
+				"buffer_size": 116,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/main.scss",
+			"settings":
+			{
+				"buffer_size": 718,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/_constantes.scss",
+			"settings":
+			{
+				"buffer_size": 154,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/_home.scss",
+			"settings":
+			{
+				"buffer_size": 931,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/_footer.scss",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/_header.scss",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/_mixins.scss",
+			"settings":
+			{
+				"buffer_size": 768,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/_pages.scss",
+			"settings":
+			{
+				"buffer_size": 51,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/_utility.scss",
+			"settings":
+			{
+				"buffer_size": 496,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 274.0,
+		"last_filter": "instal",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"PROEJT",
+				"Project: Save As"
+			]
+		],
+		"width": 398.0
+	},
+	"console":
+	{
+		"height": 200.0,
+		"history":
+		[
+			"GDB",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Documents/Portfolio/SitePorfolio",
+		"/D/Documents/Portfolio/SitePorfolio/src",
+		"/D/Documents/Portfolio/SitePorfolio/src/app",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/components",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/components/assets",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/json",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/utilities",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/vues",
+		"/D/Documents/Portfolio/SitePorfolio/src/sass"
+	],
+	"file_history":
+	[
+		"/E/Sublime Text 3/Local/License.sublime_license",
+		"/E/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/E/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/E/Sublime Text 3/Packages/User/textsync.sublime-settings",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/components/assets/Button.jsx",
+		"/D/Documents/Portfolio/SitePorfolio/src/sass/_utility.scss",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/utilities/backgroundAnim.js",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/index.jsx",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/components/Header.js",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/components/Footer.js",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/components/Banniere.js",
+		"/D/wamp64/www/Challenger/src/app/components/assets/DeleteBtn.jsx",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/utilities/utility.js",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/components/assets/Button.js",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/index.js",
+		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/vues/Home.js",
+		"/D/Documents/Portfolio/SitePorfolio/webpack.config.js",
+		"/D/wamp64/www/Challenger/src/app/components/Tag.js",
+		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-mousemap",
+		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/Documents/Portfolio/site/src/app/components/Header.js",
+		"/D/Documents/Portfolio/site/src/sass/main.scss",
+		"/D/Documents/Portfolio/site/src/app/components/Footer.js",
+		"/D/Documents/Portfolio/site/src/app/vues/Home.js",
+		"/D/Documents/Portfolio/site/src/app/utilities/backgroundAnim.js",
+		"/D/Documents/Portfolio/site/src/app/index.js",
+		"/D/Documents/Portfolio/site/index.html",
+		"/D/wamp64/www/Challenger/package.json",
+		"/D/Documents/Portfolio/site/package.json",
+		"/D/Documents/Portfolio/site/webpack.config.js",
+		"/D/Documents/Portfolio/site/src/index.html",
+		"/D/Documents/Portfolio/site/src/sass/_pages.scss",
+		"/D/Documents/Portfolio/site/src/sass/_header.scss",
+		"/D/Documents/Portfolio/site/src/sass/_footer.scss",
+		"/D/wamp64/www/canvas/index.html",
+		"/D/Documents/Portfolio/site/src/sass/_constantes.scss",
+		"/D/wamp64/www/canvas/style.css/style.css",
+		"/D/wamp64/www/canvas/js/script.js",
+		"/D/wamp64/www/canvas/css/style.css",
+		"/D/Documents/Portfolio/site/src/sass/_page.scss",
+		"/D/Documents/Portfolio/site/src/sass/_mixins.scss",
+		"/D/Documents/Portfolio/site/src/app/components/footer/AboutUs.js",
+		"/D/wamp64/www/Challenger/src/sass/_pages.scss",
+		"/D/wamp64/www/Challenger/src/index.html",
+		"/D/wamp64/www/Challenger/src/app/index.js",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/sleepPsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/awakeRobotic.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/awakePsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/ymoveLeftRobotic.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/ymoveRightRobotic.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/xmoveRightRobotic.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/soundParameterList.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/xmoveLeftPsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/pinchLeftPsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/pinchRightRobotic.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/zmoveLeftPsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/awake.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/sleep.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/deepPsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/xmoveRightPsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/xmoveLeftRobotic.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/ymoveRightPsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/pinchRightPsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/grabRightPsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/grabLeftPsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/sleepRobotic.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/deepRobotic.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/robotic/deepActionsIndex.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/ymoveLeftPsych.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/psychedelic/world.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/grabLeftRobotic.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/deepRotation.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/psychedelic/deepActionsIndex.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/psychedelic/gestureMapping.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/pinchLeftRobotic.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/grabRightRobotic.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/robotic/gestureMapping.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/xmoveRight.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/childish/world.json",
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/robotic/world.json",
+		"/D/wamp64/www/Challenger/api/search.html",
+		"/C/Users/Antoine/Desktop/Test/src/sass/_page.scss",
+		"/D/wamp64/www/Challenger/src/app/components/UploadPost.js",
+		"/D/wamp64/www/Challenger/src/sass/_header.scss",
+		"/D/wamp64/www/Challenger/src/sass/mixins.scss",
+		"/D/wamp64/www/Challenger/src/sass/_form.scss",
+		"/D/wamp64/www/Challenger/src/sass/main.scss",
+		"/D/wamp64/www/Challenger/src/sass/_uploadBox.scss",
+		"/D/wamp64/www/Challenger/src/sass/_contact.scss",
+		"/D/wamp64/www/Challenger/src/sass/_challengesContainer.scss",
+		"/D/wamp64/www/Challenger/src/app/components/header/UserMenu.js",
+		"/D/wamp64/www/Challenger/src/app/components/ChallengeMin.js",
+		"/D/wamp64/www/Challenger/src/app/components/post/PostContent.js",
+		"/D/wamp64/www/Challenger/api/controller/userController.php",
+		"/D/wamp64/www/Challenger/api/model/utility.php",
+		"/D/wamp64/www/Challenger/src/sass/_search.scss",
+		"/C/Users/Antoine/Desktop/api/model/utility.php",
+		"/D/wamp64/www/Challenger/api/model/image.php",
+		"/D/wamp64/www/Challenger/src/app/components/PostsContainer.js",
+		"/D/wamp64/www/Challenger/src/app/vues/Challenge.js",
+		"/D/wamp64/www/Challenger/src/app/vues/Home.js",
+		"/D/wamp64/www/Challenger/api/controller/postController.php",
+		"/D/wamp64/www/Challenger/.htaccess",
+		"/D/wamp64/www/Challenger/api/.htaccess",
+		"/D/wamp64/www/Challenger/webpack.config.js",
+		"/D/wamp64/www/Challenger/src/sass/_challenge.scss",
+		"/D/wamp64/www/Challenger/api/controller/challengeController.php",
+		"/D/wamp64/www/Challenger/api/model/challenge.php",
+		"/D/wamp64/www/Challenger/src/app/components/ChallengeContainer.js",
+		"/D/wamp64/www/Challenger/src/app/vues/Login.js",
+		"/D/wamp64/www/Challenger/src/app/components/ChallengeBox.js",
+		"/D/wamp64/www/Challenger/src/app/components/PostMin.js",
+		"/D/wamp64/www/Challenger/src/app/components/post/PostLikesBar.js",
+		"/D/wamp64/www/Challenger/src/app/vues/UserProfil.js",
+		"/D/wamp64/www/Challenger/src/app/components/post/PostProfilBar.js",
+		"/D/wamp64/www/Challenger/src/sass/_postsContainer.scss",
+		"/D/wamp64/www/Challenger/src/sass/_profil.scss",
+		"/D/wamp64/www/Challenger/src/app/components/assets/Button.js",
+		"/D/wamp64/www/Challenger/src/app/components/Post.js",
+		"/D/wamp64/www/Challenger/src/app/components/assets/Timer.js",
+		"/D/wamp64/www/Challenger/src/sass/_login.scss",
+		"/D/wamp64/www/Challenger/api/model/Post.php",
+		"/C/Users/Antoine/Desktop/Test/src/app/components/post/PostContent.js",
+		"/C/Users/Antoine/Desktop/Test/src/app/components/post/PostProfilBar.js",
+		"/D/wamp64/www/Challenger/src/app/vues/Layout.js",
+		"/D/wamp64/www/Challenger/src/app/vues/Template.js"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"<current file>",
+			"D:\\wamp64\\www\\Challenger\\src\\app\\components",
+			"<current file>",
+			"D:\\Documents\\Portfolio\\site\\src",
+			"<current file>",
+			"<open folders>",
+			"D:\\Documents\\IMAC2\\OFX_Visual\\apps\\myApps\\Delaunayx64\\dreams\\",
+			"D:\\Documents\\IMAC2\\OFX_Visual\\apps\\myApps\\Delaunayx64\\dreams\\action",
+			"D:\\wamp64\\www\\Challenger\\src",
+			"D:\\wamp64\\www\\Challenger\\src/sass",
+			"D:\\wamp64\\www\\Challenger\\api",
+			"D:\\wamp64\\www\\Challenger\\src/sass",
+			"D:\\wamp64\\www\\Challenger\\src",
+			"D:\\wamp64\\www\\Challenger\\src\\src",
+			"D:\\wamp64\\www\\Challenger\\src\\sass",
+			"D:\\wamp64\\www\\Challenger\\api",
+			"D:\\wamp64\\www\\Challenger\\src\\app",
+			"D:\\wamp64\\www\\Challenger\\src\\",
+			"D:\\wamp64\\www\\Challenger\\api\\",
+			"D:\\wamp64\\www\\Challenger\\src\\",
+			"D:\\wamp64\\www\\Challenger\\src\\sass",
+			"D:\\wamp64\\www\\Challenger\\src",
+			"D:\\wamp64\\www\\Challenger",
+			"D:\\wamp64\\www\\Challenger\\src\\app",
+			"D:\\wamp64\\www\\Challenger\\src\\app\\components",
+			"D:\\wamp64\\www\\Challenger\\src\\app\\vues",
+			"D:\\wamp64\\www\\Challenger\\src\\app\\components",
+			"D:\\wamp64\\www\\semaineWeb\\api",
+			"D:\\wamp64\\www\\semaineWeb\\api\\vendor",
+			"D:\\wamp64\\www\\semaineWeb\\api\\",
+			"D:\\wamp64\\www\\semaineWeb\\api\\model",
+			"D:\\wamp64\\www\\Challenger",
+			"D:\\wamp64\\www\\Challenger\\src\\app",
+			"D:\\wamp64\\www\\Challenger\\src\\css",
+			"D:\\wamp64\\www\\Challenger\\src",
+			"D:\\wamp64\\www\\Challenger",
+			"D:\\wamp64\\www\\ChallengerBack",
+			"<current file>",
+			"<open folders>",
+			"<current file>",
+			"<current file>,<open files>",
+			"<current file>",
+			"<current file>,<open files>",
+			"<current file>",
+			"<open files>,<current file>",
+			"<open files>",
+			"",
+			"<select>,<current file>",
+			"<select>",
+			"",
+			"<current file>",
+			"",
+			"<current file>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"();\n",
+			" \n",
+			"enterBtn",
+			"click",
+			"style",
+			"select_lines",
+			"resize()",
+			"resize",
+			"./../img/icons/search-icon.png",
+			"1 0",
+			"0 1",
+			"Volume ",
+			"Volume",
+			"robotic",
+			"sound",
+			"baby",
+			"roboticHighsRev",
+			"roboticH",
+			"roboticLows",
+			"glitch",
+			"ep-vol",
+			"roboticLows",
+			"RoboticLows",
+			"Volume",
+			"radial",
+			"glitch",
+			"move",
+			"sinusoide",
+			"wiggle",
+			"scale",
+			"random",
+			"scale",
+			"speedX",
+			"orange",
+			"960",
+			"speedX",
+			"colone5\"",
+			"colone5",
+			"colone3\"",
+			"colone3",
+			"colone1\"",
+			"delet",
+			"console.log",
+			"filterBar",
+			"id",
+			".post-min",
+			"AUDIO",
+			"labelType",
+			"';\n",
+			"reponse",
+			"setResponse",
+			"login",
+			"\"#\";",
+			"nextPage",
+			"login",
+			".upload",
+			"IMAGE",
+			"img-profil:hover",
+			".user-menu .img-profil:hover",
+			"transform: scale",
+			".user-menu",
+			".circle",
+			".contact",
+			"contact",
+			"cont",
+			"dex",
+			"overlay",
+			"time",
+			"box_time",
+			"box-time",
+			".challenge-box-time",
+			".challenge_box_time",
+			".circle-back",
+			".tab-user-menu-box",
+			"hover",
+			"HOVER",
+			"hallenge-min",
+			".img_profil",
+			".img-profil",
+			"add",
+			".challenge_box__time",
+			"state",
+			"SHOW",
+			"        \n",
+			"id",
+			"callbackisLiking",
+			"post-cont",
+			"POST SHOW CALLBA",
+			"props",
+			"omponentWillReceiveProps",
+			"props",
+			"this.porps",
+			"porps",
+			"affFollow",
+			"PostsContainer",
+			"affFollow",
+			"callbackUserLike",
+			"likes",
+			"post-likes-bar",
+			".post-min .post-likes-bar",
+			"veil",
+			"viel",
+			"post-content",
+			"elapsed",
+			"seconds",
+			"1000",
+			"elapsed",
+			"var",
+			"distance",
+			"start",
+			"title",
+			"},",
+			"test_image",
+			"history",
+			"browserHistory.push",
+			"());",
+			"console.log",
+			"this.state.post.linkcontent",
+			"profilepics",
+			"profilpics",
+			"content",
+			"= ",
+			"1, 2, 9, 4, 5",
+			"this.state = {\n            post: defaultPost",
+			"user",
+			"api/user/id/",
+			"content",
+			"posts"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"handleClick",
+			"resizeCanvas",
+			"0 1",
+			"1 0",
+			"psyche",
+			"roboticHighs",
+			"robotLows",
+			"roboticHighs",
+			"RoboticHighs",
+			"roboticRack",
+			"speedY",
+			"noir",
+			"85",
+			"speedY",
+			"colone5 impaire\"",
+			"colone3 impaire\"",
+			"colone1 impaire\"",
+			"timeleft",
+			"query",
+			"getJSON",
+			"getAjax",
+			"pos.",
+			"centre.",
+			"posV.",
+			"position.",
+			".",
+			"pos.",
+			"position.",
+			"direction.",
+			"vitesse.",
+			"Point2D",
+			"Vector2D",
+			"Point2D",
+			"Vector2D",
+			".",
+			"l",
+			"nbLevels",
+			"nblevels",
+			"level->vp",
+			"vp",
+			"vp1",
+			"vp",
+			"Vehicule",
+			"VectorXY",
+			"PointXY",
+			"Point2D*",
+			"Vector2D*",
+			"Vector2D"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/app/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								239,
+								239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/app/vues/Home.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								227,
+								227
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/app/components/Banniere.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								188,
+								146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/app/components/Footer.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/app/components/Header.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								105,
+								105
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "src/sass/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								408,
+								408
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/sass/_constantes.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 154,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								102,
+								102
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/sass/_home.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 931,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								340,
+								340
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 327.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/sass/_footer.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/sass/_header.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/sass/_mixins.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/sass/_pages.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 51,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/sass/_utility.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 496,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								494,
+								494
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 66.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.551630604848,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "folio.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"inde",
+				"app\\index.js"
+			],
+			[
+				"uplo",
+				"src\\app\\components\\UploadPost.js"
+			],
+			[
+				"postc",
+				"api\\controller\\postController.php"
+			],
+			[
+				"page",
+				"src\\sass\\_page.scss"
+			],
+			[
+				"sear",
+				"src\\app\\vues\\Search.js"
+			],
+			[
+				"main",
+				"src\\sass\\main.scss"
+			],
+			[
+				"prof",
+				"src\\sass\\_profil.scss"
+			],
+			[
+				"folo",
+				"src\\app\\components\\assets\\FollowBtn.js"
+			],
+			[
+				"ut",
+				"api\\model\\utility.php"
+			],
+			[
+				"postcon",
+				"src\\app\\components\\post\\PostContent.js"
+			],
+			[
+				"image",
+				"api\\model\\image.php"
+			],
+			[
+				"upl",
+				"src\\app\\components\\UploadPost.js"
+			],
+			[
+				"chall",
+				"src\\app\\components\\ChallengeContainer.js"
+			],
+			[
+				"postcontin",
+				"src\\app\\components\\PostsContainer.js"
+			],
+			[
+				"user",
+				"api\\controller\\userController.php"
+			],
+			[
+				"login",
+				"src\\sass\\_login.scss"
+			],
+			[
+				"head",
+				"src\\sass\\_header.scss"
+			],
+			[
+				"challenge.sc",
+				"src\\sass\\_challenge.scss"
+			],
+			[
+				"pos",
+				"api\\controller\\postController.php"
+			],
+			[
+				"chal",
+				"api\\controller\\challengeController.php"
+			],
+			[
+				"chel",
+				"api\\controller\\challengeController.php"
+			],
+			[
+				"challe",
+				"src\\app\\components\\ChallengeContainer.js"
+			],
+			[
+				"pro",
+				"src\\sass\\_profil.scss"
+			],
+			[
+				"postco",
+				"api\\controller\\postController.php"
+			],
+			[
+				"userp",
+				"src\\app\\vues\\UserProfil.js"
+			],
+			[
+				"uti",
+				"src\\sass\\_utility.scss"
+			],
+			[
+				"cha",
+				"api\\model\\challenge.php"
+			],
+			[
+				"log",
+				"src\\app\\vues\\Login.js"
+			],
+			[
+				"hom",
+				"src\\app\\vues\\Home.js"
+			],
+			[
+				"",
+				"src\\app\\components\\PostMin.js"
+			],
+			[
+				"tab",
+				"src\\app\\components\\header\\TabUser.js"
+			],
+			[
+				"profilb",
+				"src\\app\\components\\ProfilBox.js"
+			],
+			[
+				"const",
+				"api\\constants.php"
+			],
+			[
+				"constant",
+				"api\\constants.php"
+			],
+			[
+				"postl",
+				"src\\app\\components\\post\\PostLikesBar.js"
+			],
+			[
+				"userc",
+				"api\\controller\\userController.php"
+			],
+			[
+				"userco",
+				"api\\controller\\userController.php"
+			],
+			[
+				"routs",
+				"api\\model\\routes.json"
+			],
+			[
+				"potli",
+				"src\\app\\components\\post\\PostLikesBar.js"
+			],
+			[
+				"postcont",
+				"src\\app\\components\\post\\PostContent.js"
+			],
+			[
+				"postmin",
+				"src\\app\\components\\PostMin.js"
+			],
+			[
+				"home",
+				"src\\app\\vues\\Home.js"
+			],
+			[
+				"userm",
+				"src\\app\\components\\UserMenu.js"
+			],
+			[
+				"index",
+				"index.php"
+			],
+			[
+				"login.",
+				"src\\css\\_login.scss"
+			],
+			[
+				"abou",
+				"src\\app\\vues\\AboutUs.js"
+			],
+			[
+				"veto",
+				"src\\Vector2D.c"
+			],
+			[
+				"col",
+				"src\\Collision.c"
+			],
+			[
+				"but",
+				"src/But.c"
+			],
+			[
+				"trer",
+				"src/Terrain.c"
+			],
+			[
+				"level",
+				"src/Level.c"
+			],
+			[
+				"v",
+				"src/Vehicule.c"
+			],
+			[
+				"veh",
+				"include/Vehicule.h"
+			],
+			[
+				"le",
+				"include/Level.h"
+			],
+			[
+				"tool",
+				"src/sdl_tools.c"
+			],
+			[
+				"ge",
+				"src/geometry.c"
+			],
+			[
+				"ci",
+				"include/Collision.h"
+			],
+			[
+				"coli",
+				"src/Collision.c"
+			],
+			[
+				"ball",
+				"src/Ballon.c"
+			],
+			[
+				"sd",
+				"src/sdl_tools.c"
+			],
+			[
+				"poi",
+				"src/Point2D.c"
+			],
+			[
+				"s",
+				"include/sdl_tools.h"
+			],
+			[
+				"geo",
+				"include/Geometry.h"
+			],
+			[
+				"ved",
+				"include/Vector2D.h"
+			],
+			[
+				"eve",
+				"src/level.c"
+			],
+			[
+				"ter",
+				"include/Terrain.h"
+			],
+			[
+				"gam",
+				"include/Game.h"
+			],
+			[
+				"vehi",
+				"include/Vehicule.h"
+			],
+			[
+				"che",
+				"include/Checkpoint.h"
+			],
+			[
+				"bal",
+				"include/Ballon.h"
+			],
+			[
+				"fon",
+				"~/Documents/IMAC_1ere_Annee/gitHovercraft/fond.txt"
+			],
+			[
+				"but.c",
+				"src/But.c"
+			],
+			[
+				"bl",
+				"include/Ballon.h"
+			],
+			[
+				"sce",
+				"Raytracer/src/scene/scene.c"
+			],
+			[
+				"t",
+				"include/Terrain.h"
+			],
+			[
+				"inter",
+				"Raytracer/include/geometry/Intersection.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
