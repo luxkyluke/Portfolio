@@ -10,3 +10,87 @@
 		z-index: 2;
 	}
 }
+
+.scrollDots{
+	position: absolute;
+	right: $paddingGeneral;
+	top: 50%;
+	transform: translateY(-50%);
+
+	.scrollDot{
+		list-style: none;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		width: 10px;
+		height: 10px;
+		margin : 10px;
+
+		&.current{
+			background-color: #fff;
+		}
+	}
+}
+
+.project{
+	max-width: 1500px;
+	height: 100%;
+	top: 50%;
+	margin: auto;
+	position: relative;
+
+	&.odd{
+		&__img, &__filter{
+			right: 0;
+		}
+	}
+
+	&.even{
+		.desc{
+			right: 0;
+		}
+	}
+
+	&__img{
+		position: absolute;
+		width: 1300px;
+		height: 650px;
+		top: 150px;
+	}
+
+	.desc{
+		position: absolute;
+		background-color: $bodyBG;
+		width: 350px;
+		height: 330px;
+		top: 500px;
+		padding: 50px;
+
+		&__title{
+			font-family: "Quicksand";
+			font-style: normal;
+			font-size: 12pt;
+			letter-spacing: 5px;
+			text-transform: uppercase;
+			color: $greyTitle;
+			font-weight: 500;
+			padding: 0;
+			margin:0;
+		}
+
+		&__name{
+			font-size: 40px;
+		}
+
+		&__category{
+			font-size: 30px;
+		}
+
+		&__eye{
+			width: 70px;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			margin: 50px;
+		}
+	}
+}

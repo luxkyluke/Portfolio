@@ -6,8 +6,8 @@
 
 html, body{
 	margin:0;
-	background-color : $pageBackgroundColor;
-	font-family: 'akkurat-pro-regular', sans-serif;
+	background-color : $bodyBG;
+	font-family: 'Karla', sans-serif;
 	font-weight: 300;
 	width: 100%;
 	height: 100%;
@@ -49,6 +49,7 @@ canvas {
 		font-size: 12pt;
 		padding: 0;
 		margin: 0;
+		letter-spacing: 1px;
 
 		-ms-transform: rotate(-90deg) translateX(20px); /* IE 9 */
 	    -webkit-transform: rotate(-90deg) translateX(20px); /* Chrome, Safari, Opera */
@@ -66,14 +67,14 @@ canvas {
 	position: absolute;
 	top: $paddingGeneral;
 	right: $paddingGeneral;
-	width: 70px;
-	height: 50px;
+	width: 60px;
+	height: 40px;
 
 
 	&__span{
 	    position: absolute;
 		width: 100%;
-	    height: 3px;
+	    height: 2px;
 	    background: #fff;
 	    margin-top: 10px;
 	    -webkit-transition: all 0.1s;
@@ -83,15 +84,15 @@ canvas {
 			content: "";
 		    position: absolute;
 		    width: 100%;
-		    height: 3px;
+		    height: 2px;
 		    background: #fff;
-		    top: -15px;
+		    top: -10px;
 		    -webkit-transition: all 0.3s;
 		    transition: all 0.3s;
 		}
 
 		&:after{
-			top: 15px;
+			top: 10px;
 		}
 	}
 
@@ -99,13 +100,13 @@ canvas {
 		background: transparent;
 
 		&:before{
-			-webkit-transform: rotate(-45deg) translate(-11px, 18px);
-    		transform: rotate(-45deg) translate(-11px, 18px);
+			-webkit-transform: rotate(-45deg) translate(-2px, 14px);
+    		transform: rotate(-45deg) translate(-2px, 14px);
 		}
 
 		&:after{
-		    -webkit-transform: rotate(45deg)  translate(-3px, -10px);
-	    	transform: rotate(45deg)  translate(-3px, -10px);
+		    -webkit-transform: rotate(45deg)  translate(0px, -12px);
+	    	transform: rotate(45deg)  translate(0px, -12px);
 		}
 	}
 }
@@ -117,7 +118,7 @@ canvas {
 	position: absolute;
 	top: $paddingGeneral;
 	left: $paddingGeneral; 
-	font-size: 18px;
+	font-size: 17px;
 	letter-spacing: 2px;
 	
 	&__title{

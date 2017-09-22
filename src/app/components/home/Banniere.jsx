@@ -21,6 +21,7 @@ export default class Banniere extends React.Component {
 		});
 	
 		this.handleEnterBtnClick.bind(this);
+		this.handleAboutBtnClick.bind(this);
 	}
 
 	handleEnterBtnClick(){
