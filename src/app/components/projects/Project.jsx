@@ -53,7 +53,6 @@ export default class Project extends React.Component {
                                 onLoad={this.handleImgLoaded}
                                 onError={this.handleImgError}
                             />
-                        <div className={"project__image__filter"+active} style={filterStyle}></div>
                     </div>
                 </a>
                 <Description    name ={this.props.name} 

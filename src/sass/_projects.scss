@@ -1,4 +1,6 @@
 .projects{
+	overflow: hidden;
+
 	&__veil{
 	    background-color: rgba(0, 8, 25, 0.5);
 	    width: 100%;
@@ -9,6 +11,7 @@
 	&__content *{
 		z-index: 2;
 	}
+
 }
 
 .scrollDots{
@@ -47,8 +50,8 @@
 	}
 
 	&.odd{
-		.project__image{
-			right: 0;
+		.project__image__img{
+			float: right;
 		}
 	}
 
@@ -59,25 +62,24 @@
 	}
 
 	&__image {
-		&__img, &__filter{
-			position: absolute;
+		overflow: hidden;
+
+		&__img{
+			position: relative;
 			width: 1100px;
 			height: 635px;
-			transform: scaleY(0);
+			transform: translateY(-200%);
 
-			-webkit-transition:  all 500ms;
-		  	transition: all 500ms;
+			-webkit-transition:  all 1s;
+		  	transition: all 1s;
 
 		  	&.active{
-		  		transform: scaleY(1); 
+		  		transform: translateY(0%); 		  	
 		  	}
 		}
 	}
 
-	&__filter{
-		/* background-color: #A4632A;
-		opacity: 0.4; */
-	}
+	
 
 	.desc{
 		position: absolute;

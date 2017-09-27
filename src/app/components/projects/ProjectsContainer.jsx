@@ -10,6 +10,10 @@ import ScrollDots   from "../../components/projects/ScrollDots.jsx"
 
 const cover1 = require('./../../../img/project1.jpg');
 const cover2 = require('./../../../img/project1.jpg');
+const cover3 = require('./../../../img/project1.jpg');
+const cover4 = require('./../../../img/project1.jpg');
+const cover5 = require('./../../../img/project1.jpg');
+
 const NB_PROJECT = 5;
 
 export default class ProjectsContainer extends React.Component {
@@ -31,11 +35,15 @@ export default class ProjectsContainer extends React.Component {
     }
 
     handleClickDots(id){
-        this.setState({"currentId": id});
+
+        Animation.hideProject(this.state.currentId, function(){
+            this.setState({"currentId": id});
+        }.bind(this));
+
+        
     }
 
     handleClick(){
-        Animation.hideProject(this.state.currentId);
     }
 
     componentDidMount() {
@@ -63,6 +71,28 @@ export default class ProjectsContainer extends React.Component {
                     name ="The Railway Chronicles" 
                     category="Website"
                     click = {this.handleClick}/> 
+                <Project 
+                    cover={cover3} 
+                    id="2" 
+                    isActive = {this.state.currentId === 2}
+                    name ="The Railway Chronicles" 
+                    category="Website"
+                    click = {this.handleClick}/> 
+                <Project 
+                    cover={cover4} 
+                    id="3" 
+                    isActive = {this.state.currentId === 3}
+                    name ="The Railway Chronicles" 
+                    category="Website"
+                    click = {this.handleClick}/> 
+                <Project 
+                    cover={cover5} 
+                    id="4" 
+                    isActive = {this.state.currentId === 4}
+                    name ="The Railway Chronicles" 
+                    category="Website"
+                    click = {this.handleClick}/> 
+
                 <ScrollDots 
                     nb={NB_PROJECT} 
                     click={this.handleClickDots}
