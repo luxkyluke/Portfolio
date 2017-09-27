@@ -5,7 +5,6 @@ import { BrowserRouter as Router,
 import Logo	from "../components/assets/Logo.jsx"
 import Scroll	from "../components/assets/Scroll.jsx"
 import BurgerMenu	from "../components/assets/BurgerMenu.jsx"
-import ScrollDots	from "../components/projects/ScrollDots.jsx"
 import ProjectsContainer	from "../components/projects/ProjectsContainer.jsx"
 	
 export default class Projects extends React.Component{
@@ -21,7 +20,6 @@ export default class Projects extends React.Component{
 					<Logo/>
 			      	<Scroll black={false}/>
 			      	<BurgerMenu/>
-			      	<ScrollDots nb={5}/>
 			      	<ProjectsContainer/>
 				</div>
 			</div>

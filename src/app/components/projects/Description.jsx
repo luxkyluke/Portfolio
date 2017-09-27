@@ -8,18 +8,13 @@ export default class Description extends React.Component {
     constructor(props) {
         super(props);
 
-        this.handleClick = this.handleClick.bind(this);
-        //document.documentElement.removeEventListener('scroll', this.handleClick);
-    }
-
-    handleClick(){
-
     }
 
     render() {
+        const active = (this.props.isActive) ? " active" : "";
         return(
-            <a onClick={this.handleClick}>
-                <div className="desc" >
+            <a onClick={this.props.click}>
+                <div className={"desc"+active} >
                     <h3 className="desc__title">Project</h3>
                     <h2 className="desc__name">{this.props.name}</h2>
                     <h3 className="desc__title">Category</h3>

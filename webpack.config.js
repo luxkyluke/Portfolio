@@ -39,13 +39,15 @@ var config = {
                     {
                         loader: 'image-webpack-loader',
                         query: {
-                          progressive: true,
-                          pngquant: {
-                            quality: '65-90',
-                            speed: 4
+                            mozjpeg: {
+                                progressive: true,
+                            },
+                            pngquant: {
+                              quality: '75-90',
+                              speed: 4,
+                            },
                         }
                     }
-                  }
                 ]
             }
         ]

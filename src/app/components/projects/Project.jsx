@@ -40,21 +40,26 @@ export default class Project extends React.Component {
 
     render() {      
         const filterStyle = {backgroundColor: this.state.mainColorImg}
+
         const myClass = (this.props.id%2 === 0) ? "project even" : "project odd";
-         return(
-            <div className={myClass}>
-                <div className="project__wrapper">
-                    <a onClick={this.handleClick} >
-                        <img 
-                            className="project__img" 
-                            src={this.props.cover}
-                            onLoad={this.handleImgLoaded}
-                            onError={this.handleImgError}
+        const active = (this.props.isActive) ? " active" : "";
+
+        return(
+            <div className={myClass+active} id={"project_"+this.props.id}>
+                <a onClick={this.props.click} >
+                    <div className='project__image' >
+                        <img    className={"project__image__img"+active} 
+                                src={this.props.cover}
+                                onLoad={this.handleImgLoaded}
+                                onError={this.handleImgError}
                             />
-                        <div className="project__filter" style={filterStyle}></div>
-                    </a>
-                    <Description name ={this.props.name} category={this.props.category}/> 
-                </div>
+                        <div className={"project__image__filter"+active} style={filterStyle}></div>
+                    </div>
+                </a>
+                <Description    name ={this.props.name} 
+                                category={this.props.category} 
+                                click={this.props.click}
+                                isActive = {this.props.isActive}/> 
             </div>
            
         );

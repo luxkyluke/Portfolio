@@ -34,19 +34,20 @@
 
 .project{
 	max-width: 1350px;
-	height: 100%;
+	width: 80%;
+	height: 635px;
 	top: 50%;
-	margin: auto;
-	position: relative;
+	left: 50%;
 
-	&__wrapper{
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+	transform: translate(-50%, -50%) scaleY(0);
+	position: absolute;
+
+	&.active{
+		transform: translate(-50%, -50%) scaleY(1);
 	}
 
 	&.odd{
-		.project__img, .project__filter{
+		.project__image{
 			right: 0;
 		}
 	}
@@ -57,21 +58,20 @@
 		}
 	}
 
-	&__img, &__filter{
-		/* position: absolute; */
-		width: 1100px;
-		height: 635px; 
-		/* top: 150px; */
-	}
+	&__image {
+		&__img, &__filter{
+			position: absolute;
+			width: 1100px;
+			height: 635px;
+			transform: scaleY(0);
 
-	div::before{
-		/* content: '';
-	    position: absolute;
-	    width: 100%;
-	    height: 100%;
-	    top: 0%;
-	    left: 0%;
-	    box-shadow: 0 30px 20px rgba(35,32,39,0.5); */
+			-webkit-transition:  all 500ms;
+		  	transition: all 500ms;
+
+		  	&.active{
+		  		transform: scaleY(1); 
+		  	}
+		}
 	}
 
 	&__filter{
@@ -80,12 +80,15 @@
 	}
 
 	.desc{
-		/* position: absolute; */
+		position: absolute;
 		background-color: $bodyBG;
 		width: 325px;
 		height: 310px;
-		/* top: 450px; */
+		top: 300px;
 		padding: 40px;
+
+		-webkit-transition:  all 300ms;
+	  	transition: all 300ms;
 
 		&__title{
 			font-family: "Quicksand";
@@ -117,4 +120,6 @@
 			margin: 0 30px 30px 0;
 		}
 	}
+
+	
 }

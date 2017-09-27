@@ -5,10 +5,10 @@ export default class ScrollDot extends React.Component {
     constructor(props) {
         super(props);
         
-        this.state = {
-            'isCurrent' : this.props.isCurrent
+        /*this.state = {
+            isCurrent = this.props.getInit
 
-         }
+         }*/
 
        // this.handleClick = this.handleClick.bind(this);
         //this.reset = this.reset.bind(this);
@@ -32,7 +32,7 @@ export default class ScrollDot extends React.Component {
     }*/
 
     render() {
-        const myClass = (this.state.isCurrent) ? "scrollDot current" : "scrollDot";
+        const myClass = (this.props.isCurrent) ? "scrollDot current" : "scrollDot";
         return(
             <a onClick={this.props.click.bind(this, this.props.id)}>
                 <div className={myClass}>

@@ -9,9 +9,9 @@ export default class ScrollDots extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
+        /*this.state = {
             "currentId" : 0
-        }
+        }*/
 
         let projects = new Array();
         for(let i = 0; i < this.props.nb ; i++){
@@ -28,7 +28,7 @@ export default class ScrollDots extends React.Component {
     }
 
     handleClick(id) {
-        this.setState({"currentId": id});
+        this.props.click(id);
     }
 
     componentDidMount() {
@@ -44,11 +44,26 @@ export default class ScrollDots extends React.Component {
         return(
 
             <div className="scrollDots">
-                    <ScrollDot isCurrent={this.state.currentId === 0} click={this.handleClick.bind(this)} id={0}/> 
-                    <ScrollDot isCurrent={this.state.currentId === 1} click={this.handleClick.bind(this)} id={1}/> 
-                    <ScrollDot isCurrent={this.state.currentId === 2} click={this.handleClick.bind(this)} id={2}/> 
-                    <ScrollDot isCurrent={this.state.currentId === 3} click={this.handleClick.bind(this)} id={3}/> 
-                    <ScrollDot isCurrent={this.state.currentId === 4} click={this.handleClick.bind(this)} id={4}/> 
+                <ScrollDot 
+                    isCurrent={this.props.currentId === 0}
+                    click={this.handleClick} 
+                    id={0}/> 
+                <ScrollDot 
+                    isCurrent={this.props.currentId === 1}
+                    click={this.handleClick} 
+                    id={1}/> 
+                <ScrollDot 
+                    isCurrent={this.props.currentId === 2}
+                    click={this.handleClick} 
+                    id={2}/> 
+                <ScrollDot 
+                    isCurrent={this.props.currentId === 3}
+                    click={this.handleClick} 
+                    id={3}/> 
+                <ScrollDot 
+                    isCurrent={this.props.currentId === 4}
+                    click={this.handleClick} 
+                    id={4}/> 
             </div>
         );
     }
