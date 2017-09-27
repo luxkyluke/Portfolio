@@ -1,5 +1,6 @@
 require ('../sass/main.scss');
 require ('./utilities/backgroundAnim.js')
+require ('./utilities/color-thief.js')
 
 import React from "react";
 import ReactDOM from "react-dom";

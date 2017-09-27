@@ -19,6 +19,7 @@ export default class ScrollDots extends React.Component {
         }
 
         this.handleScroll = this.handleScroll.bind(this);
+        this.handleClick = this.handleClick.bind(this);
         //document.documentElement.removeEventListener('scroll', this.handleScroll);
     }
 
@@ -43,13 +44,11 @@ export default class ScrollDots extends React.Component {
         return(
 
             <div className="scrollDots">
-                <ul>
                     <ScrollDot isCurrent={this.state.currentId === 0} click={this.handleClick.bind(this)} id={0}/> 
                     <ScrollDot isCurrent={this.state.currentId === 1} click={this.handleClick.bind(this)} id={1}/> 
                     <ScrollDot isCurrent={this.state.currentId === 2} click={this.handleClick.bind(this)} id={2}/> 
                     <ScrollDot isCurrent={this.state.currentId === 3} click={this.handleClick.bind(this)} id={3}/> 
                     <ScrollDot isCurrent={this.state.currentId === 4} click={this.handleClick.bind(this)} id={4}/> 
-                </ul>
             </div>
         );
     }

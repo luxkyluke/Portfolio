@@ -6,6 +6,7 @@ require ('./../../utilities/constantes.js')
 import Project from "./Project.jsx"
 
 const cover1 = require('./../../../img/project1.jpg');
+const cover2 = require('./../../../img/project1.jpg');
 
 
 export default class ProjectsContainer extends React.Component {
@@ -30,11 +31,10 @@ export default class ProjectsContainer extends React.Component {
     }
 
     render() {
-
         return(
-
             <div className="projectsContainer">
-                <Project cover={cover1} id="0" name ="The Railway Chronicals" category="Website"/> 
+                <Project cover={cover1} id="0" name ="The Railway Chronicles" category="Website"/> 
+                <Project cover={cover2} id="1" name ="The Railway Chronicles" category="Website"/> 
             </div>
         );
     }

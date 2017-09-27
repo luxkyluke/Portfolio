@@ -46,6 +46,30 @@ function requetePostSubmit(url, data, callback) {
         });
 }
 
+function requetePost(url, image, callback) {
+    data = {
+        key: "image",
+        value:"image"
+    }
+    fetch(url, {
+        method: 'POST',
+        body: data
+    })
+        .then(function(response) {
+            if (response.status !== 200) {
+                console.log('Error loading JSON Code: ' + response.status);
+                return;
+            }
+            response.json().then(function(data) {
+                console.log(url);
+                console.log(data);
+                callback(data);
+            });
+        })
+        .catch(function(error) {
+            console.error("Request error : " + error.message);
+        });
+}
 
 
 function changePage(page){
