@@ -24,20 +24,41 @@ export default class ProjectsContainer extends React.Component {
             'currentId':0
         };
 
+        this.isAnimated = false;
+
         this.handleClick = this.handleClick.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.handleClickDots = this.handleClickDots.bind(this);
         //document.documentElement.removeEventListener('scroll', this.handleScroll);
     }
 
-    handleScroll(){
-        console.log(s)
+    handleScroll(e){
+        if(this.isAnimated){
+            return;
+        }
+
+        this.isAnimated = true;
+        const dir = e.deltaY/Math.abs(e.deltaY);
+        //console.log(dir);
+        this.navProject(dir);
+        
+        window.removeEventListener('wheel', this.handleScroll);
+    }
+
+    navProject(dir){
+        let nextId = (this.state.currentId+dir)%NB_PROJECT;
+        if(nextId<0)
+            nextId = NB_PROJECT-1;
+        this.handleClickDots(nextId)
+        console.log(nextId)
     }
 
     handleClickDots(id){
-
         Animation.hideProject(this.state.currentId, function(){
             this.setState({"currentId": id});
+            this.isAnimated = false;
+            window.addEventListener('wheel', this.handleScroll);
+
         }.bind(this));
 
         
@@ -46,12 +67,12 @@ export default class ProjectsContainer extends React.Component {
     handleClick(){
     }
 
-    componentDidMount() {
-        document.documentElement.addEventListener('scroll', this.handleScroll);
+    componentDidMount() { 
+        window.addEventListener('wheel', this.handleScroll);
     }
 
     componentWillUnmount() {
-        document.documentElement.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('wheel', this.handleScroll);
     }
 
     render() {
