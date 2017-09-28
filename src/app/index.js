@@ -4,10 +4,12 @@ require ('./utilities/backgroundAnim.js')
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, hashHistory, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, hashHistory, Switch, HashRouter } from 'react-router-dom';
 
 import Home from "./vues/Home.jsx";
 import Projects from "./vues/Projects.jsx";
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 
 const app = document.getElementById('app');
 
@@ -20,11 +22,20 @@ const Main = () => (
   </main>
 )
 
+const App = () => (
+  <div>
+    <Header />
+    <Main />
+    <Footer/>
+  </div>
+)
+
+
 class Layout extends React.Component{
     render(){
         return(
             <BrowserRouter history={hashHistory}>
-                <Route path="/" component={Projects}/>
+                <App/>
             </BrowserRouter>
         );
     }
