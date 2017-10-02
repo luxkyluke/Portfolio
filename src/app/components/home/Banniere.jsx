@@ -25,6 +25,7 @@ export default class Banniere extends React.Component {
 	}
 
 	handleEnterBtnClick(){
+
 	}
 
 	handleAboutBtnClick(){
@@ -39,12 +40,10 @@ export default class Banniere extends React.Component {
 				</div>
 				<div className="banniere__rubriques">
 		      		<Button label = "Projects"
-		      				property = ""
-		      				callback = {this.handleEnterBtnClick}
+		      				link = {"/projects"}
 		      		/>
 		      		<Button label = "About Me"
-		      				property = ""
-		      				callback = {this.handleEnterBtnClick}
+		      				link = {"/about"}
 		      		/>
 		      	</div>
 			</div>

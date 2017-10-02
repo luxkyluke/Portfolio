@@ -11,11 +11,12 @@ export default class Projects extends React.Component{
 	}
 
 	render(){	
+		const myClass = (this.props.isActive) ? " active" : " not-active";
 		return(
-			<div className="projects page"> 
+			<div className={"projects page"+myClass}> 
 				<div className="projects__veil"></div>
 				<div className="projects__content">
-			      	<ProjectsContainer/>
+			      	<ProjectsContainer isActive={this.props.isActive} up={this.props.up}/>
 				</div>
 			</div>
 		);

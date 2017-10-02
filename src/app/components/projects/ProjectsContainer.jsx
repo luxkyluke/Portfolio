@@ -21,47 +21,55 @@ export default class ProjectsContainer extends React.Component {
         super(props);
 
         this.state = {
-            'currentId':0
+            'currentId':0,
+            'isActive':this.props.isActive
         };
-
-        this.isAnimated = false;
 
         this.handleClick = this.handleClick.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.handleClickDots = this.handleClickDots.bind(this);
         //document.documentElement.removeEventListener('scroll', this.handleScroll);
     }
+    
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.isActive !== this.state.isActive){
+            setTimeout(function(){
+                this.setState({'isActive':nextProps.isActive});
+            }.bind(this), 1000);
+        }
+    }
 
     handleScroll(e){
-        if(this.isAnimated){
+        if(!this.state.isActive){
             return;
         }
 
-        this.isAnimated = true;
         const dir = e.deltaY/Math.abs(e.deltaY);
         //console.log(dir);
         this.navProject(dir);
-        
-        window.removeEventListener('wheel', this.handleScroll);
     }
+
 
     navProject(dir){
         let nextId = (this.state.currentId+dir)%NB_PROJECT;
-        if(nextId<0)
-            nextId = NB_PROJECT-1;
-        this.handleClickDots(nextId)
-        console.log(nextId)
+        if(nextId<0){
+            this.props.up();
+            return;
+        }
+        window.removeEventListener('wheel', this.handleScroll);
+        this.changeProject(nextId);
+        console.log(nextId);
+    }
+
+    changeProject(id){
+        Animation.hideProject(this.state.currentId, function(){
+            this.setState({"currentId": id});
+            window.addEventListener('wheel', this.handleScroll);
+        }.bind(this));
     }
 
     handleClickDots(id){
-        Animation.hideProject(this.state.currentId, function(){
-            this.setState({"currentId": id});
-            this.isAnimated = false;
-            window.addEventListener('wheel', this.handleScroll);
-
-        }.bind(this));
-
-        
+        this.changeProject(id);       
     }
 
     handleClick(){

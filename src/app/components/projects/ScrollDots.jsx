@@ -18,26 +18,17 @@ export default class ScrollDots extends React.Component {
             projects.push(i);
         }
 
-        this.handleScroll = this.handleScroll.bind(this);
+        //this.handleScroll = this.handleScroll.bind(this);
         this.handleClick = this.handleClick.bind(this);
         //document.documentElement.removeEventListener('scroll', this.handleScroll);
     }
 
-    handleScroll(){
-        console.log(s)
-    }
 
     handleClick(id) {
         this.props.click(id);
     }
 
-    componentDidMount() {
-        document.documentElement.addEventListener('scroll', this.handleScroll);
-    }
-
-    componentWillUnmount() {
-        document.documentElement.removeEventListener('scroll', this.handleScroll);
-    }
+    
 
     render() {
 
