@@ -170,8 +170,8 @@ footer{
    /*  -webkit-transition: opacity 0.5s, border 0.5s ease 2s;
 		    transition: opacity 0.5s, border 0.5s ease 2s; */
     
-   		-webkit-transition: all 0.5s, border 0.5s ease 0.4s;
-		   		transition: all 0.5s, border 0.5s ease 0.4s;
+   		-webkit-transition: all 0.5s, border 0.5s ease 0.5s;
+		   		transition: all 0.5s, border 0.5s ease 0.5s;
     &.open{
     	opacity: 1;
    		border: 20px solid #fff;

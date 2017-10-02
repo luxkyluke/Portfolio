@@ -34,15 +34,14 @@ export default class Header extends React.Component{
 		document.querySelector(".page.active").style.opacity = 1;
 		const menu = document.getElementById('menu')
 		menu.style.opacity = 0;
-		menu.style.transform = 'translateX(+100%)';
-		menu.style.border = '0px'
+		/*menu.style.transform = 'translateX(+100%)';
+		menu.style.border = '0px'*/
 
 		setTimeout(function(){
 			this.setState ({
 				'open' : !this.state.open
 			});
 			menu.style="";
-			console.log("closed")
 		}.bind(this), 500);
 	}
 
@@ -50,7 +49,7 @@ export default class Header extends React.Component{
 		const myClass = (this.state.open) ? "active" : "";
 		return(
 			<header className={myClass}>
-		      	<Menu isOpen={this.state.open}/>
+		      	<Menu isOpen={this.state.open} close={this.handleClick}/>
 		      	<BurgerMenu click={this.handleClick}/>
 			</header>
 		);

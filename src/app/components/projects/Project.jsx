@@ -30,7 +30,7 @@ export default class Project extends React.Component {
         var colorThief = new ColorThief();
         var color = colorThief.getColor(img);
         const rgba = 'rgba('+color[0]+', '+color[1]+', '+color[2]+', 0.4)';
-        console.log(rgba);
+       // console.log(rgba);
         this.setState({'mainColorImg': rgba});
     }
 

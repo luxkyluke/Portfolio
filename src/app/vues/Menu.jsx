@@ -7,8 +7,10 @@ export default class Menu extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(id) {
-
+    handleClick(id, e) {
+        e.preventDefault();
+        console.log(e);
+        console.log(e.target)
     }
 
     render() {
@@ -16,7 +18,7 @@ export default class Menu extends React.Component {
         return(
             <nav id="menu" className={"menu"+myClass}>
                 <ul className="menu__list">
-                    <a onClick={this.handleClick.bind(this, "home")}>
+                    <a href="/" onClick={this.handleClick.bind(this, "home")}>
                         <li className="menu__list__item">home</li>
                     </a>
                     <a onClick={this.handleClick.bind(this, "projects")}>

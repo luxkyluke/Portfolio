@@ -11,7 +11,7 @@ export default class HomePage extends React.Component{
 		super(props);
 
 		this.state ={
-			"home": true
+			"home": this.props.page === 'home'
 		}
 
 
