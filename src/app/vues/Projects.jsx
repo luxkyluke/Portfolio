@@ -2,7 +2,7 @@ import React 	from "react";
 import { BrowserRouter as Router,
          Link, IndexRedirect,  browserHistory } from "react-router";
 
-
+import Logo	from "../components/assets/Logo.jsx"
 import ProjectsContainer	from "../components/projects/ProjectsContainer.jsx"
 	
 export default class Projects extends React.Component{
@@ -18,6 +18,8 @@ export default class Projects extends React.Component{
 				<div className="projects__content">
 			      	<ProjectsContainer isActive={this.props.isActive} up={this.props.up}/>
 				</div>
+				<Logo/>
+
 			</div>
 		);
 	}

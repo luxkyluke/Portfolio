@@ -129,6 +129,7 @@ footer{
 .logo{
 	@extend .title;
 	position: absolute;
+	z-index: 2;
 	top: $paddingGeneral;
 	left: $paddingGeneral; 
 	font-size: 17px;
