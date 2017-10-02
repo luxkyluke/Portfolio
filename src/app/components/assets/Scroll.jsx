@@ -9,11 +9,6 @@ export default class Scroll extends React.Component {
     constructor(props) {
         super(props);
         this.state = {"black" : this.props.black};
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick() {
-        const tmp = this.state.toggled;
     }
 
     render() {
@@ -21,7 +16,7 @@ export default class Scroll extends React.Component {
         myClass += (this.state.black) ? "black" : "white";
         const src = this.props.black ? blackArrow : whiteArrow;
         return(
-            <a onClick={this.handleClick} >
+            <a onClick={this.props.click} >
                 <div className={myClass}>
                     <h3 className="scroll__title">scroll</h3>
                     <img className="scroll__arrow" src={src}/>

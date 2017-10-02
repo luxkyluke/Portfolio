@@ -19,7 +19,7 @@ export default class Button extends React.Component {
 
     render() {
         return(
-            <a href={this.props.link}>
+            <a onClick={this.props.click}>
                 <div className="button">
                     {this.props.label}
                 </div>

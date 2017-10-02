@@ -6,6 +6,7 @@ require ('./../../utilities/constantes.js')
 import Project from "./Project.jsx"
 import Animation from "./../../utilities/Animation.js"
 import ScrollDots   from "../../components/projects/ScrollDots.jsx"
+import Scroll from "../../components/assets/Scroll.jsx"
 
 
 const cover1 = require('./../../../img/project1.jpg');
@@ -28,6 +29,7 @@ export default class ProjectsContainer extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.handleClickDots = this.handleClickDots.bind(this);
+        this.next = this.next.bind(this);
         //document.documentElement.removeEventListener('scroll', this.handleScroll);
     }
     
@@ -61,6 +63,10 @@ export default class ProjectsContainer extends React.Component {
         console.log(nextId);
     }
 
+    next(){
+        this.navProject(1);
+    }
+
     changeProject(id){
         Animation.hideProject(this.state.currentId, function(){
             this.setState({"currentId": id});
@@ -85,49 +91,51 @@ export default class ProjectsContainer extends React.Component {
 
     render() {
         return(
-            <div className="projectsContainer">
-                <Project 
-                    cover={cover1} 
-                    id="0" 
-                    isActive = {this.state.currentId === 0}
-                    name ="The Railway Chronicles" 
-                    category="Website"
-                    click={this.handleClick}/> 
-                <Project 
-                    cover={cover2} 
-                    id="1" 
-                    isActive = {this.state.currentId === 1}
-                    name ="The Railway Chronicles" 
-                    category="Website"
-                    click = {this.handleClick}/> 
-                <Project 
-                    cover={cover3} 
-                    id="2" 
-                    isActive = {this.state.currentId === 2}
-                    name ="The Railway Chronicles" 
-                    category="Website"
-                    click = {this.handleClick}/> 
-                <Project 
-                    cover={cover4} 
-                    id="3" 
-                    isActive = {this.state.currentId === 3}
-                    name ="The Railway Chronicles" 
-                    category="Website"
-                    click = {this.handleClick}/> 
-                <Project 
-                    cover={cover5} 
-                    id="4" 
-                    isActive = {this.state.currentId === 4}
-                    name ="The Railway Chronicles" 
-                    category="Website"
-                    click = {this.handleClick}/> 
+            <div>
+                <div className="projectsContainer">
+                    <Project 
+                        cover={cover1} 
+                        id="0" 
+                        isActive = {this.state.currentId === 0}
+                        name ="The Railway Chronicles" 
+                        category="Website"
+                        click={this.handleClick}/> 
+                    <Project 
+                        cover={cover2} 
+                        id="1" 
+                        isActive = {this.state.currentId === 1}
+                        name ="The Railway Chronicles" 
+                        category="Website"
+                        click = {this.handleClick}/> 
+                    <Project 
+                        cover={cover3} 
+                        id="2" 
+                        isActive = {this.state.currentId === 2}
+                        name ="The Railway Chronicles" 
+                        category="Website"
+                        click = {this.handleClick}/> 
+                    <Project 
+                        cover={cover4} 
+                        id="3" 
+                        isActive = {this.state.currentId === 3}
+                        name ="The Railway Chronicles" 
+                        category="Website"
+                        click = {this.handleClick}/> 
+                    <Project 
+                        cover={cover5} 
+                        id="4" 
+                        isActive = {this.state.currentId === 4}
+                        name ="The Railway Chronicles" 
+                        category="Website"
+                        click = {this.handleClick}/> 
 
-                <ScrollDots 
-                    nb={NB_PROJECT} 
-                    click={this.handleClickDots}
-                    currentId = {this.state.currentId}/>
+                    <ScrollDots 
+                        nb={NB_PROJECT} 
+                        click={this.handleClickDots}
+                        currentId = {this.state.currentId}/>
+                </div>
+                <Scroll click={this.next}/>
             </div>
-
         );
     }
 }

@@ -4,7 +4,8 @@ import { BrowserRouter as Router,
 
 import Logo	from "../components/assets/Logo.jsx"
 import ProjectsContainer	from "../components/projects/ProjectsContainer.jsx"
-	
+
+
 export default class Projects extends React.Component{
 	constructor(props){
 		super(props);
@@ -19,7 +20,6 @@ export default class Projects extends React.Component{
 			      	<ProjectsContainer isActive={this.props.isActive} up={this.props.up}/>
 				</div>
 				<Logo/>
-
 			</div>
 		);
 	}

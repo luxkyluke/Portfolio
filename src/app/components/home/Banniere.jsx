@@ -40,10 +40,10 @@ export default class Banniere extends React.Component {
 				</div>
 				<div className="banniere__rubriques">
 		      		<Button label = "Projects"
-		      				link = {"/projects"}
+		      				click = {this.props.clickProject}
 		      		/>
 		      		<Button label = "About Me"
-		      				link = {"/about"}
+		      				click = {this.props.clickProject}
 		      		/>
 		      	</div>
 			</div>
