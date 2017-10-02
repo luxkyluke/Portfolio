@@ -35,9 +35,13 @@ export default class ProjectsContainer extends React.Component {
     
     componentWillReceiveProps(nextProps) {
         if(nextProps.isActive !== this.state.isActive){
-            setTimeout(function(){
+            if(nextProps.isActive){
+                setTimeout(function(){
+                    this.setState({'isActive':nextProps.isActive});
+                }.bind(this), 1500);
+            }else
                 this.setState({'isActive':nextProps.isActive});
-            }.bind(this), 1500);
+
         }
     }
 

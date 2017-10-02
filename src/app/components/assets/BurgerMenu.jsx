@@ -19,6 +19,7 @@ export default class BurgerMenu extends React.Component {
         this.setState({
             toggled: toggled
         });
+        this.props.click();
     }
 
     render() {
