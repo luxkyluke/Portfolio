@@ -14,17 +14,24 @@ export default class HomePage extends React.Component{
 			"home": true
 		}
 
+
 		this.handleScroll = this.handleScroll.bind(this);
 		this.scrollUp = this.scrollUp.bind(this);
+		this.scrollDown = this.scrollDown.bind(this);
+
 	}
 
 	handleScroll(e){
         const dir = e.deltaY/Math.abs(e.deltaY);
         //console.log(dir)
         if(dir > 0 && this.state.home){
-        	window.removeEventListener('wheel', this.handleScroll);
-	       	this.setState({'home':false});
+	       	this.scrollDown();
         }
+	}
+
+	scrollDown(){
+		this.setState({'home':false});
+        window.removeEventListener('wheel', this.handleScroll);
 	}
 
 	scrollUp(){
@@ -47,7 +54,7 @@ export default class HomePage extends React.Component{
 		const myStyle= (this.state.home) ? {} :  {'transform':'translateY(-100%)'};
 		return(
 			<div id="homePage" style={myStyle}>
-				<Home isActive={this.state.home}/>
+				<Home isActive={this.state.home} clickProject={this.scrollDown}/>
 			    <Projects isActive={(!this.state.home)} up={this.scrollUp}/>
 		    </div>
 		);
