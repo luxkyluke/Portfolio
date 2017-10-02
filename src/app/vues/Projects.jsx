@@ -19,7 +19,7 @@ export default class Projects extends React.Component{
 				<div className="projects__content">
 			      	<ProjectsContainer isActive={this.props.isActive} up={this.props.up}/>
 				</div>
-				<Logo/>
+				<Logo click={this.props.up}/>
 			</div>
 		);
 	}

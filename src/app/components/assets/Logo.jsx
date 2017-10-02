@@ -14,7 +14,7 @@ export default class Logo extends React.Component {
 
     render() {
         return(
-            <a href="/" >
+            <a onClick={this.props.click} >
                 <div className="logo">
                     <h2 className="logo__title">Antoine Demiere</h2>
                 </div>

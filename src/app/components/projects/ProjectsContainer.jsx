@@ -37,7 +37,7 @@ export default class ProjectsContainer extends React.Component {
         if(nextProps.isActive !== this.state.isActive){
             setTimeout(function(){
                 this.setState({'isActive':nextProps.isActive});
-            }.bind(this), 1000);
+            }.bind(this), 1500);
         }
     }
 
@@ -45,6 +45,7 @@ export default class ProjectsContainer extends React.Component {
         if(!this.state.isActive){
             return;
         }
+        //console.log(e);
 
         const dir = e.deltaY/Math.abs(e.deltaY);
         //console.log(dir);

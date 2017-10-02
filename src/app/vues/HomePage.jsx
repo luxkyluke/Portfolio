@@ -50,7 +50,6 @@ export default class HomePage extends React.Component{
     }
 
 	render(){	
-		//const myStyle= {'transform':'translateY('+this.state.dist+'px)'};
 		const myStyle= (this.state.home) ? {} :  {'transform':'translateY(-100%)'};
 		return(
 			<div id="homePage" style={myStyle}>
