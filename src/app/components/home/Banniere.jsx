@@ -28,7 +28,6 @@ export default class Banniere extends React.Component {
 
 	handleEnterBtnClick(){
 		
-		this.props.clickProject();
 	}
 
 	handleAboutBtnClick(){
@@ -43,7 +42,7 @@ export default class Banniere extends React.Component {
 				</div>
 				<div className="banniere__rubriques">
 		      		<Button label = "Projects"
-		      				click = {this.handleEnterBtnClick}
+		      				click = {this.props.clickProject}
 		      		/>
 		      		<Button label = "About Me"
 		      				click = {this.props.clickProject}

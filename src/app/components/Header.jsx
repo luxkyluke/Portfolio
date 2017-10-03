@@ -19,8 +19,6 @@ export default class Header extends React.Component{
 			this.closeMenu();
 		else
 			this.openMenu();
-
-		
 	}
 
 	openMenu(){
@@ -42,7 +40,7 @@ export default class Header extends React.Component{
 				'open' : !this.state.open
 			});
 			menu.style="";
-		}.bind(this), 500);
+		}.bind(this), 300);
 	}
 
 	render(){
@@ -50,7 +48,7 @@ export default class Header extends React.Component{
 		return(
 			<header className={myClass}>
 		      	<Menu isOpen={this.state.open} close={this.handleClick}/>
-		      	<BurgerMenu click={this.handleClick}/>
+		      	<BurgerMenu isOpen={this.state.open} click={this.handleClick}/>
 			</header>
 		);
 	}

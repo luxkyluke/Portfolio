@@ -23,9 +23,9 @@ export default class BurgerMenu extends React.Component {
     }
 
     render() {
-       const myClass = this.state.toggled ? "burger toggled" : "burger not-toggled";
+       const myClass = this.props.isOpen ? "burger toggled" : "burger not-toggled";
         return(
-            <a onClick={this.handleClick} >
+            <a onClick={this.props.click} >
                 <div className={myClass}>
                     <span className="burger__span"></span>
                 </div>

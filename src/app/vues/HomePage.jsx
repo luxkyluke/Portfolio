@@ -1,13 +1,18 @@
 import React 	from "react";
-import Link from "react-router-dom";
+import {Link, Route} from "react-router-dom";
+import PropTypes from "prop-types";
 
 import Home	from "./Home.jsx"
 import Projects from "./Projects.jsx"
 
 
 export default class HomePage extends React.Component{
-	constructor(props){
-		super(props);
+	static contextTypes = {
+	    router: PropTypes.object
+	  }
+
+	constructor(props, context){
+		super(props, context);
 
 		this.state ={
 			"home": this.props.page === 'home'
@@ -35,6 +40,7 @@ export default class HomePage extends React.Component{
 	}
 
 	scrollDown(){
+		this.context.router.history.push("/projects");
 		this.setState({'home':false});
         window.removeEventListener('wheel', this.handleScroll);
 	}
@@ -43,6 +49,7 @@ export default class HomePage extends React.Component{
 		this.setState({
     		'home':true
     	});
+    	this.context.router.history.push("/");
         window.addEventListener('wheel', this.handleScroll);
 	}
 
