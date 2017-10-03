@@ -13,10 +13,6 @@ export default class Button extends React.Component {
         super(props);
     }
 
-    handleClick() {
-
-    }
-
     render() {
         return(
             <a onClick={this.props.click}>

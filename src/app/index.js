@@ -31,7 +31,7 @@ const App = () => (
 class Layout extends React.Component{
     render(){
         return(
-            <BrowserRouter history={hashHistory}>
+            <BrowserRouter>
                 <App/>
             </BrowserRouter>
         );

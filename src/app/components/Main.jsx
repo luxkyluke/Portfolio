@@ -16,6 +16,9 @@ export default class Main extends React.Component {
 				  <Route path='/projects' render = {(props) =>(
 				  	<HomePage page={"projects"}/>
 				  )}/>
+				  <Route path='/about' render = {(props) =>(
+				  	<Projects isActive={true}/>
+				  )}/>
 				</Switch>
 			</main>
         );

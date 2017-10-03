@@ -16,8 +16,10 @@ export default class Banniere extends React.Component {
 			x = (Math.abs(x) > 5) ? (x>0 ? 5 : -5) : x;
 			let y = Math.floor((event.clientY+150-(height/2))/75);
 			y = (Math.abs(y) > 6) ? (y>0 ? 6 : -6) : y;
-			document.querySelector(".title h1")
-					.style.textShadow = (x) + "px " + (y) + "px #0062a5"
+			const title = document.querySelector(".title h1");
+			if(!title)
+				return
+			title.style.textShadow = (x) + "px " + (y) + "px #0062a5"
 		});
 	
 		this.handleEnterBtnClick.bind(this);
@@ -25,7 +27,8 @@ export default class Banniere extends React.Component {
 	}
 
 	handleEnterBtnClick(){
-
+		
+		this.props.clickProject();
 	}
 
 	handleAboutBtnClick(){
@@ -40,7 +43,7 @@ export default class Banniere extends React.Component {
 				</div>
 				<div className="banniere__rubriques">
 		      		<Button label = "Projects"
-		      				click = {this.props.clickProject}
+		      				click = {this.handleEnterBtnClick}
 		      		/>
 		      		<Button label = "About Me"
 		      				click = {this.props.clickProject}

@@ -1,6 +1,5 @@
 import React 	from "react";
-import { BrowserRouter as Router,
-         Link, IndexRedirect,  browserHistory } from "react-router";
+import Link from "react-router-dom";
 
 import Home	from "./Home.jsx"
 import Projects from "./Projects.jsx"
@@ -20,6 +19,12 @@ export default class HomePage extends React.Component{
 		this.scrollDown = this.scrollDown.bind(this);
 
 	}
+
+	componentWillReceiveProps(nextProps) {
+        if(nextProps.page !== this.state.page){
+            this.setState({'home':nextProps.page === 'home'});
+        }
+    }
 
 	handleScroll(e){
         const dir = e.deltaY/Math.abs(e.deltaY);
