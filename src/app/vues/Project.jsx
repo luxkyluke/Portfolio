@@ -35,6 +35,10 @@ export default class Project extends React.Component {
               full: false
             },
             {
+              src : img4,
+              full: true
+            },
+            {
               src : img3,
               full: false
             },
@@ -43,16 +47,10 @@ export default class Project extends React.Component {
               full: true
             },
             {
-              src : img4,
-              full: false
-            },
-            {
               src : img5,
               full: false
             }
         ]
-
-
 
         this.state = {
             project : project
@@ -63,7 +61,7 @@ export default class Project extends React.Component {
     render() {
         return(
             <div className="project page">
-                <Logo black={true}/>
+                <Logo black={true} />
                 <Header 
                     type    = {this.state.project.type}
                     title   = {this.state.project.title}
