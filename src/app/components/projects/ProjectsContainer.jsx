@@ -3,7 +3,7 @@ require ('./../../utilities/constantes.js')
 
 //var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
 
-import Project from "./Project.jsx"
+import Project from "./ProjectMin.jsx"
 import Animation from "./../../utilities/Animation.js"
 import ScrollDots   from "../../components/projects/ScrollDots.jsx"
 import Scroll from "../../components/assets/Scroll.jsx"

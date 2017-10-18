@@ -22,15 +22,15 @@ export default class Header extends React.Component{
 	}
 
 	openMenu(){
-		document.querySelector(".page.active").style.opacity = 0;
+		document.getElementsByClassName("page")[0].classList.add('hide');
 		this.setState ({
 			'open' : !this.state.open
 		});
 	}	
 
 	closeMenu(){
-		document.querySelector(".page.active").style.opacity = 1;
-		const menu = document.getElementById('menu')
+		document.getElementsByClassName("page")[0].classList.remove('hide');
+		const menu = document.getElementById('menu');
 		menu.style.opacity = 0;
 		/*menu.style.transform = 'translateX(+100%)';
 		menu.style.border = '0px'*/
@@ -40,7 +40,7 @@ export default class Header extends React.Component{
 				'open' : !this.state.open
 			});
 			menu.style="";
-		}.bind(this), 300);
+		}.bind(this), 400);
 	}
 
 	render(){

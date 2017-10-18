@@ -12,7 +12,8 @@
 #home{
 	/* position: absolute;
 	z-index: 1; */
-	height: 94.5%;
+	height: 100%;
+	overflow: hidden;
 	width: 100%;
 
 	.middle{
@@ -46,13 +47,8 @@
 
 		.button{
 			color: $titleColor;
-			text-transform: uppercase;
-			letter-spacing: 0.675rem;
-			padding: 20px 40px;
-			font-size:15px;	
 			background-color: rgba(255, 255, 255, 0.1);
 			margin:40px;
-			width: 170px;
 
 			&:hover{
 				background-color: rgba(255, 255, 255, 0.2);

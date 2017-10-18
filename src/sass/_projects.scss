@@ -20,6 +20,92 @@
 		z-index: 2;
 	}
 
+	.project{
+		max-width: 1350px;
+		width: 80%;
+		height: 635px;
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%) scaleY(0);
+		position: absolute;
+
+		&.active{
+			transform: translate(-50%, -50%) scaleY(1);
+		}
+
+		&.odd{
+			.project__image__img{
+				float: right;
+			}
+		}
+
+		&.even{
+			.desc{
+				right: 0;
+			}
+		}
+
+		&__image {
+			overflow: hidden;
+
+			&__img{
+				position: relative;
+				width: 1100px;
+				height: 635px;
+				transform: translateY(-200%);
+
+				-webkit-transition:  all 1s;
+			  	transition: all 1s;
+
+			  	&.active{
+			  		transform: translateY(0%); 		  	
+			  	}
+			}
+		}
+
+		.desc{
+			position: absolute;
+			background-color: $bodyBG;
+			width: 325px;
+			height: 310px;
+			top: 300px;
+			padding: 40px;
+
+			-webkit-transition:  all 300ms;
+		  	transition: all 300ms;
+
+			&__title{
+				font-family: "Quicksand";
+				font-style: normal;
+				font-size: 12pt;
+				letter-spacing: 10px;
+				text-transform: uppercase;
+				color: $greyTitle;
+				font-weight: 600;
+				padding: 0;
+				margin:0;
+			}
+
+			&__name{
+				font-size: 45px;
+				margin-top: calc(0.83em/2);
+			}
+
+			&__category{
+				font-size: 35px;
+				margin-top: calc(0.83em/2);
+			}
+
+			&__eye{
+				width: 90px;
+				bottom: 0;
+				right: 0;
+				position: absolute;
+				margin: 0 30px 30px 0;
+			}
+		}
+	}
 }
 
 .scrollDots{
@@ -41,95 +127,6 @@
 			background-color: #fff;
 		}
 	}
-}
-
-.project{
-	max-width: 1350px;
-	width: 80%;
-	height: 635px;
-	top: 50%;
-	left: 50%;
-
-	transform: translate(-50%, -50%) scaleY(0);
-	position: absolute;
-
-	&.active{
-		transform: translate(-50%, -50%) scaleY(1);
-	}
-
-	&.odd{
-		.project__image__img{
-			float: right;
-		}
-	}
-
-	&.even{
-		.desc{
-			right: 0;
-		}
-	}
-
-	&__image {
-		overflow: hidden;
-
-		&__img{
-			position: relative;
-			width: 1100px;
-			height: 635px;
-			transform: translateY(-200%);
-
-			-webkit-transition:  all 1s;
-		  	transition: all 1s;
-
-		  	&.active{
-		  		transform: translateY(0%); 		  	
-		  	}
-		}
-	}
-
-	
-
-	.desc{
-		position: absolute;
-		background-color: $bodyBG;
-		width: 325px;
-		height: 310px;
-		top: 300px;
-		padding: 40px;
-
-		-webkit-transition:  all 300ms;
-	  	transition: all 300ms;
-
-		&__title{
-			font-family: "Quicksand";
-			font-style: normal;
-			font-size: 12pt;
-			letter-spacing: 10px;
-			text-transform: uppercase;
-			color: $greyTitle;
-			font-weight: 600;
-			padding: 0;
-			margin:0;
-		}
-
-		&__name{
-			font-size: 45px;
-			margin-top: calc(0.83em/2);
-		}
-
-		&__category{
-			font-size: 35px;
-			margin-top: calc(0.83em/2);
-		}
-
-		&__eye{
-			width: 90px;
-			bottom: 0;
-			right: 0;
-			position: absolute;
-			margin: 0 30px 30px 0;
-		}
-	}
-
 	
 }
+

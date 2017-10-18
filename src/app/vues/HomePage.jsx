@@ -40,12 +40,17 @@ export default class HomePage extends React.Component{
 	}
 
 	scrollDown(){
+		if(document.querySelector('.page').classList.contains('hide'))
+			return;
 		this.context.router.history.push("/projects");
 		this.setState({'home':false});
         window.removeEventListener('wheel', this.handleScroll);
+
 	}
 
 	scrollUp(){
+		if(document.querySelector('.page').classList.contains('hide'))
+			return;
 		this.setState({
     		'home':true
     	});
@@ -62,11 +67,15 @@ export default class HomePage extends React.Component{
     }
 
 	render(){	
-		const myStyle= (this.state.home) ? {} :  {'transform':'translateY(-100%)'};
+		const myStyle= (this.state.home) ? {} :  {
+			'transform':'translateY(-100%)'
+		};
 		return(
-			<div id="homePage" style={myStyle}>
-				<Home isActive={this.state.home} clickProject={this.scrollDown}/>
-			    <Projects isActive={(!this.state.home)} up={this.scrollUp}/>
+			<div id="homePage" className="page" >
+				<div id="homePage__wrapper" style={myStyle}>
+					<Home isActive={this.state.home} clickProject={this.scrollDown}/>
+				    <Projects isActive={(!this.state.home)} up={this.scrollUp}/>
+			    </div>
 		    </div>
 		);
 	}

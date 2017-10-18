@@ -13,9 +13,11 @@ export default class Logo extends React.Component {
     }
 
     render() {
+        const color = (this.props.black) ? "#000" : "#f3f3f3";
+        const myStyle = {'color' : color};
         return(
             <a onClick={this.props.click} >
-                <div className="logo">
+                <div className="logo" style={myStyle}>
                     <h2 className="logo__title">Antoine Demiere</h2>
                 </div>
             </a>

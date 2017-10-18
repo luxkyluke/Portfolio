@@ -11,7 +11,7 @@ export default class Home extends React.Component{
 	}
 
 	render(){	
-		const myClass = (this.props.isActive) ? "page active" : "page not-active";
+		const myClass = (this.props.isActive) ? " active" : " not-active";
 		return(
 			<div id="home" className={myClass}>  
 		      	<Banniere clickProject={this.props.clickProject}/>

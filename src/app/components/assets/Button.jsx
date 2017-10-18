@@ -14,9 +14,10 @@ export default class Button extends React.Component {
     }
 
     render() {
+        const myStyle = (this.props.color) ? {backgroundColor : this.props.color} : {};
         return(
-            <a onClick={this.props.click}>
-                <div className="button">
+            <a onClick={this.props.click} href={this.props.link} target={this.props.target}>
+                <div className="button" style={myStyle}>
                     {this.props.label}
                 </div>
             </a>
