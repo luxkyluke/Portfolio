@@ -20,10 +20,14 @@
 				top:50%;
 				transform: translateY(-50%);
 
+				&__type{
+					font-size: 1.65em;
+				}
 
 				&__title{
 					font-size: 3em; 
-					letter-spacing: 5px;
+					letter-spacing: 0.05em;
+					margin:1em 0;
 				}
 
 				&__desc{
@@ -32,7 +36,7 @@
 
 				.button{
 					margin: 0 auto;
-					box-shadow: 1px 1px 10px #000;
+					box-shadow: 0px 4px 15px #949494;
 					border: 0px;
 					color: #fff;
 					width: 180px;
@@ -46,13 +50,38 @@
 			}
 		}
 
-		.scroll.black{
-			@extends .scroll.white;
-		}
-
 		.scroll.white{
 			right: $paddingGeneral;
 			left: inherit;
+		}
+	}
+
+	.bandeau{
+		padding: 70px;
+		color: #fff;
+
+		&__wrapper{
+			justify-content: space-around;
+			display: flex;
+			width: 80%;
+		    margin: 0 auto;
+		    max-width: 1200px;
+		}
+
+		&__bloc{
+			padding: 20px;
+
+			&__title{
+				text-transform: uppercase;
+				font-family: Quicksand;
+				letter-spacing: 0.5em;
+				font-size: 0.9em; 
+				font-weight: 600;
+			}
+			&__label{
+				font-size: 1.5em;
+				font-weight: 100;
+			}
 		}
 	}
 }

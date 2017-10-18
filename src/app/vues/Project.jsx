@@ -60,7 +60,6 @@ export default class Project extends React.Component {
     }
 
 
-
     render() {
         return(
             <div className="project page">
@@ -78,6 +77,7 @@ export default class Project extends React.Component {
                     context = {this.state.project.context}
                     year    = {this.state.project.year}
                     color   = {this.state.project.color}
+                    txtcolor   = {this.state.project.txtcolor}
                 />   
                 <Images 
                     imgs     = {this.imgs}

@@ -3,13 +3,24 @@ import React from "react";
 export default class BandeauTxtBloc extends React.Component {
     constructor(props) {
         super(props);
+
+        this.label = this.props.label.split('<br>').map(function(item, key) {
+          return (
+            <span key={key} className="bandeau__bloc__label">
+              {item}
+              <br/>
+            </span>
+          )
+        })
+
     }
 
     render() {
+        const color = {color : this.props.color};
         return(
-            <div className="bandeau_bloc">
-                <h3 className="bandeau_bloc__title"></h3>
-                <h2 className="bandeau_bloc__label"></h2>
+            <div className="bandeau__bloc">
+                <h3 className="bandeau__bloc__title" style={color}>{this.props.title}</h3>
+                {this.label}
             </div>
         );
     }

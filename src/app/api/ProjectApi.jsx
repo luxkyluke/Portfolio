@@ -8,12 +8,13 @@ const ProjectApi = {
       type : "Website",
       title: "The Railway Chronicles",
       desc : "This project is do eiusmo dtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ",
-      link : "luxkyluke.github.io/therailwaychronicles/",
+      link : "http://luxkyluke.github.io/therailwaychronicles/",
       background : './data/background.jpg',
-      role: "Developer, Web Designer",
+      role: "Developer,<br> Web Designer",
       context:"Student Project",
       year: "2016",
       color: "#A4632A",
+      txtcolor: "#5A2A00",
       imgs: [
         {
           src : "/data/the_railway_chronicles/1.jpg",
