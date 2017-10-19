@@ -7,6 +7,7 @@ import Project from "./ProjectMin.jsx"
 import Animation from "./../../utilities/Animation.js"
 import ScrollDots   from "../../components/projects/ScrollDots.jsx"
 import Scroll from "../../components/assets/Scroll.jsx"
+import ProjectAPI from "../../api/ProjectAPI.jsx"
 
 
 const cover1 = require('./../../../img/project1.jpg');
@@ -15,7 +16,7 @@ const cover3 = require('./../../../img/project1.jpg');
 const cover4 = require('./../../../img/project1.jpg');
 const cover5 = require('./../../../img/project1.jpg');
 
-const NB_PROJECT = 5;
+const NB_PROJECT = ProjectAPI.nbProjects();
 
 export default class ProjectsContainer extends React.Component {
     constructor(props) {

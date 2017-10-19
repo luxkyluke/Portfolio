@@ -43,10 +43,15 @@ footer{
 }
 
 .center.middle{
-	position: relative;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.backgroundImg{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .button{

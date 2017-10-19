@@ -40,6 +40,7 @@ const ProjectApi = {
     }
   ],
 
+  nbProjects: function(){return this.projects.length},
   all: function() {return this.projects},
   get: function(id) {
     const isProject = p => p.id === id

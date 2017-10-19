@@ -104,14 +104,14 @@ function createPoints(){
 	let posX = width/2; 
 	let posY = height/2;
 
-	for(i=0; i<nbPoints; i++){
+	for(let i=0; i<nbPoints; i++){
 		const x = getRandomArbitrary(0, width);
 		const y = getRandomArbitrary(0, height);
 		points.push(new Point(x, y));
 	}
 	cpt=0
-	for(i=0; i<nbPoints; i++){
-		for(j=0; j<nbPoints ; j++){
+	for(let i=0; i<nbPoints; i++){
+		for(let j=0; j<nbPoints ; j++){
 			links[cpt++] = new Link(points[i], points[j]);
 		}
 		links[cpt++] = new Link(points[i], mousePointer);
