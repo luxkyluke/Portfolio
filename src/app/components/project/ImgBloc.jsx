@@ -7,12 +7,11 @@ export default class ImgBloc extends React.Component {
     }
 
     render() {
-        const myStyle = {'backgroundImage' : 'url('+this.props.src+')'};
         const myClass = (this.props.full) ? " full" : "";
         return(
             <div className={'imgBloc'+myClass} >
-                <div className="imgBloc__img" style={myStyle}>
-                    
+                <div className="imgBloc__frame">
+                    <img className="imgBloc__frame__img" src={this.props.src} />
                 </div>    
             </div>
         );

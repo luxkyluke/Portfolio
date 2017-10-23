@@ -1,10 +1,16 @@
-.project{
+.project.page{
 	position: relative;
 	height: 100vh;
 	z-index: 1;
+	overflow-y: scroll;
+
+	&.page.hide{
+		transform: translateX(-50%);
+		opacity: 1;
+	}
 
 	.scroll{
-		position: fixed;
+		position: absolute;
 		z-index: 2;
 
 		&.white{
@@ -59,9 +65,10 @@
 			}
 		}
 		&__right{
-			&__img{
-				height: 100%;
-			}
+			height: 100%;
+			width: 100%;
+			@extend .backgroundImg;
+
 		}
 
 		.scroll.white{
@@ -100,32 +107,32 @@
 	}
 
 	.images{
+		background-color: $bodyBG;
+		padding: 5% 0; 
 		.imgBloc{
-			height: 100vh;
-			width: 100vw;
-			margin-bottom: 80px;
+			height: 100%;
+			width: 100%;
+			padding: 5% 0;
 			
-
-			&:first-child, &:last-child{
-				margin: 80px 0;
-			}
-
-			&__img{
+			&__frame{
 				position: relative;
-				@extend .center.middle;
-				@extend .backgroundImg;
-				height: 80vh;
-				max-width: 1250px;
-				width: 80vw;
+				max-width: 1400px;
+				width: 80%;
+				border: 5vw solid #F5F5F5;
+				margin: 0 auto;
 				
-				border: 80px solid #F5F5F5;
+				&__img{
+					width: 100%;
+					min-width: 100%;
+					height: 100%;
+				}
+
 			}
+
 		}
 
 		.imgBloc.full{
-			margin: 160px 0;
-
-			.imgBloc__img{
+			.imgBloc__frame{
 				max-width: 100%;
 				width: 100%;
 				height: 100%;
@@ -135,9 +142,10 @@
 	}
 
 	.footer{
-		height: 400px;
+		height: 18vw;
 		display: flex;
 		position: relative;
+		color: #fff;
 
 		&__side{
 			@extend .backgroundImg;
@@ -145,9 +153,29 @@
 			position: relative;
 			z-index: 5;
 
+			&:hover{
+				&__veil{
+					opacity: 0;
+				}
+			}
+
+			/* &__veil{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.3);
+				-webkit-transition: opacity 0.5s;
+		   		transition: opacity 0.5s;
+
+				/* &:hover{
+					opacity: 0;
+				}
+			} */
+
 			&__title{
 				@extend .center.middle;
 				position: absolute;
+				margin: 0;
 			}
 
 			&__arrow{
@@ -159,13 +187,28 @@
 			&__wrapper{
 			    width: 100%;
 			    height: 100%;
+				background-color: rgba(0, 0, 0, 0.3);
+				-webkit-transition: all 0.5s;
+		   		transition: all 0.5s;
+
+		   		&:hover{
+					background-color: rgba(0, 0, 0, 0);
+
+			   		.footer__side__title{
+			   			opacity: 0;
+			   		}
+			   		.footer__side__arrow{
+
+			   		}
+		   		}
+
 			}
 
 			&.left{
 				.footer__side__arrow{
-					-ms-transform: rotate(-180deg);
-					-webkit-transform: rotate(-180deg);
-					transform: rotate(-180deg);
+					-ms-transform: rotate(-180deg) translateY(15px);
+					-webkit-transform: rotate(-180deg) translateY(15px);
+					transform: rotate(-180deg) translateY(15px);
 					left: 10%;
 				}
 

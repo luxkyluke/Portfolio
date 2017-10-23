@@ -25,7 +25,8 @@ a{
 canvas {
   margin: 0;
   padding: 0;
-  position: fixed; 
+  position: absolute;
+  top: 0; 
 }
 
 header{
@@ -66,8 +67,8 @@ footer{
 
 .page{
 	opacity: 1;
-	-webkit-transition: opacity 0.5s;
-		    transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s, transform 0.5s;
+		    transition: opacity 0.5s, transform 0.5s;
 	&.hide{
 		opacity: 0;
 	}

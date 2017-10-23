@@ -22,14 +22,20 @@ export default class Header extends React.Component{
 	}
 
 	openMenu(){
-		document.getElementsByClassName("page")[0].classList.add('hide');
+		const page = document.getElementsByClassName("page")[0];
+		page.classList.add('hide');
+		//	page.style.display = 'none';
+		/*setTimeout(function(){
+		}, 500);*/
 		this.setState ({
 			'open' : !this.state.open
 		});
 	}	
 
 	closeMenu(){
-		document.getElementsByClassName("page")[0].classList.remove('hide');
+		const page = document.getElementsByClassName("page")[0];
+		//page.style.display = 'block';
+		page.classList.remove('hide');
 		const menu = document.getElementById('menu');
 		menu.style.opacity = 0;
 		/*menu.style.transform = 'translateX(+100%)';

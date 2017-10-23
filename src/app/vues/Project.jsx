@@ -1,13 +1,15 @@
 import React from "react";
 import {withRouter} from "react-router-dom";
+import PropTypes from 'prop-types';
 
 
 import Header       from "./../components/project/Header.jsx";
 import Bandeau      from "./../components/project/Bandeau.jsx";
 import Images       from "./../components/project/Images.jsx";
 import Footer       from "./../components/project/Footer.jsx";
-import Logo       from "./../components/assets/Logo.jsx";
+import Logo         from "./../components/assets/Logo.jsx";
 import ProjectAPI   from "./../api/ProjectAPI.jsx";
+
 
 
 const bg = require('./../../data/the_railway_chronicles/background.jpg');
@@ -22,13 +24,19 @@ const NB_PROJECT = ProjectAPI.nbProjects();
 
 
 export default class Project extends React.Component {
-    constructor(props) {
-        super(props);
+    static contextTypes = {
+        router: PropTypes.object
+    }
+
+    constructor(props, context) {
+        super(props, context);
+
+        //console.log(props.params.id);
 
         //const project = ProjectAPI.get(parseInt("props.match.params.id", 10));
         const project = ProjectAPI.get(PROJECT_ID);
         if(!project){
-            history.push('/projects');
+            this.context.router.history.push('/projects');
         }
 
         console.log(project)

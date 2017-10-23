@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from 'prop-types';
+
 require ('./../../utilities/constantes.js')
 
 //var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
@@ -19,8 +21,12 @@ const cover5 = require('./../../../img/project1.jpg');
 const NB_PROJECT = ProjectAPI.nbProjects();
 
 export default class ProjectsContainer extends React.Component {
-    constructor(props) {
-        super(props);
+    static contextTypes = {
+        router: PropTypes.object
+    }
+
+    constructor(props, context) {
+        super(props, context);
 
         this.state = {
             'currentId':0,
@@ -60,7 +66,7 @@ export default class ProjectsContainer extends React.Component {
 
     navProject(dir){
         let nextId = (this.state.currentId+dir)%NB_PROJECT;
-        if(nextId<0){
+        if(nextId < 0){
             this.props.up();
             return;
         }
@@ -85,6 +91,8 @@ export default class ProjectsContainer extends React.Component {
     }
 
     handleClick(){
+       this.context.router.history.push("/project");
+        //history.push('/project');
     }
 
     componentDidMount() { 

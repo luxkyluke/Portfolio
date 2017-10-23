@@ -10,24 +10,6 @@ import App from "./App.jsx";
 
 const app = document.getElementById('app');
 
-/*const Main = () => (
-  <main>
-    <Switch>
-      <Route exact path='/' component={HomePage}/>
-      <Route path='/projects' component={Projects}/>
-    </Switch>
-  </main>
-)
-
-const App = () => (
-  <div>
-    <Header />
-    <Main />
-    <Footer/>
-  </div>
-)*/
-
-
 class Layout extends React.Component{
     render(){
         return(

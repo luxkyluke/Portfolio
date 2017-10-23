@@ -2,6 +2,7 @@ import React from "react";
 
 import Button   from "./../assets/Button.jsx";
 import Scroll   from "./../assets/Scroll.jsx";
+import Animation   from "./../../utilities/Animation.js";
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -11,10 +12,14 @@ export default class Header extends React.Component {
     }
 
     scrollDown(){
+        console.log('scroll');
 
+        Animation.scrollTo(document.querySelector('.page'), document.querySelector('.bandeau').offsetTop, 700);
     }
 
     render() {
+        //<img className="header__right__img" src={this.props.img} />
+        const myStyle = {'backgroundImage' : 'url('+this.props.img+')'};
         const color = {color : this.props.color};
         return(
             <div className="header">
@@ -32,8 +37,7 @@ export default class Header extends React.Component {
 
                     
                 </div>
-                <div className="header__right">
-                    <img className="header__right__img" src={this.props.img} />
+                <div className="header__right" style={myStyle}>
                 </div>
                 <Scroll click={this.scrollDown} black={true}/>
                 <Scroll click={this.scrollDown} black={false}/>
