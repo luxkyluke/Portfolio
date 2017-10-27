@@ -27,7 +27,11 @@ export default class HomePage extends React.Component{
 
 	componentWillReceiveProps(nextProps) {
         if(nextProps.page !== this.state.page){
-            this.setState({'home':nextProps.page === 'home'});
+        	const isHome = (nextProps.page === 'home');
+            this.setState({'home':isHome});
+            if(isHome){
+        		window.addEventListener('wheel', this.handleScroll);
+            }
         }
     }
 
@@ -45,7 +49,6 @@ export default class HomePage extends React.Component{
 		this.context.router.history.push("/projects");
 		this.setState({'home':false});
         window.removeEventListener('wheel', this.handleScroll);
-
 	}
 
 	scrollUp(){

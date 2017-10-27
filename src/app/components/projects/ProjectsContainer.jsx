@@ -28,18 +28,26 @@ export default class ProjectsContainer extends React.Component {
     constructor(props, context) {
         super(props, context);
 
-        this.state = {
-            'currentId':0,
-            'isActive':this.props.isActive
-        };
 
         this.handleClick = this.handleClick.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.handleClickDots = this.handleClickDots.bind(this);
         this.next = this.next.bind(this);
         //document.documentElement.removeEventListener('scroll', this.handleScroll);
+
+        this.state = {
+            'currentId':0,
+            'isActive':this.props.isActive
+        };
+
+        this.projects = ProjectAPI.all();
+
+        this.state = {
+            'currentId':0,
+            'isActive':this.props.isActive
+        };
     }
-    
+
     componentWillReceiveProps(nextProps) {
         if(nextProps.isActive !== this.state.isActive){
             if(nextProps.isActive){
@@ -104,44 +112,31 @@ export default class ProjectsContainer extends React.Component {
     }
 
     render() {
+        /* */
         return(
             <div>
                 <div className="projectsContainer">
                     <Project 
-                        cover={cover1} 
+                        cover={this.projects[0].background} 
                         id="0" 
                         isActive = {this.state.currentId === 0}
-                        name ="The Railway Chronicles" 
-                        category="Website"
+                        name = {this.projects[0].title}
+                        category= {this.projects[0].type}
                         click={this.handleClick}/> 
                     <Project 
-                        cover={cover2} 
+                        cover={this.projects[1].background} 
                         id="1" 
                         isActive = {this.state.currentId === 1}
-                        name ="The Railway Chronicles" 
-                        category="Website"
-                        click = {this.handleClick}/> 
+                        name = {this.projects[1].title}
+                        category= {this.projects[1].type}
+                        click={this.handleClick}/> 
                     <Project 
-                        cover={cover3} 
+                        cover={this.projects[2].background} 
                         id="2" 
                         isActive = {this.state.currentId === 2}
-                        name ="The Railway Chronicles" 
-                        category="Website"
-                        click = {this.handleClick}/> 
-                    <Project 
-                        cover={cover4} 
-                        id="3" 
-                        isActive = {this.state.currentId === 3}
-                        name ="The Railway Chronicles" 
-                        category="Website"
-                        click = {this.handleClick}/> 
-                    <Project 
-                        cover={cover5} 
-                        id="4" 
-                        isActive = {this.state.currentId === 4}
-                        name ="The Railway Chronicles" 
-                        category="Website"
-                        click = {this.handleClick}/> 
+                        name = {this.projects[2].title}
+                        category= {this.projects[2].type}
+                        click={this.handleClick}/> 
 
                     <ScrollDots 
                         nb={NB_PROJECT} 

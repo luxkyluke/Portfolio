@@ -104,12 +104,13 @@ function createPoints(){
 	let posX = width/2; 
 	let posY = height/2;
 
+
 	for(let i=0; i<nbPoints; i++){
 		const x = getRandomArbitrary(0, width);
 		const y = getRandomArbitrary(0, height);
 		points.push(new Point(x, y));
 	}
-	cpt=0
+	let cpt=0;
 	for(let i=0; i<nbPoints; i++){
 		for(let j=0; j<nbPoints ; j++){
 			links[cpt++] = new Link(points[i], points[j]);
@@ -129,12 +130,12 @@ function animCanvas(c){
 		c.fillStyle = "#000819";
 		c.fillRect(0, 0, width, height);
 
-		for(i=0; i<points.length; i++){
+		for(let i=0; i<points.length; i++){
 			//console.log("point pos "+ points[i].dx + " " + points[i].dy);
 			points[i].update(); 
 			points[i].draw(c);
 		}
-		for(i=1; i<points.length*points.length; i++){
+		for(let i=1; i<points.length*points.length; i++){
 			links[i].draw(c);
 		}
 		//console.log("mousePointer pos "+ mousePointer.point.x + " " +mousePointer.point.y);
