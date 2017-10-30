@@ -3,7 +3,6 @@
 	height: 100vh;
 	overflow-y: scroll;	
 	z-index: 1;
-	scroll-behavior: smooth;
 
 	.logo{
 		position: fixed;
@@ -84,7 +83,6 @@
 			position: absolute;
 			z-index: 0;
 			@extend .backgroundImg;
-			transform: scale(1.1);
 		}
 
 		.scroll.white{

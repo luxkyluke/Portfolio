@@ -1,7 +1,8 @@
 import React from "react";
 import {withRouter} from "react-router-dom";
 import PropTypes from 'prop-types';
-
+//import {smoothScroll}  from 'smoothscroll';
+var smoothScroll = require('smoothscroll');
 
 import HeaderProject    from "./../components/project/HeaderProject.jsx";
 import Bandeau          from "./../components/project/Bandeau.jsx";
@@ -41,6 +42,8 @@ export default class Project extends React.Component {
         this.getPrevAndNextProject();
         this.handleScroll = this.handleScroll.bind(this);
         this.goBack = this.goBack.bind(this);
+        this.scrollDown = this.scrollDown.bind(this);
+
     }
 
     goBack(){
@@ -50,6 +53,8 @@ export default class Project extends React.Component {
 
     componentDidMount() { 
         //window.addEventListener('wheel', this.handleScroll);
+        this.scrollDist = document.querySelector('.bandeau');
+        this.scrollContext = document.querySelector('.project');
     }
 
     componentWillUnmount() {
@@ -72,6 +77,12 @@ export default class Project extends React.Component {
         this.nextArticle = ProjectAPI.get(this.nextId);
     }
 
+    scrollDown(){
+       /* const elem = document.querySelector(".bandeau");
+        document.querySelector('.page').scrollTo(0, elem.offsetTop);*/
+        //console.log('lala');
+        smoothScroll(this.scrollDist, 1000, function(){}, this.scrollContext);
+    }
     
 
     render() {
@@ -80,32 +91,33 @@ export default class Project extends React.Component {
             <div className="project page" onScroll={this.handleScroll}>
                 <Logo black={true} click={this.goBack}/>
                 <HeaderProject 
-                    type    = {this.state.project.type}
-                    title   = {this.state.project.title}
-                    desc    = {this.state.project.desc}
-                    link    = {this.state.project.link}
-                    img     = {this.state.project.background}
-                    color   = {this.state.project.color}
-                    scale   = {this.state.scale}
-                /> 
+                    type                = {this.state.project.type}
+                    title               = {this.state.project.title}
+                    desc                = {this.state.project.desc}
+                    link                = {this.state.project.link}
+                    img                 = {this.state.project.background}
+                    color               = {this.state.project.color}
+                    scale               = {this.state.scale}
+                    scrollClick         = {this.scrollDown}
+                />  
                 <div className="project__content">
                     <Bandeau
-                         role    = {this.state.project.role}
-                        context = {this.state.project.context}
-                        year    = {this.state.project.year}
-                        color   = {this.state.project.color}
-                        txtcolor   = {this.state.project.txtcolor}
+                         role           = {this.state.project.role}
+                        context         = {this.state.project.context}
+                        year            = {this.state.project.year}
+                        color           = {this.state.project.color}
+                        txtcolor        = {this.state.project.txtcolor}
                     />   
                     <Images 
-                        imgs     = {this.state.project.imgs}
+                        imgs            = {this.state.project.imgs}
                     />
                     <Footer 
-                        titlePrev = {this.prevArticle.title}
-                        linkPrev= {"/project/"+this.prevId}
-                        backgroundPrev = {this.prevArticle.background}
-                        titleNext = {this.nextArticle.title}
-                        linkNext= {"/project/"+this.nextId}
-                        backgroundNext = {this.nextArticle.background}
+                        titlePrev       = {this.prevArticle.title}
+                        linkPrev        = {"/project/"+this.prevId}
+                        backgroundPrev  = {this.prevArticle.background}
+                        titleNext       = {this.nextArticle.title}
+                        linkNext        = {"/project/"+this.nextId}
+                        backgroundNext  = {this.nextArticle.background}
                         />
                 </div>  
             </div>

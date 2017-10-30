@@ -9,14 +9,10 @@ import Animation   from "./../../utilities/Animation.js";
 export default class HeaderProject extends React.Component {
     constructor(props) {
         super(props);
-        this.scrollDown = this.scrollDown.bind(this);
 
     }
 
-    scrollDown(){
-        const elem = document.querySelector(".bandeau");
-        document.querySelector('.page').scrollTo(0, elem.offsetTop);
-    }
+    
 
     render() {
         //<img className="header__right__img" src={this.props.img} />
@@ -42,8 +38,8 @@ export default class HeaderProject extends React.Component {
                 </div>
                 <div className="header_project__right" style={background}>
                 </div>
-                <ScrollArrow click={this.scrollDown} black={true}/>
-                <ScrollArrow click={this.scrollDown} black={false}/>
+                <ScrollArrow click={this.props.scrollClick} black={true}/>
+                <ScrollArrow click={this.props.scrollClick} black={false}/>
             </div>
         );
     }
