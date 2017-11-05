@@ -260,3 +260,25 @@ footer{
 		left: 10%;
 	}
 }
+
+/**********VEIL BLANK*************/
+.mask{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+    z-index: 56;
+    transform: translateX(-100%);
+}
+
+#dark_veil{
+	background-color: $canvasColor;
+	transition: transform 250ms ease-in;
+    -webkit-transition: transform 250ms ease-in;
+}
+
+#blank_veil{
+	background-color: $bodyBG;
+	z-index: 55;
+	transition: transform 250ms ease-out;
+    -webkit-transition: transform 250ms ease-out;
+}

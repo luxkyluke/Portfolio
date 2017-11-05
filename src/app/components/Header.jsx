@@ -53,6 +53,8 @@ export default class Header extends React.Component{
 		const myClass = (this.state.open) ? "active" : "";
 		return(
 			<header className={myClass}>
+				<div id="blank_veil" className="mask"></div>
+				<div id="dark_veil" className="mask"></div>
 		      	<Menu isOpen={this.state.open} close={this.handleClick}/>
 		      	<BurgerMenu isOpen={this.state.open} click={this.handleClick}/>
 			</header>

@@ -51,7 +51,7 @@ const ProjectApi = {
       title: "The Railway Chronicles",
       desc : "This project is do eiusmo dtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ",
       link : "http://luxkyluke.github.io/therailwaychronicles/",
-      background : './data/monaco_porcelaine/background.jpg',
+      background : './data/the_railway_chronicles/background.jpg',
       role: "Developer,<br> Web Designer",
       context:"Student Project",
       year: "2016",

@@ -43,9 +43,16 @@
 		&__left{
 			width: 50%;
 			height: 100vh;
-			background-color: $bodyBG;
+			background-color: rgba(255, 255, 255, 0.9);
 			position: absolute;
 			z-index: 1;
+			-webkit-transition:  all 400ms ease-in-out;
+			transition: all 400ms ease-in-out;
+    		transform: translateX(-100%);
+			
+			&.active{
+    			transform: translateX(0);
+			}
 
 			&__wrapper{
 				padding: $paddingGeneral;

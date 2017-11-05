@@ -11,6 +11,7 @@ import Footer           from "./../components/project/Footer.jsx";
 import Logo             from "./../components/assets/Logo.jsx";
 import ProjectAPI       from "./../api/ProjectAPI.jsx";
 import Utility          from "./../utilities/utility.js";
+import Animation          from "./../utilities/Animation.js";
 
 const PROJECT_ID = 1;
 const NB_PROJECT = ProjectAPI.nbProjects();
@@ -47,8 +48,9 @@ export default class Project extends React.Component {
     }
 
     goBack(){
-        this.context.router.history.push('/projects');
-
+        Animation.switchPage(function(){
+            this.context.router.history.push('/projects');
+        }.bind(this));
     }
 
     componentDidMount() { 

@@ -6,6 +6,17 @@ const utility = {
             return min;
         }
         return value;
+    },
+
+    getCenter(elem){
+    	const rect = elem.getBoundingClientRect();
+		const width = elem.offsetWidth;
+		const height = elem.offsetHeight;
+		
+		return {
+			x: rect.left + width / 2,
+			y: rect.top + height / 2
+		} 
     }
 }
 

@@ -10,9 +10,17 @@ export default class HeaderProject extends React.Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            active: ""
+        }
+        
     }
 
-    
+    componentDidMount(){
+        setTimeout(function(){
+            this.setState({active:' active'})
+        }.bind(this), 750);
+    }
 
     render() {
         //<img className="header__right__img" src={this.props.img} />
@@ -22,7 +30,7 @@ export default class HeaderProject extends React.Component {
         const color = {color : this.props.color};
         return(
             <div className="header_project">
-                <div className="header_project__left">
+                <div className={"header_project__left" + this.state.active}>
                     <div className="header_project__left__wrapper">
                         <h3 className="header_project__left__wrapper__type" style={color}>{this.props.type}</h3>
                         <h2 className="header_project__left__wrapper__title">{this.props.title}</h2>

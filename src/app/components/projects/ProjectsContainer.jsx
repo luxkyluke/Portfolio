@@ -83,7 +83,7 @@ export default class ProjectsContainer extends React.Component {
     }
 
     changeProject(id){
-        Animation.hideProject(this.state.currentId, id, function(){
+        Animation.changeProjectMin(this.state.currentId, id, function(){
             this.setState({"currentId": id});
             setTimeout(function(){
                 window.addEventListener('wheel', this.handleScroll);
@@ -91,12 +91,17 @@ export default class ProjectsContainer extends React.Component {
         }.bind(this));
     }
 
+    
+    
     handleClickDots(id){
         this.changeProject(id);       
     }
 
     handleClick(){
-       this.context.router.history.push("/project");
+       Animation.openProject(this.state.currentId, this.projects[this.state.currentId].color, function(){
+           this.context.router.history.push("/project");
+       }.bind(this))
+
         //history.push('/project');
     }
 
