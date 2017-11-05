@@ -26,7 +26,7 @@ export default class ProjectMin extends React.Component {
     handleImgLoaded(){
         //getMainColors
         let img = new Image();
-        img.src=this.props.cover;
+        img.src = this.props.cover;
         var colorThief = new ColorThief();
         var color = colorThief.getColor(img);
         const rgba = 'rgba('+color[0]+', '+color[1]+', '+color[2]+', 0.4)';

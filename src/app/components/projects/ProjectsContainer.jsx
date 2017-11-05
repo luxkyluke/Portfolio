@@ -12,11 +12,6 @@ import Scroll from "../../components/assets/Scroll.jsx"
 import ProjectAPI from "../../api/ProjectAPI.jsx"
 
 
-const cover1 = require('./../../../img/project1.jpg');
-const cover2 = require('./../../../img/project1.jpg');
-const cover3 = require('./../../../img/project1.jpg');
-const cover4 = require('./../../../img/project1.jpg');
-const cover5 = require('./../../../img/project1.jpg');
 
 const NB_PROJECT = ProjectAPI.nbProjects();
 
@@ -90,7 +85,9 @@ export default class ProjectsContainer extends React.Component {
     changeProject(id){
         Animation.hideProject(this.state.currentId, function(){
             this.setState({"currentId": id});
-            window.addEventListener('wheel', this.handleScroll);
+            setTimeout(function(){
+                window.addEventListener('wheel', this.handleScroll);
+            }.bind(this), 500)
         }.bind(this));
     }
 

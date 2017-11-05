@@ -2,14 +2,26 @@ const Animation = {
 
 	hideProject : function(id, callback) {
 	    const pImg = document.querySelector('#project_'+id+' .project__image__img');
-	    const pDesc = document.querySelector('#project_'+id+' .project__desc');
+	    const pDesc = document.querySelector('#project_'+id+' .desc');
 	    //console.log(pImg)
+	
+		const offsetLeft = pDesc.getBoundingClientRect().left;
+		console.log(offsetLeft)
+		let translateX = -offsetLeft - pDesc.offsetWidth;
+		if (id%2 === 0) 
+			translateX = Math.abs(offsetLeft - window.innerWidth) 
 
+		//console.log(translateX);
+		
 		pImg.style.transform = 'translateY(-200%)';
-
+		setTimeout(function(){
+			pDesc.style.transform = 'translateX('+translateX+'px)';
+		}, 500);
+	    
 	    setTimeout(function(){
 	    	pImg.style = null;
-	    	callback();
+	    	pDesc.style = null;
+	    	callback(translateX);
 	    }, 1000);
 	},
 
