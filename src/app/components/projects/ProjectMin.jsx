@@ -49,13 +49,13 @@ export default class ProjectMin extends React.Component {
                 <a onClick={this.props.click} >
                     <div className='project__image' >
                         <img    className={"project__image__img"+active} 
-                                src={this.props.cover}
+                                src={'./data/'+this.props.name+'/background.min.jpg'}
                                 onLoad={this.handleImgLoaded}
                                 onError={this.handleImgError}
                             />
                     </div>
                 </a>
-                <Description    name ={this.props.name} 
+                <Description    name ={this.props.title} 
                                 category={this.props.category} 
                                 click={this.props.click}
                                 isActive = {this.props.isActive}/> 

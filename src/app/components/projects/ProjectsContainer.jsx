@@ -83,11 +83,11 @@ export default class ProjectsContainer extends React.Component {
     }
 
     changeProject(id){
-        Animation.hideProject(this.state.currentId, function(){
+        Animation.hideProject(this.state.currentId, id, function(){
             this.setState({"currentId": id});
             setTimeout(function(){
                 window.addEventListener('wheel', this.handleScroll);
-            }.bind(this), 500)
+            }.bind(this), 500);
         }.bind(this));
     }
 
@@ -114,24 +114,24 @@ export default class ProjectsContainer extends React.Component {
             <div>
                 <div className="projectsContainer">
                     <Project 
-                        cover={this.projects[0].background} 
+                        name={this.projects[0].name} 
                         id="0" 
                         isActive = {this.state.currentId === 0}
-                        name = {this.projects[0].title}
+                        title = {this.projects[0].title}
                         category= {this.projects[0].type}
                         click={this.handleClick}/> 
                     <Project 
-                        cover={this.projects[1].background} 
+                        name={this.projects[1].name} 
                         id="1" 
                         isActive = {this.state.currentId === 1}
-                        name = {this.projects[1].title}
+                        title = {this.projects[1].title}
                         category= {this.projects[1].type}
                         click={this.handleClick}/> 
                     <Project 
-                        cover={this.projects[2].background} 
+                        name={this.projects[2].name} 
                         id="2" 
                         isActive = {this.state.currentId === 2}
-                        name = {this.projects[2].title}
+                        title = {this.projects[2].title}
                         category= {this.projects[2].type}
                         click={this.handleClick}/> 
 

@@ -1,41 +1,47 @@
 //const the_railway_chronicles_bg = require('./../../data/the_railway_chronicles/background.jpg');
 
+
 const ProjectApi = {
   projects: [
     { 
       id: 0,   
-      name:  "the_railway_chronicles",
-      type : "Website",
-      title: "The Railway Chronicles",
+      name:  "monaco_porcelaine",
+      type : "Webapp",
+      title: "Chinese Porcelains",
       desc : "This project is do eiusmo dtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ",
-      link : "http://luxkyluke.github.io/therailwaychronicles/",
-      background : './data/background.jpg',
-      role: "Developer,<br> Web Designer",
-      context:"Student Project",
-      year: "2016",
-      color: "#A4632A",
-      txtcolor: "#5A2A00",
+      link : "http://expo2017.grimaldiforum.com/",
+      background : './data/monaco_porcelaine/background.jpg',
+      role: "Developer",
+      context:"Intership at FleurDePapier",
+      year: "2017",
+      color: "#151a38",
+      txtcolor: "#0d1022",
       imgs: [
         {
-          src : "./data/the_railway_chronicles/1.jpg",
+          src : "./data/monaco_porcelaine/3.jpg",
           full: false
         },
         {
-          src : "./data/the_railway_chronicles/3.jpg",
+          src : "./data/monaco_porcelaine/1.jpg",
           full: false
         },
         {
-          src : "./data/the_railway_chronicles/2.jpg",
+          src : "./data/monaco_porcelaine/2.jpg",
           full: true
         },
         {
-          src : "./data/the_railway_chronicles/4.jpg",
+          src : "./data/monaco_porcelaine/4.jpg",
           full: false
         },
         {
-          src : "./data/the_railway_chronicles/5.jpg",
+          src : "./data/monaco_porcelaine/5.jpg",
+          full: true
+        },
+        {
+          src : "./data/monaco_porcelaine/6.jpg",
           full: false
         }
+
       ]
     },
     { 
@@ -45,7 +51,7 @@ const ProjectApi = {
       title: "The Railway Chronicles",
       desc : "This project is do eiusmo dtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ",
       link : "http://luxkyluke.github.io/therailwaychronicles/",
-      background : './data/background.jpg',
+      background : './data/monaco_porcelaine/background.jpg',
       role: "Developer,<br> Web Designer",
       context:"Student Project",
       year: "2016",
