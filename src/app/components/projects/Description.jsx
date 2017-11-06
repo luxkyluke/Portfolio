@@ -9,7 +9,7 @@ export default class Description extends React.Component {
     constructor(props) {
         super(props);
     
-        this.state ={
+        /*this.state ={
             'ax' : '0',
             'ay' : '0',
             reset: true
@@ -17,10 +17,10 @@ export default class Description extends React.Component {
     
         this.handleMouseMove = this.handleMouseMove.bind(this);
         this.handleIn = this.handleIn.bind(this);
-        this.handleOut = this.handleOut.bind(this);
+        this.handleOut = this.handleOut.bind(this);*/
     }
 
-    
+    /*
     handleMouseMove(e){
        
         const ax = -(this.center.x- e.pageX)/20;
@@ -55,10 +55,10 @@ export default class Description extends React.Component {
     componentWillUnmount() {
 
         window.removeEventListener('mousemove', this.handleMouseMove);
-    }
+    }*/
 
     render() {
-        let myStyle = {};
+        /*let myStyle = {};
         if (this.state.ax == 0 && this.state.ay == 0){
             myStyle = {
                 "WebkitTransition": 'all 500ms ease-in-out',
@@ -71,12 +71,12 @@ export default class Description extends React.Component {
                 "WebkitTransform": "rotateY("+this.state.ax+"deg) rotateX("+this.state.ay+"deg)",
                 "MozTransform": "rotateY("+this.state.ax+"deg) rotateX("+this.state.ay+"deg)"
             };
-        } 
+        } */
         const active = (this.props.isActive) ? " active" : "";
         return(
             <a onClick={this.props.click} >
-                <div className={"desc"+active} style={myStyle}>
-                    <div className="clickableArea" onMouseOver={this.handleIn} onMouseOut={this.handleOut}></div>
+                <div className={"desc"+active} >
+                    <div className="clickableArea"></div>
                     <h3 className="desc__title">Project</h3>
                     <h2 className="desc__name">{this.props.name}</h2>
                     <h3 className="desc__title">Category</h3>

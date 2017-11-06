@@ -64,7 +64,6 @@ export default class ProjectMin extends React.Component {
                                 category={this.props.category} 
                                 click={this.props.click}
                                 isActive = {this.props.isActive}
-                                id={this.props.id}
                 /> 
             </div>
            

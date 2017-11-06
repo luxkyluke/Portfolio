@@ -77,12 +77,12 @@
 			padding: 40px;
 		  	transform: translateX(-300%); 	
 		  	
-		  	transform-style: preserve-3d;
-  			backface-visibility: hidden;  	
+		  	/* transform-style: preserve-3d;
+  			backface-visibility: hidden; */  	
 			box-shadow: -1px 0px 20px 7px rgba(37, 37, 37, 0.62);
 
-		/* 	-webkit-transition:  all 500ms ease-in-out;
-		  	transition: all 500ms ease-in-out; */
+			-webkit-transition:  all 500ms ease-in-out;
+		  	transition: all 500ms ease-in-out;
 
 			.clickableArea{
 				width: 100%;

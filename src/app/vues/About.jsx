@@ -13,6 +13,7 @@ export default class About extends React.Component {
         return(
             <div className="about">
                 <ProfilPic/>
+                
             </div>
         );
     }
