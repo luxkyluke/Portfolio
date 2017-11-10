@@ -6,6 +6,11 @@ export default class Menu extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
+        this.state={
+            open : this.props.isOpen,
+            scale : "",
+            move: ""
+        }
     }
 
     handleClick(id, e) {
@@ -13,11 +18,26 @@ export default class Menu extends React.Component {
         this.props.close();
     }
 
+    componentWillReceiveProps(newProps){
+        console.log(newProps)
+        if(newProps.isOpen){
+            this.setState({scale : " scale"});
+            setTimeout(function(){
+                this.setState({move : " move", open: true});
+            }.bind(this), 0);
+        }else{
+            this.setState({scale : ""});
+            setTimeout(function(){
+                this.setState({move : "", open: false});
+            }.bind(this), 0);
+        }
+    }
+
     render() {
-        const myClass = (this.props.isOpen) ? " open" : "";
+        const myClass = (this.state.open) ? " open" : "";
         return(
             <nav id="menu" className={"menu"+myClass}>
-                <ul className="menu__list">
+                <ul className={"menu__list" + this.state.scale + this.state.move}>
                     
                     <li className="menu__list__item">
                         <Link to="/" onClick={this.handleClick.bind(this, "home")}>home</Link>

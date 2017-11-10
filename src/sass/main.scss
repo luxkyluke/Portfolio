@@ -204,7 +204,6 @@ footer{
     &.open{
     	opacity: 1;
    		border: 20px solid #fff;
-
     }
 
     &:before{
@@ -230,14 +229,22 @@ footer{
 	&__list{
 		top: 50%;
 		left: 110%;
-		transform: translateY(-50%);
+		transform: scale(0) translateY(-50%);
 		position: absolute;
-
+		
 
 		/* -webkit-transition: all 0.5s ease-out 0.325s;
 		    	transition: all 0.5s ease-out 0.325s; */
-    	transition: all 0.5s ease-out 0s;
-    	-webkit-transition: all 0.5s ease-out 0s;
+		&.scale{
+			transition: none;
+			-webkit-transition: none;
+			transform: scale(1) translateY(-50%);
+		}
+		&.move{
+			transition: all 0.5s ease-out 0s;
+			-webkit-transition: all 0.5s ease-out 0s;
+			transform: scale(1) translateY(-50%);			
+		}
 
 		&__item{
 			list-style: none;
