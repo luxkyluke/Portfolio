@@ -1,4 +1,6 @@
 import React from "react";
+import ReactLazyBlur from 'react-lazy-blur';
+
 require ('./../../utilities/constantes.js');
 
 import Description from "./Description.jsx"
@@ -53,12 +55,18 @@ export default class ProjectMin extends React.Component {
             <div className={myClass+active} id={"project_"+this.props.id}>
                 <div className='project__image' >
                     <a onClick={this.props.click} >
-                        <img    className={"project__image__img"+active} 
+                        <ReactLazyBlur
+                            className={"project__image__img"+active}
+                            background={'./data/'+this.props.name+'/background.min.jpg'}
+                            blur={'./data/'+this.props.name+'/background.blur.jpg'}
+                            duration={ 1000 }>                            
+                        </ReactLazyBlur>
+                        {/*<img    className={"project__image__img"+active} 
                                 src={'./data/'+this.props.name+'/background.min.jpg'}
                                 onLoad={this.handleImgLoaded}
                                 onError={this.handleImgError}
                                 alt={this.props.name +" background"}
-                        />
+                        />*/}
                     </a>
                 </div>
                 <Description    name ={this.props.title} 
