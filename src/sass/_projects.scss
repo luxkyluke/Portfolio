@@ -79,18 +79,18 @@
 		  	
 		  	/* transform-style: preserve-3d;
   			backface-visibility: hidden; */  	
-			box-shadow: -1px 0px 20px 7px rgba(37, 37, 37, 0.62);
-
+			box-shadow: 0px -3px 20px 5px rgba(37, 37, 37, 0.4);
 			-webkit-transition:  all 500ms ease-in-out;
 		  	transition: all 500ms ease-in-out;
 
-			.clickableArea{
+			&__link{
 				width: 100%;
 				height: 100%;
-				position: absolute;
-				z-index: 5;
 				top: 0;
-    			left: 0;
+				&:hover .desc__eye__iris{
+					animation: 6s infinite eyeDesc;
+					
+				}
 			}
 
 			&.active{
@@ -118,13 +118,20 @@
 				font-size: 35px;
 				margin-top: calc(0.83em/2);
 			}
-
-			&__eye{
-				width: 90px;
+		
+			
+			&__eyewrapper{
+				width: 190px;
 				bottom: 0;
 				right: 0;
 				position: absolute;
 				margin: 0 30px 30px 0;
+
+				&__iris{
+					-webkit-transition:  all 500ms ease-in-out;
+		  			transition: all 500ms ease-in-out;
+				}
+
 			}
 		}
 	}

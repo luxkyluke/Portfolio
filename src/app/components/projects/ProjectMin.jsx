@@ -51,15 +51,16 @@ export default class ProjectMin extends React.Component {
 
         return(
             <div className={myClass+active} id={"project_"+this.props.id}>
-                <a onClick={this.props.click} >
-                    <div className='project__image' >
+                <div className='project__image' >
+                    <a onClick={this.props.click} >
                         <img    className={"project__image__img"+active} 
                                 src={'./data/'+this.props.name+'/background.min.jpg'}
                                 onLoad={this.handleImgLoaded}
                                 onError={this.handleImgError}
+                                alt={this.props.name +" background"}
                         />
-                    </div>
-                </a>
+                    </a>
+                </div>
                 <Description    name ={this.props.title} 
                                 category={this.props.category} 
                                 click={this.props.click}
