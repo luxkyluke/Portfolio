@@ -1,3 +1,4 @@
+import Utility from './utility.js'
 const Animation = {
 
 	switchPage : function(callback, color=null){
@@ -23,17 +24,39 @@ const Animation = {
 				setTimeout(function(){
 					dark.style = null;
 					blank.style = null;
-				}, 300)
-			}, 300)
+				}, 500)
+			}, 500)
 
 			callback();
-		},400)
+		},600)
 	},
 
 	openProject(id, color, callback){
 
-		Animation.switchPage(callback, color);
+		//Animation.switchPage(callback, color);
 		
+		const desc = document.querySelector('.desc.active');
+		console.log(desc);
+		desc.classList.remove('active');
+
+		document.querySelector('.project.active > .project__image').style.overflow = 'visible';
+		document.querySelector('.logo').style.opacity = '0';
+		document.querySelector('.burger').style.opacity = '0';
+		document.querySelector('.scrollDots').style.opacity = '0';
+		document.querySelector('.projects .scroll').style.opacity = '0';
+
+		const img = document.querySelector('.project__image__img.active');
+		const x = Utility.getCenter(img).x;
+		const transX = window.innerWidth/2 - x; 
+		
+		const scaleY = window.innerHeight /img.offsetHeight;
+		const scaleX = window.innerWidth /img.offsetWidth;
+		const scale = (scaleX > scaleY) ? scaleX : scaleY;
+		img.style.transform = 'translateX('+transX+'px) scale('+scale+')';
+
+		setTimeout(callback, 1000);
+
+
 	},
 
 	changeProjectMin : function(id, nextId, callback) {
@@ -63,7 +86,7 @@ const Animation = {
 	    	pDesc.style = null;
 			
 			setTimeout(function(){
-	    		nextDesc.style.transform = 'translateX(0)';
+	    		nextDesc.style = null;
 			}, 250);
 	    	callback();
 	    }, 750);

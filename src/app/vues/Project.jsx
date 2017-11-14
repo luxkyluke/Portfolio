@@ -13,7 +13,7 @@ import ProjectAPI       from "./../api/ProjectAPI.jsx";
 import Utility          from "./../utilities/utility.js";
 import Animation          from "./../utilities/Animation.js";
 
-const PROJECT_ID = 1;
+const PROJECT_ID = 0;
 const NB_PROJECT = ProjectAPI.nbProjects();
 
 

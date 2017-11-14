@@ -45,7 +45,7 @@ export default class Banniere extends React.Component {
 		      				click = {this.props.clickProject}
 		      		/>
 		      		<Button label = "About Me"
-		      				click = {this.props.clickProject}
+		      				click = {this.props.clickAbout}
 		      		/>
 		      	</div>
 			</div>

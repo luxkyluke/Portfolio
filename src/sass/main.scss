@@ -93,6 +93,9 @@ footer{
 	left: $paddingGeneral;
 	bottom: calc(#{$paddingGeneral} + 10px);
 
+	-webkit-transition: opacity 0.5s;
+    		transition: opacity 0.5s;
+
 	&.black{
 		color: #000;
 	}
@@ -129,6 +132,8 @@ footer{
 	height: 40px;
 	z-index: 3;
 
+	-webkit-transition: opacity 0.5s;
+	    	transition: opacity 0.5s;
 
 	&__span{
 	    position: absolute;
@@ -180,6 +185,9 @@ footer{
 	left: $paddingGeneral; 
 	font-size: 17px;
 	letter-spacing: 0px;
+
+	-webkit-transition: opacity 0.5s;
+	    	transition: opacity 0.5s;
 	
 	&__title{
 		margin: 0;
@@ -287,13 +295,25 @@ footer{
 
 #dark_veil{
 	background-color: $canvasColor;
-	transition: transform 250ms ease-in;
-    -webkit-transition: transform 250ms ease-in;
+	
+	transition: transform 500ms cubic-bezier(0.78, 0, 0.84, 1);
+    -webkit-transition: transform 500ms cubic-bezier(0.78, 0, 0.84, 1);
+    //border-right: 85px solid $bodyBG; 
 }
 
 #blank_veil{
-	background-color: $bodyBG;
+	background-color: $bleuClaire;
 	z-index: 55;
-	transition: transform 250ms ease-out;
-    -webkit-transition: transform 250ms ease-out;
+	
+	transition: transform 450ms ease-out;
+    -webkit-transition: transform 450ms ease-out;
+
+    &:before{
+    	content: ' ';
+		background-color: $bodyBG;
+		position: absolute;
+		top: 0;
+		width: 60%;
+		height: 100%;
+    }
 }

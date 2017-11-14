@@ -33,17 +33,17 @@ export default class About extends React.Component {
                     <ProfilPic/>
                     <div className="about__texte">
                         <div className="about__texte__wrapper">
-                            <p>Hi ! I'm <span>Antoine Demière</span> a french creative developper living in Paris.</p>
-                            <p>I'm student in <a target="_blank" href="https://www.ingenieur-imac.fr/">IMAC</a> a school which
-                            make creative ingenieers. It taught me 3D programming, web design and filming secrets.</p>
+                            <p>Hi ! I'm <span>Antoine Demière</span> a french creative developper living in Paris, France.</p>
+                            <p>I'm a student in <a target="_blank" href="https://www.ingenieur-imac.fr/">IMAC</a> a university which specializes in creative engineering.
+                             It is here that I learned 3D programming, web design and filming techniques.</p>
 
-                            <p>I'm passionate by the theatre and acting. I also love photography, 
-                            especially film photo, if you're interested, you can find some of my photos <a target="_blank" href="https://500px.com/demierea">here</a>. 
-                            Then I'm also fanisated by compture art and generative design.</p>
+                            <p>From a young age, I have been passionate about theatre and arts. I love photography, especially film.
+                            You can find some of my photos <a target="_blank" href="https://500px.com/demierea">here</a>. 
+                             I’m particularly fascinated by computer art, generative design and video mapping.</p>
                             
-                            <p>I'm currently looking for a 6 months internship as creative developper in
-                            web feild or for interactive installations.</p> 
-                            <p>Feel free to contact me by mail at 
+                            <p>I'm currently seeking a 6 months internship as a creative web developer 
+                            or in the field of interactive installation.</p> 
+                            <p>Feel free to contact me via mail at 
                                 <a href="mailto:demiere.a@gmail.com"> demiere.a@gmail.com</a>
                             </p>
                         </div>

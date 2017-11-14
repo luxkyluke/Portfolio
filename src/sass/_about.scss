@@ -37,7 +37,7 @@
 		font-weight: 500;
 	
 		a, span{
-			color: #5DA8FF;
+			color: $bleuClaire;
 			font-weight: 600;
 		}
 	}
@@ -70,16 +70,6 @@
 			height: 100%;
 			display: block;
 			position: relative;
-		}
-
-		&__figure::before {
-			content: '';
-			position: absolute;
-			width: 90%;
-			height: 90%;
-			top: 5%;
-			left: 5%;
-			box-shadow: 0 30px 20px rgba(35,32,39,0.5);
 		}
 
 		&__figure > * {
