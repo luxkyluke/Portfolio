@@ -17,6 +17,11 @@ const utility = {
 			x: rect.left + width / 2,
 			y: rect.top + height / 2
 		} 
+    },
+
+    getBlurImg(src){
+    	const decompPath = src.split('.');
+		return decompPath[0]+'.blur'+'.jpg';
     }
 }
 

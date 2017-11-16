@@ -11,7 +11,7 @@ export default class Bandeau extends React.Component {
     render() {
         return(
             <div className="bandeau" style={this.style}>
-                <div className="bandeau__wrapper" style={this.style}>
+                <div className="bandeau__wrapper">
                     <BandeauBloc color={this.props.txtcolor} title="role" label={this.props.role}/>
                     <BandeauBloc color={this.props.txtcolor} title="context" label={this.props.context}/>
                     <BandeauBloc color={this.props.txtcolor} title="year" label={this.props.year}/>

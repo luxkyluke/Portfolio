@@ -51,9 +51,13 @@ const Animation = {
 		
 		const scaleY = window.innerHeight /img.offsetHeight;
 		const scaleX = window.innerWidth /img.offsetWidth;
-		const scale = (scaleX > scaleY) ? scaleX : scaleY;
+		let scale = (scaleX > scaleY) ? scaleX : scaleY;
+		scale += 0.1;
 		img.style.transform = 'translateX('+transX+'px) scale('+scale+')';
 
+		setTimeout(function(){
+			document.querySelector('.burger').style=null;
+		}, 1500);
 		setTimeout(callback, 1000);
 
 

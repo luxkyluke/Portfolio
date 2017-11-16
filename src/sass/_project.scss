@@ -1,3 +1,5 @@
+
+
 .project.page{
 	position: relative;
 	height: 100vh;
@@ -15,8 +17,8 @@
 	}
 
 	&.page.hide{
-		transform: translateX(-50%);
-		opacity: 1;
+		//@include transform(translateX(-50%));
+		opacity: 0;
 	}
 
 	.scroll{
@@ -25,10 +27,7 @@
 
 		&.white{
 			.scroll__title{
-				-ms-transform: rotate(90deg) translateX(-62px);
-				-webkit-transform: rotate(90deg) translateX(-62px);
-				transform: rotate(90deg) translateX(-62px);
-				
+				@include transform(rotate(90deg) translateX(-62px));
 			}
 		}
 	}
@@ -46,19 +45,18 @@
 			background-color: rgba(255, 255, 255, 0.9);
 			position: absolute;
 			z-index: 1;
-			-webkit-transition:  all 400ms ease-in-out;
-			transition: all 400ms ease-in-out;
-    		transform: translateX(-100%);
+			@include transition (all 400ms ease-in-out);
+    		@include transform(translateX(-100%));
 			
 			&.active{
-    			transform: translateX(0);
+    			@include transform(translateX(0));
 			}
 
 			&__wrapper{
 				padding: $paddingGeneral;
 				position: relative;
 				top:50%;
-				transform: translateY(-50%);
+				@include transform(translateY(-50%));
 
 				&__type{
 					font-size: 1.65em;
@@ -119,6 +117,7 @@
 				letter-spacing: 0.5em;
 				font-size: 0.9em; 
 				font-weight: 600;
+				margin-top: 0;
 			}
 			&__label{
 				font-size: 1.5em;
@@ -169,48 +168,47 @@
 		color: #fff;
 
 		&__side{
-			@extend .backgroundImg;
 			width: 50%;
 			position: relative;
 			z-index: 5;
+			overflow: hidden;
 
-			&:hover{
-				&__veil{
-					opacity: 0;
-				}
+			&:hover .footer__side__scaler{
+				@include transform(scale(1.3));
+				@include transition(transform 10s ease-out);
+
+			}
+	
+			&__scaler{
+				@extend .full;
+			}
+	
+			&__img{
+				@extend .backgroundImg;
 			}
 
-			/* &__veil{
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				background-color: rgba(0, 0, 0, 0.3);
-				-webkit-transition: opacity 0.5s;
-		   		transition: opacity 0.5s;
-
-				/* &:hover{
-					opacity: 0;
-				}
-			} */
-
+	
 			&__title{
 				@extend .center.middle;
 				position: absolute;
 				margin: 0;
+				@include transition (opacity 0.3s ease-in-out);
 			}
 
 			&__arrow{
 				position: absolute;
 				@extend .center.middle;
 				width: 50px;
+				@include transition(all 0.3s ease-in-out);
 			}
 
 			&__wrapper{
 			    width: 100%;
 			    height: 100%;
 				background-color: rgba(0, 0, 0, 0.3);
-				-webkit-transition: all 0.5s;
-		   		transition: all 0.5s;
+				position: absolute;
+    			top: 0;
+		   		@include transition (all 0.5s);
 
 		   		&:hover{
 					background-color: rgba(0, 0, 0, 0);
@@ -218,27 +216,35 @@
 			   		.footer__side__title{
 			   			opacity: 0;
 			   		}
-			   		.footer__side__arrow{
-
-			   		}
+			   		
 		   		}
 
 			}
 
 			&.left{
 				.footer__side__arrow{
-					-ms-transform: rotate(-180deg) translateY(15px);
-					-webkit-transform: rotate(-180deg) translateY(15px);
-					transform: rotate(-180deg) translateY(15px);
+					@include transform(rotate(-180deg) translateY(15px));
 					left: 10%;
 				}
 
+				.footer__side__wrapper:hover{
+					.footer__side__arrow{
+						@include transform(rotate(-180deg) translate(50px, 15px));
+						opacity: 0;
+			   		}
+				}
 			}
 
 			&.right{
 				.footer__side__arrow{
 					left: inherit;
 					right: 10%;
+				}
+				.footer__side__wrapper:hover{
+					.footer__side__arrow{
+						@include transform(translate(calc(-50% + 50px), -50%));
+						opacity: 0;
+			   		}
 				}
 			}
 		}

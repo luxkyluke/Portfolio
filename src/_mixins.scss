@@ -13,7 +13,7 @@ $mq-mobile-portrait : 450px !default;
 */
 
 // generic transform
-@mixin transform($transforms...) {
+@mixin transform($transforms) {
        -moz-transform: $transforms;
          -o-transform: $transforms;
         -ms-transform: $transforms;
@@ -21,7 +21,7 @@ $mq-mobile-portrait : 450px !default;
             transform: $transforms;
 }
 
-@mixin transition($transitions...) {
+@mixin transition($transitions) {
        -moz-transition: $transitions;
          -o-transition: $transitions;
         -ms-transition: $transitions;

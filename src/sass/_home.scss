@@ -19,7 +19,7 @@
 	.middle{
 		@extend .center_center;
 		top: 26%;
-		transform: translate(-50%, 0);
+		@include transform(translate(-50%, 0));
 		z-index:2;
 
 	}
@@ -29,7 +29,6 @@
 		flex-direction: column;
 		justify-content:center;
 		align-items: flex-end;
-		position: relative;
 	
 
 		.title{			

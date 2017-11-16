@@ -1,5 +1,5 @@
 import React from "react";
-import ReactLazyBlur from 'react-lazy-blur';
+import ProgressiveImage from "react-progressive-image-loading";
 
 require ('./../../utilities/constantes.js');
 
@@ -55,18 +55,20 @@ export default class ProjectMin extends React.Component {
             <div className={myClass+active} id={"project_"+this.props.id}>
                 <div className='project__image' >
                     <a onClick={this.props.click} >
-                        <ReactLazyBlur
-                            className={"project__image__img"+active}
-                            background={'./data/'+this.props.name+'/background.min.jpg'}
-                            blur={'./data/'+this.props.name+'/background.blur.jpg'}
-                            duration={ 1000 }>                            
-                        </ReactLazyBlur>
-                        {/*<img    className={"project__image__img"+active} 
-                                src={'./data/'+this.props.name+'/background.min.jpg'}
-                                onLoad={this.handleImgLoaded}
-                                onError={this.handleImgError}
-                                alt={this.props.name +" background"}
-                        />*/}
+                        <div className={"project__image__img"+active} >
+                            <ProgressiveImage
+                                preview={'./data/'+this.props.name+'/background.blur.jpg'}
+                                src={'./data/'+this.props.name+'/background.jpg'}
+                                transitionTime={500}
+                                transitionFunction="ease"
+                                render={(src, style) => 
+                                    <div 
+                                        className={"project__image__img__wrapper"} 
+                                        style={Object.assign(style, { backgroundImage: `url(${src})` })} 
+                                    />
+                                }
+                            />
+                        </div>
                     </a>
                 </div>
                 <Description    name ={this.props.title} 

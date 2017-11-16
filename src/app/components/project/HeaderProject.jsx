@@ -24,7 +24,7 @@ export default class HeaderProject extends React.Component {
 
     render() {
         //<img className="header__right__img" src={this.props.img} />
-        const background = {'backgroundImage' : 'url('+this.props.img+')',
+        const backgroundStyle = {'backgroundImage' : 'url('+this.props.img+')',
             'transform':'scale('+this.props.scale+')'
         }
         const color = {color : this.props.color};
@@ -41,10 +41,8 @@ export default class HeaderProject extends React.Component {
                             target="_blank"
                             color = {this.props.color}/>
                     </div>
-
-                    
                 </div>
-                <div className="header_project__right" style={background}>
+                <div className="header_project__right" style={backgroundStyle}>
                 </div>
                 <ScrollArrow click={this.props.scrollClick} black={true}/>
                 <ScrollArrow click={this.props.scrollClick} black={false}/>

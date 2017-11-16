@@ -1,14 +1,17 @@
 import React from "react";
 
+import Interface from './Interface.jsx'
 
 const whiteArrow = require("./../../../img/icons/arrow_down_white.svg");
 const blackArrow = require("./../../../img/icons/arrow_down_black.svg");
 
 
-export default class Scroll extends React.Component {
+export default class Scroll extends Interface {
     constructor(props) {
         super(props);
-        this.state = {"black" : this.props.black};
+        this.state = {
+            "black" : this.props.black
+        };
     }
 
     render() {
@@ -17,7 +20,7 @@ export default class Scroll extends React.Component {
         const src = this.props.black ? blackArrow : whiteArrow;
         return(
             <a onClick={this.props.click} >
-                <div className={myClass}>
+                <div className={myClass} style={{'opacity':this.state.opacity}}>
                     <h3 className="scroll__title">scroll</h3>
                     <img className="scroll__arrow" src={src}/>
                 </div>

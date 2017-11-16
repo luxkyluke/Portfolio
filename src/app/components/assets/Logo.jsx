@@ -1,20 +1,15 @@
 import React from "react";
 
+import Interface from "./Interface.jsx"
 
-export default class Logo extends React.Component {
+export default class Logo extends Interface {
     constructor(props) {
         super(props);
-
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick() {
-        //lancer la fonction passer en props
     }
 
     render() {
         const color = (this.props.black) ? "#000" : "#f3f3f3";
-        const myStyle = {'color' : color};
+        const myStyle = {'color' : color, 'opacity' : this.state.opacity};
         return(
             <a onClick={this.props.click} >
                 <div className="logo" style={myStyle}>

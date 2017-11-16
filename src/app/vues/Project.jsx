@@ -1,7 +1,6 @@
 import React from "react";
 import {withRouter} from "react-router-dom";
 import PropTypes from 'prop-types';
-//import {smoothScroll}  from 'smoothscroll';
 var smoothScroll = require('smoothscroll');
 
 import HeaderProject    from "./../components/project/HeaderProject.jsx";
@@ -13,7 +12,7 @@ import ProjectAPI       from "./../api/ProjectAPI.jsx";
 import Utility          from "./../utilities/utility.js";
 import Animation          from "./../utilities/Animation.js";
 
-const PROJECT_ID = 0;
+const PROJECT_ID = 1;
 const NB_PROJECT = ProjectAPI.nbProjects();
 
 
@@ -98,13 +97,14 @@ export default class Project extends React.Component {
                     desc                = {this.state.project.desc}
                     link                = {this.state.project.link}
                     img                 = {this.state.project.background}
+                    blur                = {'./data/'+this.state.project.name+'/background.blur.jpg'}
                     color               = {this.state.project.color}
                     scale               = {this.state.scale}
                     scrollClick         = {this.scrollDown}
                 />  
                 <div className="project__content">
                     <Bandeau
-                         role           = {this.state.project.role}
+                        role            = {this.state.project.role}
                         context         = {this.state.project.context}
                         year            = {this.state.project.year}
                         color           = {this.state.project.color}

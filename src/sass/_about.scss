@@ -12,7 +12,7 @@
 		display: flex;
 		top: 50%;
 	    left: 50%;
-	    transform: translate(-50%, -50%);
+	    @include transform (translate(-50%, -50%));
 		position: absolute;
     	width: 100%;
     	max-width: 1500px;
@@ -44,7 +44,7 @@
 
 	.tilter {
 	    left: 50%;
-	    transform: translateX(-50%);
+	    @include transform (translateX(-50%));
 		display: block;
 		position: relative;
 		flex: none;
@@ -73,13 +73,13 @@
 		}
 
 		&__figure > * {
-			transform: translateZ(0px); /* Force correct stacking order */
+			@include transform (translateZ(0px)); 
 		}
 		
 		&__figure,
 		&__deco--lines,
 		&__deco--shine div {
-			transition: transform 0.2s ease-out;
+			@include transition(transform 0.2s ease-out);
 		}
 
 		&__deco {
