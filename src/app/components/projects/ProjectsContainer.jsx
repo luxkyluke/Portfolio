@@ -75,7 +75,6 @@ export default class ProjectsContainer extends React.Component {
         }
         window.removeEventListener('wheel', this.handleScroll);
         this.changeProject(nextId);
-        console.log(nextId);
     }
 
     next(){
@@ -91,15 +90,14 @@ export default class ProjectsContainer extends React.Component {
         }.bind(this));
     }
 
-    
-    
     handleClickDots(id){
         this.changeProject(id);       
     }
 
-    handleClick(){
+    handleClick(id){
+        console.log(id)
        Animation.openProject(this.state.currentId, this.projects[this.state.currentId].color, function(){
-           this.context.router.history.push("/project");
+           this.context.router.history.push("/project/"+id);
        }.bind(this))
 
         //history.push('/project');
@@ -138,6 +136,13 @@ export default class ProjectsContainer extends React.Component {
                         isActive = {this.state.currentId === 2}
                         title = {this.projects[2].title}
                         category= {this.projects[2].type}
+                        click={this.handleClick}/> 
+                    <Project 
+                        name={this.projects[3].name} 
+                        id="3" 
+                        isActive = {this.state.currentId === 3}
+                        title = {this.projects[3].title}
+                        category= {this.projects[3].type}
                         click={this.handleClick}/> 
 
                     <ScrollDots 

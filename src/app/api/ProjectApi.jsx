@@ -34,10 +34,6 @@ const ProjectApi = {
           full: false
         },
         {
-          src : "/data/monaco_porcelaine/5.jpg",
-          full: true
-        },
-        {
           src : "/data/monaco_porcelaine/6.jpg",
           full: false
         }
@@ -115,7 +111,48 @@ const ProjectApi = {
           full: false
         }
       ]
-    }
+    },
+    { 
+        id: 3,   
+        name:  "monaco_porcelaine",
+        type : "Webapp",
+        title: "Chinese Porcelains",
+        desc : "This project is do eiusmo dtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ",
+        link : "http://expo2017.grimaldiforum.com/",
+        background : '/data/monaco_porcelaine/background.jpg',
+        role: "Developer",
+        context:"Intership at FleurDePapier",
+        year: "2017",
+        color: "#202336",
+        txtcolor: "#000314",
+        imgs: [
+          {
+            src : "/data/monaco_porcelaine/3.jpg",
+            full: false
+          },
+          {
+            src : "/data/monaco_porcelaine/1.jpg",
+            full: false
+          },
+          {
+            src : "/data/monaco_porcelaine/2.jpg",
+            full: true
+          },
+          {
+            src : "/data/monaco_porcelaine/4.jpg",
+            full: false
+          },
+          {
+            src : "/data/monaco_porcelaine/5.jpg",
+            full: true
+          },
+          {
+            src : "/data/monaco_porcelaine/6.jpg",
+            full: false
+          }
+
+        ]
+      }
   ],
 
   nbProjects: function(){return this.projects.length},

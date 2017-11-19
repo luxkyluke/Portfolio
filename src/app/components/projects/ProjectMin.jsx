@@ -54,7 +54,7 @@ export default class ProjectMin extends React.Component {
         return(
             <div className={myClass+active} id={"project_"+this.props.id}>
                 <div className='project__image' >
-                    <a onClick={this.props.click} >
+                    <a onClick={this.props.click.bind(this, this.props.id)} >
                         <div className={"project__image__img"+active} >
                             <ProgressiveImage
                                 preview={'./data/'+this.props.name+'/background.blur.jpg'}

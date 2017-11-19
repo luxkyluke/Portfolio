@@ -19,7 +19,6 @@ export default class Menu extends React.Component {
     }
 
     componentWillReceiveProps(newProps){
-        console.log(newProps)
         if(newProps.isOpen){
             this.setState({scale : " scale"});
             setTimeout(function(){

@@ -12,7 +12,7 @@ import ProjectAPI       from "./../api/ProjectAPI.jsx";
 import Utility          from "./../utilities/utility.js";
 import Animation          from "./../utilities/Animation.js";
 
-const PROJECT_ID = 1;
+//const this.state.id = 1;
 const NB_PROJECT = ProjectAPI.nbProjects();
 
 
@@ -23,37 +23,78 @@ export default class Project extends React.Component {
 
     constructor(props, context) {
         super(props, context);
-
-        //console.log(props.params.id);
-
-        //const project = ProjectAPI.get(parseInt("props.match.params.id", 10));
-        const project = ProjectAPI.get(PROJECT_ID);
-        if(!project){
-            this.goBack();
-        }
-
-        console.log(project)        
+        
+//        console.log(props.match)
+        
+//        const this.state.project = this.state.ProjectAPI.get();
+        this.id = parseInt(props.match.params.id, 10);
+        if(!this.init(this.id))
+            return;
 
         this.state = {
-            project : project,
-            scale : 1.1
+            scale : 1.1,
+            id : this.id,
+            project: this.project
         }
 
         this.getPrevAndNextProject();
+
         this.handleScroll = this.handleScroll.bind(this);
         this.goBack = this.goBack.bind(this);
         this.scrollDown = this.scrollDown.bind(this);
+        this.changeProject = this.changeProject.bind(this);
+        //this.init = this.init.bind(this);
 
     }
 
-    goBack(){
+    init(id){
+        //var ret
+        this.error = false;
+        this.project = ProjectAPI.get(id);
+        
+        if(!this.project){
+            console.log("error");
+            console.log(id);
+            this.error = true;
+            this.goBack();
+            return false;
+        }
+        return true;
+    }
+    
+/*    componentWillReceiveProps(newProps){
+        console.log(newProps);
+        console.log(this.state.id);
+        const newId = parseInt(newProps.match.params.id, 10);
+        if(newId !== this.state.id){
+            //this.id = newId;
+            if(!this.init(newId))
+                return;
+            console.log(this.project)
+
+            this.setState({
+                id: newId,
+                project: this.project
+            })
+        }
+    }*/
+
+    changeProject(newId){
+        setTimeout(function(){
+            this.context.router.history.push('/');
+        }.bind(this), 300);
         Animation.switchPage(function(){
-            this.context.router.history.push('/projects');
-        }.bind(this));
+            this.context.router.history.push('/project/'+newId);
+        }.bind(this));        
     }
 
     componentDidMount() { 
         //window.addEventListener('wheel', this.handleScroll);
+        /*if(this.error){
+            //setTimeout(function(){
+                this.context.router.history.push('/projects');
+           // }.bind(this), 100);
+        }*/
         this.scrollDist = document.querySelector('.bandeau');
         this.scrollContext = document.querySelector('.project');
     }
@@ -62,32 +103,38 @@ export default class Project extends React.Component {
         //window.removeEventListener('wheel', this.handleScroll);
     }
 
+    goBack(){
+        Animation.switchPage(function(){
+            this.context.router.history.push('/projects');
+        }.bind(this));
+    }
+
     handleScroll(event: Object){
         const scrollTop = event.nativeEvent.srcElement.scrollTop;
-        const delta = scrollTop/(window.innerHeight-350)*0.1;
+        const delta = scrollTop/(window.innerHeight-300)*0.1;
         let scale = 1.1-delta;
         scale = (scale < 1) ? 1 : scale;
         this.setState({scale:scale});
     }
 
     getPrevAndNextProject(){
-        this.prevId = (PROJECT_ID-1 < 0) ? NB_PROJECT-1 : PROJECT_ID-1 ;
-        this.nextId = (PROJECT_ID+1 > NB_PROJECT) ? 0 : PROJECT_ID+1 ;
-
-        this.prevArticle = ProjectAPI.get(this.prevId);
-        this.nextArticle = ProjectAPI.get(this.nextId);
+        const prevId = (this.state.id-1 < 0) ? NB_PROJECT-1 : this.state.id-1 ;
+        const nextId = (this.state.id+1 >= NB_PROJECT) ? 0 : this.state.id+1 ;
+    
+        this.prevArticle = ProjectAPI.get(prevId);
+        this.nextArticle = ProjectAPI.get(nextId);
+    
     }
 
     scrollDown(){
-       /* const elem = document.querySelector(".bandeau");
-        document.querySelector('.page').scrollTo(0, elem.offsetTop);*/
-        //console.log('lala');
         smoothScroll(this.scrollDist, 1000, function(){}, this.scrollContext);
     }
     
 
     render() {
-        const myStyle= (this.state.scroll) ? {'transform':'translateY(-100%)'} : {};
+        if(this.error){
+            return(<div></div>);
+        }
         return(
             <div className="project page" onScroll={this.handleScroll}>
                 <Logo black={true} click={this.goBack}/>
@@ -97,7 +144,7 @@ export default class Project extends React.Component {
                     desc                = {this.state.project.desc}
                     link                = {this.state.project.link}
                     img                 = {this.state.project.background}
-                    blur                = {'./data/'+this.state.project.name+'/background.blur.jpg'}
+                    blur                = {Utility.getBlurImg(this.state.project.background)}
                     color               = {this.state.project.color}
                     scale               = {this.state.scale}
                     scrollClick         = {this.scrollDown}
@@ -115,10 +162,11 @@ export default class Project extends React.Component {
                     />
                     <Footer 
                         titlePrev       = {this.prevArticle.title}
-                        linkPrev        = {"/project/"+this.prevId}
+                        idPrev          = {this.prevArticle.id}
                         backgroundPrev  = {this.prevArticle.background}
                         titleNext       = {this.nextArticle.title}
-                        linkNext        = {"/project/"+this.nextId}
+                        click           = {this.changeProject}
+                        idNext          = {this.nextArticle.id}
                         backgroundNext  = {this.nextArticle.background}
                         />
                 </div>  

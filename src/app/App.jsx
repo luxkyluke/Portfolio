@@ -15,12 +15,12 @@ export default class App extends React.Component {
 		  console.log("on route change");
 		});*/
 	}
+	
 	componentWillUnmount() {
 	  this.unlisten();
 	}
 
     render() {   
-
         return(			
 			<div>
 				<Header />

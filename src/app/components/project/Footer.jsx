@@ -13,12 +13,14 @@ export default class Footer extends React.Component {
                 <FooterSide 
                     background = {this.props.backgroundPrev} 
                     side="left"
-                    link={this.props.linkPrev}
+                    id={this.props.idPrev}
+                    click={this.props.click}
                     title = {this.props.titlePrev}/>
                 <FooterSide 
                     background = {this.props.backgroundNext} 
                     side="right"
-                    link={this.props.linkNext}
+                    id={this.props.idNext}
+                    click={this.props.click}
                     title = {this.props.titleNext}/>
             </div>
         );

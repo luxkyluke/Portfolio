@@ -70,7 +70,6 @@ const Animation = {
 		const padding = 50;			
 
 		const offsetLeft = pDesc.getBoundingClientRect().left;
-		console.log(offsetLeft)
 		let translateX = -offsetLeft - pDesc.offsetWidth - padding;
 		let translateNext = translateX;
 		if (id%2 === 0) 
