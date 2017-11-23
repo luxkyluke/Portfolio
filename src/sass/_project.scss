@@ -41,7 +41,7 @@
 
 		&__left{
 			width: 50%;
-			height: 100vh;
+			height: 100%;
 			background-color: rgba(255, 255, 255, 0.9);
 			position: absolute;
 			z-index: 1;
@@ -69,7 +69,7 @@
 				}
 
 				&__desc{
-					margin-bottom: 10em;
+					margin-bottom: 25%;
 				}
 
 				.button{
@@ -250,6 +250,43 @@
 			   		}
 				}
 			}
+		}
+	}
+}
+
+@include tablet{
+	.project.page{
+		.header_project{
+			&__left{
+				&__wrapper{
+					padding: $paddingGeneral_tab;
+				}
+			}
+			.scroll.white{
+				right: $paddingGeneral_tab;
+			}
+		}
+	}
+}
+
+@include tabpor{
+	.project.page{
+		.header_project{
+			height: 80%;
+			&__left{
+				width: 100%;
+				background-color: rgba(255, 255, 255, 0.6);
+				&__wrapper{
+					padding: $paddingGeneral_tab;
+					&__desc{
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		.scroll{
+			display: none;
 		}
 	}
 }

@@ -134,7 +134,7 @@ footer{
 	height: 40px;
 	z-index: 3;
 
-	    	@include transition(opacity 0.5s);
+	@include transition(opacity 0.5s);
 
 	&__span{
 	    position: absolute;
@@ -173,6 +173,7 @@ footer{
 		}
 	}
 }
+
 
 
 /**********LOGO***********/
@@ -300,4 +301,22 @@ footer{
 		width: 60%;
 		height: 100%;
     }
+}
+
+
+@include tablet{
+	.burger{
+		top: $paddingGeneral_tab;
+		right: $paddingGeneral_tab;
+	}
+
+	.logo{
+		top: $paddingGeneral_tab;
+		left: $paddingGeneral_tab;
+	}
+
+	.scroll{
+		left: $paddingGeneral_tab;
+
+	}
 }

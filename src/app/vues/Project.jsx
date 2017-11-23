@@ -80,15 +80,26 @@ export default class Project extends React.Component {
     }*/
 
     changeProject(newId){
-        setTimeout(function(){
+        /*setTimeout(function(){
             this.context.router.history.push('/');
         }.bind(this), 300);
         Animation.switchPage(function(){
             this.context.router.history.push('/project/'+newId);
-        }.bind(this));        
+        }.bind(this));    */    
     }
 
     componentDidMount() { 
+        this._isMounted = true;
+       /* history.pushState(null, null, location.href);
+        window.onpopstate = function(event) {
+            history.go(1);
+        };*/
+        window.onpopstate = ()=> {
+          if(this._isMounted) {
+            const { hash } = location;
+            console.log(location)
+          }
+        };
         //window.addEventListener('wheel', this.handleScroll);
         /*if(this.error){
             //setTimeout(function(){

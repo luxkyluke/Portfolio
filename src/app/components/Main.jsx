@@ -18,6 +18,9 @@ export default class Main extends React.Component {
 	componentDidUpdate(prevProps) {
 		//Animation.switchPage(function(){})
 	}
+
+	
+
 	/*<Route path='/project/:id' render= {(props) =>(
 						<Project id={props.match.params.id}/>
 					)}/>*/

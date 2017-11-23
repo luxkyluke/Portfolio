@@ -3,6 +3,7 @@ const OVERFLOW = 20;
 const MAX_ALPHA = 0.5;
 
 var mousePointer = new MousePointeur(new Point(0, 0));
+const CONST_NB_POINTS = 0.05
 var width, height;
 var points =[];	
 var links = [];
@@ -39,6 +40,13 @@ function Point (x, y) {
 		}
 		this.x += this.dx;
 		this.y += this.dy;
+	}
+
+	this.linkAllOtherPoint = function(){
+		for(let i=0; i<points.length ; i++){
+			links.push(new Link(this, points[i]));
+		}
+		links.push(new Link(this, mousePointer));
 	}
 }
 
@@ -87,6 +95,12 @@ function MousePointeur(p) {
 		this.x =x;
 		this.y =y;
 	}
+
+	this.click = function(){
+		const p = new Point(this.x, this.y);
+		p.linkAllOtherPoint();
+		points.push(p);
+	}
 }
 
 function resizeCanvas(){
@@ -100,7 +114,7 @@ window.onresize = function(e){
 }
 
 function createPoints(){
-	let nbPoints = Math.floor(width /12);
+	let nbPoints = Math.floor(width *CONST_NB_POINTS);
 	let posX = width/2; 
 	let posY = height/2;
 
@@ -112,10 +126,11 @@ function createPoints(){
 	}
 	let cpt=0;
 	for(let i=0; i<nbPoints; i++){
-		for(let j=0; j<nbPoints ; j++){
+		points[i].linkAllOtherPoint();
+		/*for(let j=0; j<nbPoints ; j++){
 			links[cpt++] = new Link(points[i], points[j]);
 		}
-		links[cpt++] = new Link(points[i], mousePointer);
+		links[cpt++] = new Link(points[i], mousePointer);*/
 	}
 }
 
@@ -135,7 +150,7 @@ function animCanvas(c){
 			points[i].update(); 
 			points[i].draw(c);
 		}
-		for(let i=1; i<points.length*points.length; i++){
+		for(let i=1; i<links.length; i++){
 			links[i].draw(c);
 		}
 		//console.log("mousePointer pos "+ mousePointer.point.x + " " +mousePointer.point.y);
@@ -145,6 +160,10 @@ function animCanvas(c){
 
 	document.addEventListener("mousemove", function(event){
 		mousePointer.update(event.clientX, event.clientY);
+	});
+
+	document.addEventListener("click", function(e){
+		mousePointer.click()
 	});
 }
 

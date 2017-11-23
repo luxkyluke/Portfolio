@@ -12,7 +12,7 @@ const ProjectApi = {
       link : "http://expo2017.grimaldiforum.com/",
       background : '/data/monaco_porcelaine/background.jpg',
       role: "Developer",
-      context:"Intership at FleurDePapier",
+      context:"Intership at <br> FleurDePapier",
       year: "2017",
       color: "#202336",
       txtcolor: "#000314",

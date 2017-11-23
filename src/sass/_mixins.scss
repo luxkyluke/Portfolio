@@ -48,7 +48,7 @@ $mq-mobile-portrait : 450px !default;
 }
 
 @mixin tabpor {
-    @media (min-width : $mq-mobile + 1) and (max-width : $mq-tablet-portrait){
+    @media (max-width : $mq-tablet-portrait){
         @content;
     }
 }
