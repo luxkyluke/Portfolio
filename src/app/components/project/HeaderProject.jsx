@@ -39,7 +39,8 @@ export default class HeaderProject extends React.Component {
                             label="see website" 
                             link={this.props.link} 
                             target="_blank"
-                            color = {this.props.color}/>
+                            color = {this.props.color}
+                            hide = {!this.props.link}/>
                     </div>
                 </div>
                 <div className="header_project__right" style={backgroundStyle}>

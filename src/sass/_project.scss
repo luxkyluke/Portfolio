@@ -103,7 +103,6 @@
 		&__wrapper{
 			justify-content: space-around;
 			display: flex;
-			width: 80%;
 		    margin: 0 auto;
 		    max-width: 1200px;
 		}
@@ -122,6 +121,7 @@
 			&__label{
 				font-size: 1.5em;
 				font-weight: 100;
+				line-height: 1.3em;
 			}
 		}
 	}
@@ -163,6 +163,7 @@
 
 	.footer{
 		height: 18vw;
+		min-height: 200px;
 		display: flex;
 		position: relative;
 		color: #fff;
@@ -227,7 +228,7 @@
 			&.left{
 				.footer__side__arrow{
 					@include transform(rotate(-180deg) translateY(15px));
-					left: 10%;
+					left: 2.5vw;
 				}
 
 				.footer__side__wrapper:hover{
@@ -241,7 +242,7 @@
 			&.right{
 				.footer__side__arrow{
 					left: inherit;
-					right: 10%;
+					right: 2.5vw;
 				}
 				.footer__side__wrapper:hover{
 					.footer__side__arrow{
@@ -266,6 +267,10 @@
 				right: $paddingGeneral_tab;
 			}
 		}
+		
+		.footer__side__title{
+			font-size: 1.3em;
+		}
 	}
 }
 
@@ -277,7 +282,6 @@
 				width: 100%;
 				background-color: rgba(255, 255, 255, 0.6);
 				&__wrapper{
-					padding: $paddingGeneral_tab;
 					&__desc{
 						font-weight: 600;
 					}
@@ -288,5 +292,58 @@
 		.scroll{
 			display: none;
 		}
+
 	}
+}
+
+@include mobile{
+	.project.page{
+		.bandeau{
+			padding: 50px 5px;
+		}
+		.images{
+			.imgBloc__frame{
+				width: 90vw;
+			}
+		}
+		
+		.footer__side{
+			&.left{
+				display: none;
+			}
+			&.right{
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 540px){
+	.project.page{
+		.bandeau{
+			padding: 50px;
+			&__wrapper{
+				display: block;
+			}
+		}
+	}
+}
+
+@media (max-width: 450px){
+	.project.page {
+		.header_project{
+			&__left{
+				&__wrapper{
+					padding: $paddingGeneral_mobile;
+				}
+			}
+		}
+
+		.header_project__left__wrapper__type{
+			font-size: 1.3em;
+		}
+		.header_project__left__wrapper__title{
+			font-size: 2em;
+		}
+	} 
 }

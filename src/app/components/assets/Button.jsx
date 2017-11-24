@@ -14,6 +14,8 @@ export default class Button extends React.Component {
     }
 
     render() {
+        if(this.props.hide)
+            return (<div style={{"display" : 'none'}}></div>);
         const myStyle = (this.props.color) ? {backgroundColor : this.props.color} : {};
         return(
             <a onClick={this.props.click} href={this.props.link} target={this.props.target}>
