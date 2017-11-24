@@ -183,13 +183,13 @@ footer{
 	z-index: 2;
 	top: $paddingGeneral;
 	left: $paddingGeneral; 
-	font-size: 17px;
 	letter-spacing: 0px;
 	opacity: 0;
 
 	    	@include transition(opacity 0.5s);
 	
 	&__title{
+		font-size: 3.6vh;
 		margin: 0;
 		padding:0;
 	}
@@ -317,6 +317,18 @@ footer{
 
 	.scroll{
 		left: $paddingGeneral_tab;
+	}
+}
 
+@include mobilepor{
+	.burger{
+		top: $paddingGeneral_mobile;
+		right: $paddingGeneral_mobile;
+		width: 50px;
+	}
+
+	.logo{
+		top: $paddingGeneral_mobile;
+		left: $paddingGeneral_mobile;
 	}
 }

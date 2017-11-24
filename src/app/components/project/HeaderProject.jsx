@@ -32,9 +32,11 @@ export default class HeaderProject extends React.Component {
             <div className="header_project">
                 <div className={"header_project__left" + this.state.active}>
                     <div className="header_project__left__wrapper">
-                        <h3 className="header_project__left__wrapper__type" style={color}>{this.props.type}</h3>
-                        <h2 className="header_project__left__wrapper__title">{this.props.title}</h2>
-                        <p className="header_project__left__wrapper__desc">{this.props.desc}</p>
+                        <div className="header_project__left__wrapper__text">
+                            <h3 className="header_project__left__wrapper__text__type" style={color}>{this.props.type}</h3>
+                            <h2 className="header_project__left__wrapper__text__title">{this.props.title}</h2>
+                            <p className="header_project__left__wrapper__text__desc">{this.props.desc}</p>
+                        </div>
                         <Button 
                             label="see website" 
                             link={this.props.link} 

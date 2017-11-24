@@ -34,16 +34,16 @@
 
 	.header_project{
 		position: relative;
-		z-index: 1;
+		/* z-index: 1;
 		height: 100%;
-		width: 100%;
+		width: 100%; */
 		overflow: hidden;
 
 		&__left{
 			width: 50%;
-			height: 100%;
+			height: 100vh;
 			background-color: rgba(255, 255, 255, 0.9);
-			position: absolute;
+			position: relative;
 			z-index: 1;
 			@include transition (all 400ms ease-in-out);
     		@include transform(translateX(-100%));
@@ -57,23 +57,25 @@
 				position: relative;
 				top:50%;
 				@include transform(translateY(-50%));
+				display: flex;
+				flex-direction: column;
 
-				&__type{
-					font-size: 1.65em;
-				}
+				&__text{
+					min-height: 60vh;
 
-				&__title{
-					font-size: 3em; 
-					letter-spacing: 0.05em;
-					margin:1em 0;
-				}
+					&__type{
+						font-size: 1.65em;
+					}
 
-				&__desc{
-					margin-bottom: 25%;
+					&__title{
+						font-size: 3em; 
+						letter-spacing: 0.05em;
+						margin:1em 0;
+					}
 				}
 
 				.button{
-					margin: 0 auto;
+					margin: 1vh auto;
 					box-shadow: 0px 4px 15px #949494;
 					border: 0px;
 					color: #fff;
@@ -83,6 +85,7 @@
 			}
 		}
 		&__right{
+			top: 0;
 			height: 100%;
 			width: 100%;
 			position: absolute;
@@ -277,11 +280,17 @@
 @include tabpor{
 	.project.page{
 		.header_project{
-			height: 80%;
+			//height: 80%;
 			&__left{
+				height: inherit;
 				width: 100%;
 				background-color: rgba(255, 255, 255, 0.6);
 				&__wrapper{
+					@include transform(none);
+					&__text{
+						margin-top: 10vh;
+					}
+					//transform: none;
 					&__desc{
 						font-weight: 600;
 					}
@@ -329,21 +338,29 @@
 	}
 }
 
-@media (max-width: 450px){
+@include mobilepor{
 	.project.page {
 		.header_project{
 			&__left{
 				&__wrapper{
-					padding: $paddingGeneral_mobile;
+					padding: $paddingGeneral_tab $paddingGeneral_mobile $paddingGeneral_mobile $paddingGeneral_mobile ;
+				
+					&__text{
+						margin-top: 5vh;
+					}
 				}
 			}
 		}
+		
+		.header_project__left{
+			//height: inherit;
+			&__wrapper__text__type{
+				font-size: 1.3em;
+			}
+			&__wrapper__text__title{
+				font-size: 2em;
+			}
+		}
 
-		.header_project__left__wrapper__type{
-			font-size: 1.3em;
-		}
-		.header_project__left__wrapper__title{
-			font-size: 2em;
-		}
 	} 
 }
