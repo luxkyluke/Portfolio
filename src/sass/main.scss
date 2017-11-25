@@ -78,7 +78,7 @@ footer{
 		text-transform: uppercase;
 	    letter-spacing: 0.675rem;
 	    padding: 20px 40px;
-	    font-size: 15px;
+	    font-size: 0.94em;
 	    text-align: center; 
 	}
 }
@@ -331,11 +331,24 @@ footer{
 		width: 50px;
 	}
 
+	.page{
+		@include transition(none);
+	}
+
 	.menu{
+		&:before{
+			@include transition(none);
+		}
+		@include transition(none);
 		&.open{
 			border: none;
 		}
 		&__list{
+			@include transition(none);
+			&.move, &.scale{
+				@include transition(none);
+			}
+
 			font-size: 80%;
 			&__item{
 				margin: 10vh 0;
