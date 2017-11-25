@@ -70,13 +70,17 @@ footer{
 }
 
 .button{
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 400;
-	text-transform: uppercase;
-    letter-spacing: 0.675rem;
-    padding: 20px 40px;
-    font-size: 15px;
-    text-align: center; 
+	border: 2px solid #fff;
+
+	&__wrapper{
+		font-family: 'Quicksand', sans-serif;
+		font-weight: 400;
+		text-transform: uppercase;
+	    letter-spacing: 0.675rem;
+	    padding: 20px 40px;
+	    font-size: 15px;
+	    text-align: center; 
+	}
 }
 
 .page{

@@ -79,8 +79,11 @@
 					box-shadow: 0px 4px 15px #949494;
 					border: 0px;
 					color: #fff;
-					width: 180px;
-    				letter-spacing: 0.5em;
+
+					//width: 180px;
+					&__wrapper{
+    					letter-spacing: 0.5em;
+					}
 				}
 			}
 		}
