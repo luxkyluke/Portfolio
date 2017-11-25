@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"utili",
+				"utilities"
+			],
+			[
+				"hand",
+				"handleResize"
+			],
+			[
+				"trn",
+				"transform: "
+			],
+			[
+				"her",
+				"header_project__left__wrapper"
+			],
+			[
+				"paddingGene",
+				"paddingGeneral_tab"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"mq-mobile-po",
+				"mq-mobile-portrait"
+			],
+			[
 				"mar",
 				"margin-bottom"
 			],
@@ -120,10 +152,6 @@
 				"handleOut"
 			],
 			[
-				"utili",
-				"Utility"
-			],
-			[
 				"th",
 				"the_railway_chronicles"
 			],
@@ -190,10 +218,6 @@
 			[
 				"background-",
 				"background-repeat: "
-			],
-			[
-				"font",
-				"font-family"
 			],
 			[
 				"con",
@@ -306,10 +330,6 @@
 			[
 				"preve",
 				"preventDefault\t(): void Event"
-			],
-			[
-				"hand",
-				"handleMouseMove"
 			],
 			[
 				"onMou",
@@ -494,26 +514,6 @@
 			[
 				"Follo",
 				"FollowBtn"
-			],
-			[
-				"Folo",
-				"FollowBtn"
-			],
-			[
-				"pr",
-				"preRender"
-			],
-			[
-				"backgr",
-				"background\tStyle CSS"
-			],
-			[
-				"follo",
-				"follow"
-			],
-			[
-				"col",
-				"color"
 			]
 		]
 	},
@@ -646,7 +646,16 @@
 			"file": "src/app/components/project/HeaderProject.jsx",
 			"settings":
 			{
-				"buffer_size": 1938,
+				"buffer_size": 2131,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/components/assets/Button.jsx",
+			"settings":
+			{
+				"buffer_size": 796,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -664,7 +673,7 @@
 			"file": "src/app/components/projects/ProjectsContainer.jsx",
 			"settings":
 			{
-				"buffer_size": 4835,
+				"buffer_size": 5488,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -682,7 +691,7 @@
 			"file": "src/app/utilities/utility.js",
 			"settings":
 			{
-				"buffer_size": 547,
+				"buffer_size": 609,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -709,7 +718,7 @@
 			"file": "src/app/api/ProjectApi.jsx",
 			"settings":
 			{
-				"buffer_size": 4752,
+				"buffer_size": 4913,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -718,7 +727,7 @@
 			"file": "src/sass/main.scss",
 			"settings":
 			{
-				"buffer_size": 4988,
+				"buffer_size": 5179,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -736,7 +745,7 @@
 			"file": "src/sass/_project.scss",
 			"settings":
 			{
-				"buffer_size": 4452,
+				"buffer_size": 5472,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -745,7 +754,7 @@
 			"file": "src/sass/_mixins.scss",
 			"settings":
 			{
-				"buffer_size": 1204,
+				"buffer_size": 1203,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -754,7 +763,7 @@
 			"file": "src/sass/_projects.scss",
 			"settings":
 			{
-				"buffer_size": 2720,
+				"buffer_size": 2834,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -790,7 +799,7 @@
 			"file": "src/sass/_constantes.scss",
 			"settings":
 			{
-				"buffer_size": 260,
+				"buffer_size": 291,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1087,6 +1096,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"props",
+			"te.isAc",
+			"rops.is",
+			"currentId",
+			"Utility",
+			"handleClickDots",
+			"\t\t\n",
+			"active",
+			"button",
+			"paddingGeneral_tab",
+			"apper",
+			"header_project__left__wrapper__type",
+			".header_project__left",
+			".header_project__left__wrappe",
+			"header_project__left__wrapper",
+			"_wrapper",
+			".",
+			"10%",
+			"footer",
+			"label",
+			"wrapper",
 			"desc",
 			"80",
 			"desc",
@@ -1193,28 +1223,7 @@
 			"transition",
 			"transition:",
 			"@include transform",
-			" transform: ",
-			" transform:",
-			"transform:",
-			" transform:",
-			"    transform:",
-			"transform",
-			" (",
-			"@include transform",
-			"\ttransform: ",
-			" transform: ",
-			"    transform: ",
-			"transform: ",
-			"transform:",
-			"transform",
-			"transform:",
-			".transform:",
-			"transform:^text",
-			"transform:",
-			"^transform:",
-			"^#transform:#",
-			"^transform:",
-			"*^.transform:"
+			" transform: "
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1282,7 +1291,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 17,
 			"sheets":
 			[
 				{
@@ -1312,7 +1321,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
@@ -1340,7 +1349,7 @@
 						"translation.y": 59.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
@@ -1368,7 +1377,7 @@
 						"translation.y": 271.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
@@ -1398,7 +1407,7 @@
 						"translation.y": 150.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
@@ -1428,7 +1437,7 @@
 						"translation.y": 2913.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -1444,8 +1453,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								340,
+								340
 							]
 						],
 						"settings":
@@ -1456,7 +1465,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -1485,7 +1494,7 @@
 						"translation.y": 3078.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1515,7 +1524,7 @@
 						"translation.y": 705.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
@@ -1544,7 +1553,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
@@ -1574,7 +1583,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1590,12 +1599,8 @@
 						"selection":
 						[
 							[
-								457,
-								457
-							],
-							[
-								722,
-								722
+								179,
+								179
 							]
 						],
 						"settings":
@@ -1608,7 +1613,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1635,10 +1640,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 134.0,
+						"translation.y": 87.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1668,7 +1673,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1698,7 +1703,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -1707,15 +1712,45 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1938,
+						"buffer_size": 2131,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1622,
-								1622
+								1127,
+								1127
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 511.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "src/app/components/assets/Button.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 796,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								353,
+								353
 							]
 						],
 						"settings":
@@ -1728,11 +1763,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 16,
 					"file": "src/app/vues/About.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1759,24 +1794,28 @@
 						"translation.y": 94.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 31,
+					"stack_index": 32,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 17,
 					"file": "src/app/components/projects/ProjectsContainer.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4835,
+						"buffer_size": 5488,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2609,
-								2609
+								2234,
+								2234
+							],
+							[
+								2581,
+								2581
 							]
 						],
 						"settings":
@@ -1786,14 +1825,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1858.0,
+						"translation.y": 1455.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 18,
 					"file": "src/app/components/projects/ProjectMin.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1819,24 +1858,24 @@
 						"translation.y": 1070.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 19,
 					"file": "src/app/utilities/utility.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 547,
+						"buffer_size": 609,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								470,
-								470
+								515,
+								515
 							]
 						],
 						"settings":
@@ -1847,11 +1886,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 20,
 					"file": "src/app/utilities/Animation.js",
 					"semi_transient": false,
 					"settings":
@@ -1877,11 +1916,11 @@
 						"translation.y": 614.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 21,
 					"file": "src/app/components/projects/ScrollDots.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1907,30 +1946,30 @@
 						"translation.y": 1219.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 26,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 21,
+					"buffer": 22,
 					"file": "src/app/api/ProjectApi.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4752,
+						"buffer_size": 4913,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								585,
-								585
+								1613,
+								1613
 							]
 						],
 						"settings":
@@ -1940,27 +1979,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 97.0,
+						"translation.y": 2655.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 23,
 					"file": "src/sass/main.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4988,
+						"buffer_size": 5179,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4335,
-								4378
+								532,
+								532
 							]
 						],
 						"settings":
@@ -1969,14 +2008,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5340.0,
+						"translation.y": 1119.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 24,
 					"file": "src/sass/_about.scss",
 					"semi_transient": false,
 					"settings":
@@ -2009,27 +2048,27 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 652.0,
+						"translation.y": 796.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 25,
 					"file": "src/sass/_project.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4452,
+						"buffer_size": 5472,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4374,
-								4374
+								1173,
+								1186
 							]
 						],
 						"settings":
@@ -2037,27 +2076,27 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 5896.0,
+						"translation.y": 1172.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 26,
 					"file": "src/sass/_mixins.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1204,
+						"buffer_size": 1203,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								971,
-								971
+								151,
+								151
 							]
 						],
 						"settings":
@@ -2070,24 +2109,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 27,
 					"file": "src/sass/_projects.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2720,
+						"buffer_size": 2834,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								688,
-								688
+								2730,
+								2730
 							]
 						],
 						"settings":
@@ -2096,14 +2135,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 697.0,
+						"translation.y": 3754.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 28,
 					"file": "src/sass/_animations.scss",
 					"semi_transient": false,
 					"settings":
@@ -2170,11 +2209,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 30,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": "src/sass/_home.scss",
 					"semi_transient": false,
 					"settings":
@@ -2200,11 +2239,11 @@
 						"translation.y": 197.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "src/sass/_homePage.scss",
 					"semi_transient": false,
 					"settings":
@@ -2229,24 +2268,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 29,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "src/sass/_constantes.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 260,
+						"buffer_size": 291,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								110,
-								125
+								188,
+								188
 							]
 						],
 						"settings":
@@ -2257,11 +2296,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"semi_transient": false,
 					"settings":
 					{
@@ -2343,7 +2382,7 @@
 						"translation.y": 416.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 18,
 					"type": "text"
 				}
 			]
@@ -2377,7 +2416,7 @@
 		"cols":
 		[
 			0.0,
-			0.253884400249,
+			0.734752589183,
 			1.0
 		],
 		"rows":
@@ -2404,6 +2443,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"util",
+				"src\\app\\utilities\\utility.js"
+			],
+			[
+				"procon",
+				"src\\app\\components\\projects\\ProjectsContainer.jsx"
+			],
+			[
+				"headp",
+				"src\\app\\components\\project\\HeaderProject.jsx"
+			],
 			[
 				"mixi",
 				"src\\sass\\_mixins.scss"
@@ -2889,7 +2940,7 @@
 		],
 		"width": 744.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -2897,7 +2948,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 311.0,
+	"side_bar_width": 182.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

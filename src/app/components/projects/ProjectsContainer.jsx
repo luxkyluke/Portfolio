@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-require ('./../../utilities/constantes.js')
+require ('./../../utilities/constantes.js');
 
 //var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
 
-import Project from "./ProjectMin.jsx"
-import Animation from "./../../utilities/Animation.js"
-import ScrollDots   from "../../components/projects/ScrollDots.jsx"
-import Scroll from "../../components/assets/Scroll.jsx"
-import ProjectAPI from "../../api/ProjectAPI.jsx"
+import Project from "./ProjectMin.jsx";
+import Animation from "./../../utilities/Animation.js";
+import ScrollDots   from "../../components/projects/ScrollDots.jsx";
+import Scroll from "../../components/assets/Scroll.jsx";
+import ProjectAPI from "../../api/ProjectAPI.jsx";
+import Utility from './../../utilities/utility.js';
 
 
 
@@ -27,6 +28,7 @@ export default class ProjectsContainer extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.handleClickDots = this.handleClickDots.bind(this);
+        this.handleResize = this.handleResize.bind(this);
         this.next = this.next.bind(this);
         //document.documentElement.removeEventListener('scroll', this.handleScroll);
 
@@ -39,7 +41,8 @@ export default class ProjectsContainer extends React.Component {
 
         this.state = {
             'currentId':0,
-            'isActive':this.props.isActive
+            'isActive':this.props.isActive,
+            'allActive' : false
         };
     }
 
@@ -66,6 +69,16 @@ export default class ProjectsContainer extends React.Component {
         this.navProject(dir);
     }
 
+
+    handleResize(){
+        if(Utility.isTablet() && !this.state.allActive){
+            window.removeEventListener('wheel', this.handleScroll);
+            this.setState({allActive : true});
+        }else if(!Utility.isTablet() && this.state.allActive){
+            window.addEventListener('wheel', this.handleScroll);
+            this.setState({allActive : false});
+        }
+    }
 
     navProject(dir){
         let nextId = (this.state.currentId+dir)%NB_PROJECT;
@@ -105,9 +118,12 @@ export default class ProjectsContainer extends React.Component {
 
     componentDidMount() { 
         window.addEventListener('wheel', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();
     }
 
     componentWillUnmount() {
+        window.removeEventListener('resize', this.handleResize);
         window.removeEventListener('wheel', this.handleScroll);
     }
 
@@ -119,28 +135,28 @@ export default class ProjectsContainer extends React.Component {
                     <Project 
                         name={this.projects[0].name} 
                         id="0" 
-                        isActive = {this.state.currentId === 0}
+                        isActive = {this.state.currentId === 0 || this.state.allActive}
                         title = {this.projects[0].title}
                         category= {this.projects[0].type}
                         click={this.handleClick}/> 
                     <Project 
                         name={this.projects[1].name} 
                         id="1" 
-                        isActive = {this.state.currentId === 1}
+                        isActive = {this.state.currentId === 1 || this.state.allActive}
                         title = {this.projects[1].title}
                         category= {this.projects[1].type}
                         click={this.handleClick}/> 
                     <Project 
                         name={this.projects[2].name} 
                         id="2" 
-                        isActive = {this.state.currentId === 2}
+                        isActive = {this.state.currentId === 2 || this.state.allActive}
                         title = {this.projects[2].title}
                         category= {this.projects[2].type}
                         click={this.handleClick}/> 
                     <Project 
                         name={this.projects[3].name} 
                         id="3" 
-                        isActive = {this.state.currentId === 3}
+                        isActive = {this.state.currentId === 3 || this.state.allActive}
                         title = {this.projects[3].title}
                         category= {this.projects[3].type}
                         click={this.handleClick}/> 
