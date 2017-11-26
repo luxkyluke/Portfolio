@@ -30,6 +30,12 @@ const utility = {
 
     isTabletPortrait(){
     	return window.innerWidth < 800;
+    },
+
+    isVideo(src){
+    	const re = /(?:\.([^.]+))?$/;
+    	const ext = re.exec(src)[0];
+    	return ext === ".mp4" || ext === ".mov";
     }
 }
 

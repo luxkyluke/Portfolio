@@ -7,8 +7,7 @@ export default class BandeauTxtBloc extends React.Component {
         this.label = this.props.label.split('<br>').map(function(item, key) {
           return (
             <span key={key} className="bandeau__bloc__label">
-              {item}
-              <br/>
+              <p className="bandeau__bloc__label__text" dangerouslySetInnerHTML={{__html: item}}/>
             </span>
           )
         })

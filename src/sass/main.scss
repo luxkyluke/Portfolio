@@ -194,7 +194,7 @@ footer{
 	    	@include transition(opacity 0.5s);
 	
 	&__title{
-		font-size: 3.6vh;
+		font-size: 2.3rem;// 3.6vh;
 		margin: 0;
 		padding:0;
 	}
@@ -318,12 +318,17 @@ footer{
 	.logo{
 		top: $paddingGeneral_tab;
 		left: $paddingGeneral_tab;
+
+		&__title{
+			font-size: 180%;
+		}
 	}
 
 	.scroll{
 		left: $paddingGeneral_tab;
 	}
 }
+
 
 @media screen and (max-width: 450px), screen and (max-height: 400px){
 	.burger{
@@ -360,5 +365,8 @@ footer{
 	.logo{
 		top: $paddingGeneral_mobile;
 		left: $paddingGeneral_mobile;
+		&__title{
+			font-size: 150%;
+		}
 	}
 }
