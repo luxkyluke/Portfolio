@@ -7,8 +7,6 @@ export default class ImgBloc extends React.Component {
     constructor(props) {
         super(props);
         
-        
-        console.log(Utility.isVideo(this.props.src))
         if(Utility.isVideo(this.props.src)){
             this.content = (
                 <div className="video__wrapper">

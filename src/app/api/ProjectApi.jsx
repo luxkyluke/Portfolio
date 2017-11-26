@@ -77,36 +77,36 @@ const ProjectApi = {
     },
     { 
       id: 2,   
-      name:  "the_railway_chronicles",
+      name:  "giverny_galaxy",
       type : "Website",
-      title: "The Railway Chronicles",
+      title: "Impressionnist Galaxy",
       desc : "This project is do eiusmo dtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ",
-      link : "http://luxkyluke.github.io/therailwaychronicles/",
-      background : '/data/the_railway_chronicles/background.jpg',
-      role: "Developer,<br> Web Designer",
-      context:"Student Project",
-      year: "2016",
-      color: "#A4632A",
-      txtcolor: "#5A2A00",
+      link : "http://galaxie.mdig.fr/en/",
+      background : '/data/giverny_galaxy/background.jpg',
+      role: "Developer",
+      context:'Intership at <br> <a href="http://fleurdepapier.com" target="_blank">Fleur de Papier</a>',
+      year: "2017",
+      color: "#a23435",
+      txtcolor: "#500101",
       imgs: [
         {
-          src : "/data/the_railway_chronicles/1.jpg",
+          src : "/data/giverny_galaxy/6.jpg",
           full: false
         },
         {
-          src : "/data/the_railway_chronicles/3.jpg",
+          src : "/data/giverny_galaxy/2.jpg",
           full: false
         },
         {
-          src : "/data/the_railway_chronicles/2.jpg",
+          src : "/data/giverny_galaxy/7.jpg",
           full: true
         },
         {
-          src : "/data/the_railway_chronicles/4.jpg",
+          src : "/data/giverny_galaxy/4.jpg",
           full: false
         },
         {
-          src : "/data/the_railway_chronicles/5.jpg",
+          src : "/data/giverny_galaxy/3.jpg",
           full: false
         }
       ]
@@ -114,7 +114,7 @@ const ProjectApi = {
     { 
         id: 3,   
         name:  "delaunay_dreams",
-        type : "Interactive Installation",
+        type : "Digital Installation",
         title: "Delaunay Dreams",
         desc : "This project is do eiusmo dtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ",
         link : "https://delaunaysinteractivedreams.github.io/",
@@ -152,12 +152,7 @@ const ProjectApi = {
           {
             src : "/data/delaunay_dreams/8.jpg",
             full: false
-          },
-          {
-            src : "/data/delaunay_dreams/3.jpg",
-            full: false
           }
-
         ]
       }
   ],

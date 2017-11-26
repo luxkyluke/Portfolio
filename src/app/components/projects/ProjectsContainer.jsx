@@ -99,7 +99,7 @@ export default class ProjectsContainer extends React.Component {
             this.setState({"currentId": id});
             setTimeout(function(){
                 window.addEventListener('wheel', this.handleScroll);
-            }.bind(this), 500);
+            }.bind(this), 1000);
         }.bind(this));
     }
 
