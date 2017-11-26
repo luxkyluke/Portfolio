@@ -3,7 +3,7 @@ const OVERFLOW = 20;
 const MAX_ALPHA = 0.5;
 
 var mousePointer = new MousePointeur(new Point(0, 0));
-const CONST_NB_POINTS = 0.05
+const CONST_NB_POINTS = 0.08
 var width, height;
 var points =[];	
 var links = [];

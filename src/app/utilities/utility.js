@@ -26,6 +26,10 @@ const utility = {
 
     isTablet(){
     	return window.innerWidth < 1059;
+    },
+
+    isTabletPortrait(){
+    	return window.innerWidth < 800;
     }
 }
 

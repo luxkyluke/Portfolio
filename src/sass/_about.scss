@@ -41,6 +41,8 @@
 			font-weight: 600;
 		}
 	}
+	
+	
 
 	.tilter {
 	    left: 50%;
@@ -109,7 +111,94 @@
 		&--1 &__figure::before {
 			box-shadow: 0 30px 20px rgba(0,0,0,0.5);
 		}
-
+		
+	}
+	
+	.profilPicFull{
+		position: fixed;	
+		@extend .full;
+		@extend .center.middle;
+		&__background{
+			@extend .backgroundImg;
+			background-image: url("./../img/pp.jpg");
+			&__filter{
+				@extend .full;
+				background-image: linear-gradient(45deg, rgba(116, 62, 13, 0.5) 0%, rgba(180, 84, 0, 0.3) 50%, transparent 100%);
+			}
+		}
 	}
 
+}
+
+@include laptop{
+	.about{
+		&__texte{
+			font-size: 1.3em;
+		}
+	}
+}
+
+
+@include tablet{
+	.about{
+		&__wrapper > div > div{
+			width: 90%;
+		}
+		&__texte{
+			font-size: 1.2em;
+		}
+	}
+}
+
+@include tabpor{
+	.about{
+		.logo{
+			z-index: 3;
+		}
+		&__wrapper {
+			
+			//padding: $paddingGeneral;
+			top: inherit;
+			left: inherit;
+			overflow: scroll;
+			@include transform(none);
+			height: 100%;
+			& > div{
+				width: 90%;
+				&> div{
+					max-width: inherit;
+					width: 100%;
+				}
+			}
+		}
+
+		&__texte{
+
+			/* left: 50%;
+			top: 50%;
+			@include transform(translate(-50%, -50%)); */
+			z-index: 2;
+			font-size: 1.3em;
+		    padding: $paddingGeneral $paddingGeneral_tab;
+		    z-index: 8;
+		    position: relative;
+		    margin: auto;
+			&__wrapper{
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px), screen and (max-height: 400px){
+	.about{
+		&__texte{
+			padding: $paddingGeneral_tab $paddingGeneral_mobile;
+		}
+		&__wrapper {
+			& > div{
+				width: 95%;
+			}
+		}
+	}
 }

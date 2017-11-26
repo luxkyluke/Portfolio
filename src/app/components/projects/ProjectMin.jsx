@@ -73,7 +73,7 @@ export default class ProjectMin extends React.Component {
                 </div>
                 <Description    name ={this.props.title} 
                                 category={this.props.category} 
-                                click={this.props.click}
+                                click={this.props.click.bind(this, this.props.id)}
                                 isActive = {this.props.isActive}
                 /> 
             </div>
