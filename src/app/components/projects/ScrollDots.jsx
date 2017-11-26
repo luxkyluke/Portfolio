@@ -81,6 +81,10 @@ export default class ScrollDots extends React.Component {
                     isCurrent={this.props.currentId === 3}
                     click={this.handleClick} 
                     id={3}/> 
+                <ScrollDot 
+                    isCurrent={this.props.currentId === 4}
+                    click={this.handleClick} 
+                    id={4}/> 
             </div>
         );
     }

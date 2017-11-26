@@ -160,6 +160,13 @@ export default class ProjectsContainer extends React.Component {
                         title = {this.projects[3].title}
                         category= {this.projects[3].type}
                         click={this.handleClick}/> 
+                    <Project 
+                        name={this.projects[4].name} 
+                        id="4" 
+                        isActive = {this.state.currentId === 4 || this.state.allActive}
+                        title = {this.projects[4].title}
+                        category= {this.projects[4].type}
+                        click={this.handleClick}/> 
 
                     <ScrollDots 
                         nb={NB_PROJECT} 
