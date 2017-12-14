@@ -27,14 +27,18 @@ export default class Project extends React.Component {
 //        console.log(props.match)
         
 //        const this.state.project = this.state.ProjectAPI.get();
+        
         this.id = parseInt(props.match.params.id, 10);
-        if(!this.init(this.id))
-            return;
 
+        const project = this.getProject(this.id);
+
+        if(!project)
+            return;
+            
         this.state = {
             scale : 1.1,
             id : this.id,
-            project: this.project
+            project: project
         }
 
         this.getPrevAndNextProject();
@@ -43,49 +47,28 @@ export default class Project extends React.Component {
         this.goBack = this.goBack.bind(this);
         this.scrollDown = this.scrollDown.bind(this);
         this.changeProject = this.changeProject.bind(this);
-        //this.init = this.init.bind(this);
+        //this.getProject = this.getProject.bind(this);
 
     }
 
-    init(id){
-        //var ret
-        this.error = false;
-        this.project = ProjectAPI.get(id);
-        
-        if(!this.project){
-            console.log("error");
-            console.log(id);
-            this.error = true;
-            this.goBack();
-            return false;
-        }
-        return true;
-    }
     
-/*    componentWillReceiveProps(newProps){
+    componentWillReceiveProps(newProps){
         console.log(newProps);
         console.log(this.state.id);
         const newId = parseInt(newProps.match.params.id, 10);
+        console.log(newId)
         if(newId !== this.state.id){
-            //this.id = newId;
-            if(!this.init(newId))
+            const project = this.getProject(newId)
+            if(!project)
                 return;
-            console.log(this.project)
+
+            console.log(project)
 
             this.setState({
                 id: newId,
-                project: this.project
+                project: project
             })
         }
-    }*/
-
-    changeProject(newId){
-        /*setTimeout(function(){
-            this.context.router.history.push('/');
-        }.bind(this), 300);
-        Animation.switchPage(function(){
-            this.context.router.history.push('/project/'+newId);
-        }.bind(this));    */    
     }
 
     componentDidMount() { 
@@ -94,6 +77,8 @@ export default class Project extends React.Component {
         window.onpopstate = function(event) {
             history.go(1);
         };*/
+
+
         window.onpopstate = ()=> {
           if(this._isMounted) {
             const { hash } = location;
@@ -109,10 +94,36 @@ export default class Project extends React.Component {
         this.scrollDist = document.querySelector('.bandeau');
         this.scrollContext = document.querySelector('.project');
     }
-
+    
     componentWillUnmount() {
         //window.removeEventListener('wheel', this.handleScroll);
     }
+
+    getProject(id){
+        //var ret
+        this.error = false;
+        const project = ProjectAPI.get(id);
+        
+        if(!project){
+            console.log("error");
+            console.log(id);
+            this.error = true;
+            this.goBack();
+            return false;
+        }
+        
+        return project;
+    }
+
+    changeProject(newId){
+        setTimeout(function(){
+            this.context.router.history.push('/');
+        }.bind(this), 300);   
+        Animation.switchPage(function(){
+            this.context.router.history.push('/project/'+newId);
+        }.bind(this));     
+    }
+
 
     goBack(){
         Animation.switchPage(function(){

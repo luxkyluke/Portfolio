@@ -21,7 +21,9 @@ const utility = {
 
     getBlurImg(src){
     	const decompPath = src.split('.');
-		return decompPath[0]+'.blur'+'.jpg';
+        const str = "."+decompPath[decompPath.length-2]+'.blur'+'.jpg';
+        //console.log(str)
+		return str;
     },
 
     isTablet(){

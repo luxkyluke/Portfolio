@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 
 export default class Menu extends React.Component {
-    constructor(props) {
-        super(props);
+    static contextTypes = {
+        router: PropTypes.object
+    }
+    
+    constructor(props, context) {
+        super(props, context);
         this.handleClick = this.handleClick.bind(this);
         this.state={
             open : this.props.isOpen,
@@ -15,6 +20,8 @@ export default class Menu extends React.Component {
 
     handleClick(id, e) {
        //e.preventDefault();
+        this.context.router.history.push("/"+id);
+
         this.props.close();
     }
 
@@ -39,14 +46,14 @@ export default class Menu extends React.Component {
                 <ul className={"menu__list" + this.state.scale + this.state.move}>
                     
                     <li className="menu__list__item">
-                        <Link to="/" onClick={this.handleClick.bind(this, "home")}>home</Link>
+                        <a  onClick={this.handleClick.bind(this, "")}>home</a>
                     </li>
 
                     <li className="menu__list__item">
-                        <Link to="/projects" onClick={this.handleClick.bind(this, "projects")}>projects</Link>
+                        <a  onClick={this.handleClick.bind(this, "projects")}>projects</a>
                     </li>
                     <li className="menu__list__item">
-                        <Link to="/about" onClick={this.handleClick.bind(this, "aboutme")}>about me</Link>
+                        <a onClick={this.handleClick.bind(this, "about")}>about me</a>
                     </li>
                 </ul>
             </nav>

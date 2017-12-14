@@ -46,7 +46,7 @@ export default class HomePage extends React.Component{
 	scrollDown(){
 		if(document.querySelector('.page').classList.contains('hide'))
 			return;
-		this.context.router.history.push("/projects");
+		this.context.router.history.push("./projects");
 		this.setState({'home':false});
         window.removeEventListener('wheel', this.handleScroll);
 	}
