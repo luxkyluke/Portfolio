@@ -49,7 +49,8 @@ export default class HeaderProject extends React.Component {
     }
 
     render() {
-        //console.log(this.state.type)
+        console.log(this.state.title)
+        console.log(this.state.img)
         //<img className="header__right__img" src={this.img} />
         const backgroundStyle = {'backgroundImage' : 'url('+this.state.img+')',
             'transform':'scale('+this.state.scale+')'

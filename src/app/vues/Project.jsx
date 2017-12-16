@@ -53,7 +53,7 @@ export default class Project extends React.Component {
 
     
     componentWillReceiveProps(newProps){
-        console.log(newProps);
+        //console.log(newProps);
         console.log(this.state.id);
         const newId = parseInt(newProps.match.params.id, 10);
         console.log(newId)
@@ -116,9 +116,9 @@ export default class Project extends React.Component {
     }
 
     changeProject(newId){
-        setTimeout(function(){
+        /*setTimeout(function(){
             this.context.router.history.push('/');
-        }.bind(this), 300);   
+        }.bind(this), 300); */  
         Animation.switchPage(function(){
             this.context.router.history.push('/project/'+newId);
         }.bind(this));     

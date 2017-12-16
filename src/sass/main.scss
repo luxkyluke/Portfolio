@@ -11,7 +11,7 @@
 
 html, body{
 	margin:0;
-	background-color : $bodyBG;
+	background-color : $canvasColor;
 	font-family: 'Karla', sans-serif;
 	font-weight: 300;
 	width: 100%;
@@ -43,6 +43,10 @@ header{
 
 footer{
 	bottom: 0;
+}
+
+#app{
+	opacity: 0;
 }
 
 .center.middle{
@@ -91,6 +95,24 @@ footer{
 		opacity: 0;
 	}
 }
+
+/**********LOADER************/
+#loader{
+	position:absolute;
+	@extend .center.middle;
+	z-index:8888;
+	opacity: 1;
+
+	@include transition(opacity 300ms);
+	&__img{
+		width:300px;
+		height: 300px;
+		@extend .backgroundImg;
+		background-image: url('../img/loader.gif')
+	}
+}
+
+
 /**************SCROLL************/
 
 .scroll{
@@ -308,6 +330,8 @@ footer{
     }
 }
 
+
+/*******RESPONSIVE*************/
 
 @include tablet{
 	.burger{

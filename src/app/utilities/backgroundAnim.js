@@ -157,6 +157,7 @@ function animCanvas(c){
 		mousePointer.draw(c);
 
 	}, 30);
+	
 
 	document.addEventListener("mousemove", function(event){
 		mousePointer.update(event.clientX, event.clientY);
@@ -172,10 +173,25 @@ window.onload = function () {
 	let canvas = document.getElementById("scene");
 	let c = canvas.getContext("2d");
 	//document.body.appendChild(canvas);
+	
+	document.getElementById('app').style.opacity = 0;
 
 	initCanvas(c);
 	createPoints();
 	animCanvas(c);
+	console.log('CANVAS LOADED');
+	removeLoader();
+
+	document.getElementById('app').style.opacity = 1;
+
+}
+
+function removeLoader(){
+	const loader = document.getElementById('loader');
+	loader.style.opacity = 0;
+	setTimeout(function(){
+		loader.style.display = 'none';
+	},500);
 }
 
 
