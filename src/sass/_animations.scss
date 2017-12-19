@@ -8,6 +8,16 @@
   }
 }
 
+@keyframes loader {
+  from {
+    @include transform(rotate(0deg));
+  }
+
+  to {
+    @include transform(rotate(360deg));
+  }
+}
+
 @keyframes eyeDesc {
   0% {
     @include transform(translateX(0));

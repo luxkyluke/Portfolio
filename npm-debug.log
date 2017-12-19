@@ -27,7 +27,7 @@
 14 verbose stack     at maybeClose (internal/child_process.js:920:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)
 15 verbose pkgid @1.0.0
-16 verbose cwd D:\Documents\Portfolio\SitePorfolio\src
+16 verbose cwd D:\Documents\Portfolio\SitePorfolio
 17 error Windows_NT 10.0.16299
 18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "webpack"
 19 error node v6.11.3

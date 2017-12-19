@@ -116,9 +116,9 @@ export default class Project extends React.Component {
     }
 
     changeProject(newId){
-        /*setTimeout(function(){
+        setTimeout(function(){
             this.context.router.history.push('/');
-        }.bind(this), 300); */  
+        }.bind(this), 300);   
         Animation.switchPage(function(){
             this.context.router.history.push('/project/'+newId);
         }.bind(this));     

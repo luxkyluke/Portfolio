@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ba",
+				"backgroundStyle"
+			],
+			[
 				"tran",
 				"transition"
 			],
@@ -14,10 +18,6 @@
 			[
 				"back",
 				"backgroundImg"
-			],
-			[
-				"ba",
-				"background"
 			],
 			[
 				"componen",
@@ -527,7 +527,6 @@
 			"settings":
 			{
 				"buffer_size": 491,
-				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -578,7 +577,7 @@
 			"file": "src/app/vues/Project.jsx",
 			"settings":
 			{
-				"buffer_size": 6525,
+				"buffer_size": 6521,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -587,7 +586,7 @@
 			"file": "src/app/components/project/HeaderProject.jsx",
 			"settings":
 			{
-				"buffer_size": 3065,
+				"buffer_size": 3653,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -610,13 +609,10 @@
 			}
 		},
 		{
-			"contents": "const DISTANCE = 200;\nconst OVERFLOW = 20;\nconst MAX_ALPHA = 0.5;\n\nvar mousePointer = new MousePointeur(new Point(0, 0));\nconst CONST_NB_POINTS = 0.08\nvar width, height;\nvar points =[];\t\nvar links = [];\n\n\nfunction Point (x, y) {\n\tconst PAS = 1;\n\tthis.x = x;\n\tthis.y = y;\n\n\tthis.init = function(){\n\t\tdo{\n\t\t\tthis.dx = getRandomArbitrary(-PAS, PAS)\n\t\t}while(Math.abs(this.dx)-0<Math.EPSILON);\n\t\tdo{\n\t\t\tthis.dy = getRandomArbitrary(-PAS, PAS);\n\t\t}while(Math.abs(this.dy)-0<Math.EPSILON);\n\t}\n\n\tthis.init();\n\n\tthis.draw = function(c, radius=1){\n\t\tc.fillStyle = \"rgba(255, 255, 255,\"+ MAX_ALPHA +\")\";;\n\t\tc.beginPath();\n\t\tc.arc(this.x, this.y, radius, 0, Math.PI*2, false);\n\t\tc.fill();\n\t}\n\n\tthis.update = function(){\n\t\tif((this.x+this.dx) > width+OVERFLOW || (this.x+this.dx) < -OVERFLOW \n\t\t\t\t|| (this.y+this.dy) > height+OVERFLOW || (this.y+this.dy) < -OVERFLOW){\n\t\t\tthis.init();\n\t\t\treturn;\n\t\t}\n\t\tthis.x += this.dx;\n\t\tthis.y += this.dy;\n\t}\n\n\tthis.linkAllOtherPoint = function(){\n\t\tfor(let i=0; i<points.length ; i++){\n\t\t\tlinks.push(new Link(this, points[i]));\n\t\t}\n\t\tlinks.push(new Link(this, mousePointer));\n\t}\n}\n\nfunction Link(p1, p2){\n\tthis.p1 = p1;\n\tthis.p2 = p2;\n\tthis.x = p1.x-p2.x;\n\tthis.y = p1.y-p2.y;\n\n\tthis.norm = function(){\n\t\tthis.x = this.p1.x-this.p2.x;\n\t\tthis.y = this.p1.y-this.p2.y;\n\t\t\n\t\tvar sqrtNorm = this.x * this.x + this.y * this.y;\n\t\treturn Math.sqrt(sqrtNorm);\n\t}\n\n\tthis.draw = function(c){\n\t\tvar alpha = 1- this.norm()/DISTANCE;\n\n\t\tif(alpha<0 || alpha > 1)\n\t\t\treturn;\n\t\tif(alpha > MAX_ALPHA)\n\t\t\talpha = MAX_ALPHA;\n\t\tc.fillStyle = \"white\";\n\t\tc.beginPath();\n\t\tc.moveTo(this.p1.x, this.p1.y);\n\t\tc.lineTo(this.p2.x, this.p2.y);\n\t\tc.strokeStyle = \"rgba(255, 255, 255,\"+ alpha +\")\";\n\t\tc.stroke();\n\t}\n}\n\nfunction MousePointeur(p) {\n\tthis.point = p;\n\tthis.x =p.x;\n\tthis.y =p.y;\n\n\tthis.draw = function(c){\n\t\tthis.point.draw(c, 0.1);\n\t}\n\n\tthis.update = function(x, y){\n\t\tthis.point.x = x;\n\t\tthis.point.y = y;\n\t\tthis.x =x;\n\t\tthis.y =y;\n\t}\n\n\tthis.click = function(){\n\t\tconst p = new Point(this.x, this.y);\n\t\tp.linkAllOtherPoint();\n\t\tpoints.push(p);\n\t}\n}\n\nfunction resizeCanvas(){\n\tlet canvas = document.getElementById(\"scene\");\n\twidth \t= canvas.width \t= window.innerWidth;\n\theight \t= canvas.height = window.innerHeight;\n}\n\nwindow.onresize = function(e){\n\tresizeCanvas();\n}\n\nfunction createPoints(){\n\tlet nbPoints = Math.floor(width *CONST_NB_POINTS);\n\tlet posX = width/2; \n\tlet posY = height/2;\n\n\n\tfor(let i=0; i<nbPoints; i++){\n\t\tconst x = getRandomArbitrary(0, width);\n\t\tconst y = getRandomArbitrary(0, height);\n\t\tpoints.push(new Point(x, y));\n\t}\n\tlet cpt=0;\n\tfor(let i=0; i<nbPoints; i++){\n\t\tpoints[i].linkAllOtherPoint();\n\t\t/*for(let j=0; j<nbPoints ; j++){\n\t\t\tlinks[cpt++] = new Link(points[i], points[j]);\n\t\t}\n\t\tlinks[cpt++] = new Link(points[i], mousePointer);*/\n\t}\n}\n\nfunction initCanvas(c){\n\tresizeCanvas();\n\tc.fillStyle = \"#000819\";\n\tc.fillRect(0, 0, width, height);\n}\n\nfunction animCanvas(c){\n\tsetInterval(function(){\n\t\tc.fillStyle = \"#000819\";\n\t\tc.fillRect(0, 0, width, height);\n\n\t\tfor(let i=0; i<points.length; i++){\n\t\t\t//console.log(\"point pos \"+ points[i].dx + \" \" + points[i].dy);\n\t\t\tpoints[i].update(); \n\t\t\tpoints[i].draw(c);\n\t\t}\n\t\tfor(let i=1; i<links.length; i++){\n\t\t\tlinks[i].draw(c);\n\t\t}\n\t\t//console.log(\"mousePointer pos \"+ mousePointer.point.x + \" \" +mousePointer.point.y);\n\t\tmousePointer.draw(c);\n\n\t}, 30);\n\t\n\n\tdocument.addEventListener(\"mousemove\", function(event){\n\t\tmousePointer.update(event.clientX, event.clientY);\n\t});\n\n\tdocument.addEventListener(\"click\", function(e){\n\t\tmousePointer.click()\n\t});\n}\n\n\nwindow.onload = function () {\n\tlet canvas = document.getElementById(\"scene\");\n\tlet c = canvas.getContext(\"2d\");\n\t//document.body.appendChild(canvas);\n\n\tinitCanvas(c);\n\tcreatePoints();\n\tanimCanvas(c);\n\tconsole.log('CANVAS LOADED');\n\tremoveLoader();\n\tdocument.getElementById('app').style.opacity = 1;\n}\n\nfunction removeLoader(){\n\tconst loader = document.getElementById('loader');\n\tloader.style.opacity = 0;\n\tsetTimeout(function(){\n\t\tloader.style.display = 'none';\n\t},500);\n}\n\n\nfunction getRandomArbitrary(min, max) {\n  return Math.random() * (max - min) + min;\n}",
 			"file": "src/app/utilities/backgroundAnim.js",
-			"file_size": 4350,
-			"file_write_time": 131579313924550944,
 			"settings":
 			{
-				"buffer_size": 4096,
+				"buffer_size": 4098,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -713,7 +709,7 @@
 			"file": "src/app/components/about/ProfilPic.jsx",
 			"settings":
 			{
-				"buffer_size": 2445,
+				"buffer_size": 2444,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -767,7 +763,7 @@
 			"file": "webpack.config.js",
 			"settings":
 			{
-				"buffer_size": 1567,
+				"buffer_size": 1566,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -786,7 +782,16 @@
 			"file": "src/sass/main.scss",
 			"settings":
 			{
-				"buffer_size": 6038,
+				"buffer_size": 6107,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/_animations.scss",
+			"settings":
+			{
+				"buffer_size": 869,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -939,6 +944,9 @@
 	],
 	"file_history":
 	[
+		"/C/Users/TonioDeMoreno/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/D/Documents/Portfolio/SitePorfolio/src/img/loader.svg",
+		"/D/Documents/Portfolio/SitePorfolio/src/app/utilities/backgroundAnim.js",
 		"/D/wamp64/www/FleurDePapier/SANDBOX/giverny/galaxie/0.6/index.html",
 		"/C/wamp64/www/.htaccess",
 		"/D/Documents/Portfolio/SitePorfolio/src/app/components/Main.jsx",
@@ -993,7 +1001,6 @@
 		"/D/Documents/Portfolio/SitePorfolio/src/app/components/project/Footer.jsx",
 		"/D/Documents/Portfolio/SitePorfolio/src/app/utilities/Animation.js",
 		"/D/Documents/Portfolio/SitePorfolio/src/app/components/assets/Button.jsx",
-		"/D/Documents/Portfolio/SitePorfolio/src/app/utilities/backgroundAnim.js",
 		"/D/Documents/Portfolio/SitePorfolio/src/app/components/project/ImgBloc.jsx",
 		"/D/Documents/Portfolio/SitePorfolio/src/app/components/project/Images.jsx",
 		"/D/Documents/Portfolio/SitePorfolio/src/index.html",
@@ -1064,9 +1071,7 @@
 		"/D/wamp64/www/Challenger/src/sass/_pages.scss",
 		"/D/wamp64/www/Challenger/src/index.html",
 		"/D/wamp64/www/Challenger/src/app/index.js",
-		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/sleepPsych.json",
-		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/awakeRobotic.json",
-		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/awakePsych.json"
+		"/D/Documents/IMAC2/OFX_Visual/apps/myApps/Delaunayx64/dreams/actions/sleepPsych.json"
 	],
 	"find":
 	{
@@ -1077,6 +1082,7 @@
 		"height": 194.0,
 		"where_history":
 		[
+			"D:\\Documents\\Portfolio\\SitePorfolio\\src/sass",
 			"D:\\Documents\\Portfolio\\SitePorfolio\\src/",
 			"D:\\Documents\\Portfolio\\SitePorfolio\\src/sass",
 			"D:\\Documents\\Portfolio\\SitePorfolio\\sass",
@@ -1146,6 +1152,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"&bodyColor",
+			"bodyColor",
+			"animation",
+			"Animation",
+			"ProgressiveImage",
+			"progressive",
 			"path/to/",
 			"all",
 			"translate",
@@ -1267,13 +1279,7 @@
 			"componentWillReceiveProps",
 			"NB_PROJECT",
 			"1px",
-			"men",
-			"myStyle",
-			"state.scroll",
-			".scroll",
-			"scroll",
-			"this.project",
-			"scrollContext"
+			"men"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1341,7 +1347,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -1371,7 +1377,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1387,8 +1393,8 @@
 						"selection":
 						[
 							[
-								514,
-								514
+								318,
+								318
 							]
 						],
 						"settings":
@@ -1399,7 +1405,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1428,7 +1434,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
@@ -1457,7 +1463,7 @@
 						"translation.y": 301.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
@@ -1483,10 +1489,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 681.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
@@ -1502,8 +1508,8 @@
 						"selection":
 						[
 							[
-								295,
-								237
+								225,
+								225
 							]
 						],
 						"settings":
@@ -1516,7 +1522,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
@@ -1525,15 +1531,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6525,
+						"buffer_size": 6521,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1971,
-								1971
+								3532,
+								3532
 							]
 						],
 						"settings":
@@ -1543,10 +1549,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1101.0,
+						"translation.y": 3601.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
@@ -1555,15 +1561,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3065,
+						"buffer_size": 3653,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1485,
-								1485
+								3463,
+								3463
 							]
 						],
 						"settings":
@@ -1573,10 +1579,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 447.0,
+						"translation.y": 1540.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1606,7 +1612,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
@@ -1636,7 +1642,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
@@ -1645,15 +1651,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4096,
+						"buffer_size": 4098,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3836,
-								3836
+								3686,
+								3686
 							]
 						],
 						"settings":
@@ -1662,10 +1668,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3888.0,
+						"translation.y": 3967.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
@@ -1695,7 +1701,7 @@
 						"translation.y": 446.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
@@ -1724,7 +1730,7 @@
 						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 34,
 					"type": "text"
 				},
 				{
@@ -1754,7 +1760,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 33,
 					"type": "text"
 				},
 				{
@@ -1784,7 +1790,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 33,
+					"stack_index": 36,
 					"type": "text"
 				},
 				{
@@ -1811,10 +1817,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 151.0,
+						"translation.y": 57.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 34,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -1844,7 +1850,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 36,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1874,7 +1880,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -1903,7 +1909,7 @@
 						"translation.y": 179.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 29,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -1933,7 +1939,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 30,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -1964,7 +1970,7 @@
 						"translation.y": 575.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 32,
 					"type": "text"
 				},
 				{
@@ -1973,15 +1979,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2445,
+						"buffer_size": 2444,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1475,
-								1475
+								1938,
+								1701
 							]
 						],
 						"settings":
@@ -1991,10 +1997,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 775.0,
+						"translation.y": 808.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -2024,7 +2030,7 @@
 						"translation.y": 2827.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -2054,7 +2060,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 31,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -2070,8 +2076,8 @@
 						"selection":
 						[
 							[
-								288,
-								288
+								413,
+								423
 							]
 						],
 						"settings":
@@ -2081,10 +2087,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 155.0,
+						"translation.y": 262.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -2114,13 +2120,13 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 32,
+					"stack_index": 35,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -2151,7 +2157,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
@@ -2160,15 +2166,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1567,
+						"buffer_size": 1566,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								406,
-								406
+								263,
+								263
 							]
 						],
 						"settings":
@@ -2181,7 +2187,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -2210,7 +2216,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -2219,15 +2225,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6038,
+						"buffer_size": 6107,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								579,
-								579
+								1442,
+								1442
 							]
 						],
 						"settings":
@@ -2237,14 +2243,44 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 756.0,
+						"translation.y": 2232.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 30,
+					"file": "src/sass/_animations.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 869,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								205,
+								205
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
 					"file": "src/sass/_about.scss",
 					"semi_transient": false,
 					"settings":
@@ -2270,11 +2306,11 @@
 						"translation.y": 86.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "src/sass/_project.scss",
 					"semi_transient": false,
 					"settings":
@@ -2300,11 +2336,11 @@
 						"translation.y": 3159.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": "src/sass/_mixins.scss",
 					"semi_transient": false,
 					"settings":
@@ -2330,11 +2366,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 35,
+					"stack_index": 37,
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 34,
 					"file": "src/sass/_projects.scss",
 					"semi_transient": false,
 					"settings":
@@ -2360,11 +2396,11 @@
 						"translation.y": 4194.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 34,
+					"buffer": 35,
 					"file": "src/sass/_home.scss",
 					"semi_transient": false,
 					"settings":
@@ -2390,11 +2426,11 @@
 						"translation.y": 521.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 35,
+					"buffer": 36,
 					"file": "src/sass/_homePage.scss",
 					"semi_transient": false,
 					"settings":
@@ -2419,11 +2455,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 36,
+					"buffer": 37,
 					"file": "src/sass/_constantes.scss",
 					"semi_transient": false,
 					"settings":
@@ -2435,8 +2471,8 @@
 						"selection":
 						[
 							[
-								100,
-								107
+								27,
+								33
 							]
 						],
 						"settings":
@@ -2447,11 +2483,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 37,
+					"buffer": 38,
 					"file": "src/sass/_utility.scss",
 					"semi_transient": false,
 					"settings":
@@ -2476,7 +2512,7 @@
 						"translation.y": 3078.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 37,
+					"stack_index": 38,
 					"type": "text"
 				}
 			]
@@ -2510,7 +2546,7 @@
 		"cols":
 		[
 			0.0,
-			0.554241200231,
+			0.317657241777,
 			1.0
 		],
 		"rows":
@@ -2538,6 +2574,30 @@
 		"selected_items":
 		[
 			[
+				"anim",
+				"SitePorfolio\\src\\sass\\_animations.scss"
+			],
+			[
+				"hea",
+				"SitePorfolio\\src\\app\\components\\project\\HeaderProject.jsx"
+			],
+			[
+				"utili",
+				"SitePorfolio\\src\\app\\utilities\\utility.js"
+			],
+			[
+				"headpro",
+				"SitePorfolio\\src\\app\\components\\project\\HeaderProject.jsx"
+			],
+			[
+				"heapro",
+				"SitePorfolio\\src\\app\\components\\project\\HeaderProject.jsx"
+			],
+			[
+				"project",
+				"SitePorfolio\\src\\app\\vues\\Project.jsx"
+			],
+			[
 				"main",
 				"SitePorfolio\\src\\app\\components\\Main.jsx"
 			],
@@ -2550,20 +2610,12 @@
 				"SitePorfolio\\src\\_mixins.scss"
 			],
 			[
-				"project",
-				"SitePorfolio\\src\\app\\vues\\Project.jsx"
-			],
-			[
 				"about",
 				"SitePorfolio\\src\\sass\\_about.scss"
 			],
 			[
 				"img",
 				"SitePorfolio\\src\\app\\components\\project\\ImgBloc.jsx"
-			],
-			[
-				"utili",
-				"SitePorfolio\\src\\app\\utilities\\utility.js"
 			],
 			[
 				"hompe",
@@ -2695,10 +2747,6 @@
 			],
 			[
 				"animp",
-				"src\\app\\utilities\\animPicture.js"
-			],
-			[
-				"anim",
 				"src\\app\\utilities\\animPicture.js"
 			],
 			[
@@ -3036,14 +3084,6 @@
 			[
 				"sce",
 				"Raytracer/src/scene/scene.c"
-			],
-			[
-				"t",
-				"include/Terrain.h"
-			],
-			[
-				"inter",
-				"Raytracer/include/geometry/Intersection.h"
 			]
 		],
 		"width": 0.0

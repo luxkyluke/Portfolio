@@ -50,7 +50,7 @@ export default class ProfilPic extends React.Component {
             <div className="profilPic">
                 <div className="tilter">
                     <figure className="tilter__figure">
-                         <ProgressiveImage
+                        <ProgressiveImage
                             preview={ppBlur}
                             src={pp}
                             render={(src, style) => <img className="tilter__image" src={src} style={style} />}

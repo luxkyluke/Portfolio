@@ -2,9 +2,11 @@ import React from "react";
 //import Scroll from 'react-scroll'; // Imports all Mixins
  
 
+import ProgressiveImage from "react-progressive-image-loading";
 import Button   from "./../assets/Button.jsx";
 import ScrollArrow   from "./../assets/Scroll.jsx";
 import Animation   from "./../../utilities/Animation.js";
+import Utility   from "./../../utilities/utility.js";
 
 export default class HeaderProject extends React.Component {
     constructor(props) {
@@ -49,8 +51,8 @@ export default class HeaderProject extends React.Component {
     }
 
     render() {
-        console.log(this.state.title)
-        console.log(this.state.img)
+        /*console.log(this.state.title)
+        console.log(this.state.img)*/
         //<img className="header__right__img" src={this.img} />
         const backgroundStyle = {'backgroundImage' : 'url('+this.state.img+')',
             'transform':'scale('+this.state.scale+')'
@@ -73,6 +75,16 @@ export default class HeaderProject extends React.Component {
                             hide = {!this.state.link}/>
                     </div>
                 </div>
+                {/*<ProgressiveImage
+                    preview={Utility.getBlurImg(this.state.img)}
+                    src={this.state.img}
+                    style={backgroundStyle}
+                    render={(src, style) => 
+                        <div   
+                            className="header_project__right" 
+                            style={Object.assign(style, { backgroundImage: `url(${src})` })}/>
+                    }
+                />*/}
                 <div className="header_project__right" style={backgroundStyle}>
                 </div>
                 <ScrollArrow click={this.state.scrollClick} black={true}/>

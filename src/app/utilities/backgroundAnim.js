@@ -173,8 +173,6 @@ window.onload = function () {
 	let canvas = document.getElementById("scene");
 	let c = canvas.getContext("2d");
 	//document.body.appendChild(canvas);
-	
-	document.getElementById('app').style.opacity = 0;
 
 	initCanvas(c);
 	createPoints();
