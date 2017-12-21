@@ -298,6 +298,20 @@
 	}
 }
 
+@media screen and (max-width: $mq-laptop), screen and (max-height: 770px){
+
+	.project.page{
+		.header_project{
+			.scroll{
+				left:25px;
+				&.white{
+					right: 25px;	
+				}
+			}
+		}
+	}
+}
+
 @include tablet{
 	.project.page{
 		.header_project{
