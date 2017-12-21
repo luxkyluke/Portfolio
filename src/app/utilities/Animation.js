@@ -5,7 +5,8 @@ const Animation = {
 		const blank = document.getElementById('blank_veil');
 		const dark = document.getElementById('dark_veil');
 		if(color){
-			console.log(color)
+			console.log(color);
+			console.log(dark)
 			dark.style.backgroundColor = color;
 		}
 
@@ -34,7 +35,12 @@ const Animation = {
 	openProject(id, color, callback){
 
 		//Animation.switchPage(callback, color);
-		
+		if(Utility.isTablet()){
+			Animation.switchPage(callback, color);
+			return;
+		}		
+
+
 		const desc = document.querySelector('.desc.active');
 		console.log(desc);
 		desc.classList.remove('active');

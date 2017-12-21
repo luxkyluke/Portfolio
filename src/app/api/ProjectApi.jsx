@@ -14,7 +14,7 @@ const ProjectApi = {
       context:'Intership at <br> <a href="http://fleurdepapier.com" target="_blank">Fleur de Papier</a>',
       year: "2017",
       color: "#232846",
-      txtcolor: "#000314",
+      txtcolor: "#bf3917",
       imgs: [
         {
           src : './data/monaco_porcelaine/3.jpg',
