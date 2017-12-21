@@ -27,7 +27,7 @@ const utility = {
     },
 
     isTablet(){
-    	return window.innerWidth < 1059;
+    	return window.innerWidth < 1059 || window.innerHeight < 770;
     },
 
     isTabletPortrait(){

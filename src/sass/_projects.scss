@@ -170,7 +170,7 @@
 	}
 }
 
-@include tablet{
+@media screen and (max-width: $mq-tablet), screen and (max-height: 770px){
 
 	.projects{
 		.projects__content{

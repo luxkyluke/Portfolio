@@ -4,3 +4,6 @@ src/.DS_Store
 package-lock.json
 package.json
 package.json
+package.json
+dist/.DS_Store
+dist/app/.DS_Store
