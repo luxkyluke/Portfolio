@@ -82,6 +82,9 @@ export default class ProjectsContainer extends React.Component {
 
     navProject(dir){
         let nextId = (this.state.currentId+dir)%NB_PROJECT;
+        if(isNaN(nextId)){
+            return;
+        }
         if(nextId < 0){
             this.props.up();
             return;
