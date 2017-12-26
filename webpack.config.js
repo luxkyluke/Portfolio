@@ -18,7 +18,6 @@ var config = {
         new LiveReloadPlugin()
     ],
     module: {
-        
         loaders: [
             {
                 test: /\.js?/,  

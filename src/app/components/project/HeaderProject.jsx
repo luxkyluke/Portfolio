@@ -31,11 +31,11 @@ export default class HeaderProject extends React.Component {
             /*console.log("setstate")
             console.log(newProps.title)*/
 
-            this.setState=({
-                type : newProps.type
-            }, function() {
-                //console.log("State UPDATED")
-            })
+            this.setState=({type : newProps.type});
+            //this.setState=({img : newProps.img});
+        }
+        if(this.state.scale !== newProps.scale){
+            this.setState({scale:newProps.scale})
         }
     }
 
