@@ -42,7 +42,6 @@ const Animation = {
 
 
 		const desc = document.querySelector('.desc.active');
-		console.log(desc);
 		desc.classList.remove('active');
 
 		document.querySelector('.project.active > .project__image').style.overflow = 'visible';

@@ -92,7 +92,6 @@ import anime from './anime.min.js';
 	 * Init.
 	 */
 	TiltFx.prototype._init = function() {
-		console.log(this.DOM)
 		this.DOM.animatable = {};
 		this.DOM.animatable.imgWrapper = this.DOM.el.querySelector('.tilter__figure');
 		this.DOM.animatable.lines = this.DOM.el.querySelector('.tilter__deco--lines');
