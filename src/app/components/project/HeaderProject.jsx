@@ -28,11 +28,15 @@ export default class HeaderProject extends React.Component {
 
     componentWillReceiveProps(newProps){
         if(this.state.img !== newProps.img){
-            /*console.log("setstate")
-            console.log(newProps.title)*/
-
-            this.setState=({type : newProps.type});
-            //this.setState=({img : newProps.img});
+            this.setState({type : newProps.type});
+            this.setState({title : newProps.title});
+            this.setState({desc : newProps.desc});
+            this.setState({link : newProps.link});
+            this.setState({img : newProps.img});
+            this.setState({blur : newProps.blur});
+            this.setState({color : newProps.color});
+            this.setState({scale : 1.1});
+            return;
         }
         if(this.state.scale !== newProps.scale){
             this.setState({scale:newProps.scale})

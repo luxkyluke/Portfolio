@@ -5,10 +5,11 @@ import BandeauBloc  from "./BandeauTxtBloc.jsx";
 export default class Bandeau extends React.Component {
     constructor(props) {
         super(props);
-        this.style = {backgroundColor : this.props.color}
     }
 
+
     render() {
+        this.style = {backgroundColor : this.props.color}
         return(
             <div className="bandeau" style={this.style}>
                 <div className="bandeau__wrapper">

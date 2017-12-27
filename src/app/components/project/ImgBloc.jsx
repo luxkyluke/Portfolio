@@ -6,34 +6,46 @@ import Utility from './../../utilities/utility.js';
 export default class ImgBloc extends React.Component {
     constructor(props) {
         super(props);
-        
-        if(Utility.isVideo(this.props.src)){
-            this.content = (
+        this.state={
+            content : this.getContent(this.props.src)
+        }
+    }
+
+    getContent(src){
+        if(Utility.isVideo(src)){
+            return (
                 <div className="video__wrapper">
                     <iframe 
                         className="video" 
-                        src="https://player.vimeo.com/video/217138011"  
+                        src={src}  
                         frameBorder="0"  
                         allowFullScreen/>
                 </div>
             )
-        }else{
-            this.content = (
-                <ProgressiveImage
-                    preview={Utility.getBlurImg(this.props.src)}
-                    src={this.props.src}
-                    render={(src, style) => <img className="imgBloc__frame__img" src={src} style={style} />}
-                />
-            );
+        }
+        return(
+            <img className="imgBloc__frame__img" src={src}/>
+            /*<ProgressiveImage
+                preview={Utility.getBlurImg(src)}
+                src={src}
+                render={(src, style) => <img className="imgBloc__frame__img" src={src} style={style} />}
+            />*/
+        );
+    }
+
+    componentWillReceiveProps(newProps){
+        if(this.props.src !== newProps.src){
+            this.setState({content:this.getContent(newProps.src)});
         }
     }
 
     render() {
         const myClass = (this.props.full) ? " full" : "";
+        //console.log(this.state.content)
         return(
             <div className={'imgBloc'+myClass} >
                 <div className="imgBloc__frame">
-                    {this.content}
+                    {this.state.content}
                 </div>    
             </div>
         );

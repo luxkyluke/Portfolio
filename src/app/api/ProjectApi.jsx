@@ -130,7 +130,7 @@ const ProjectApi = {
             full: false
           },
           {
-            src : "./data/delaunay_dreams/1.mp4",
+            src : "https://player.vimeo.com/video/217138011",
             full: true
           },
           {

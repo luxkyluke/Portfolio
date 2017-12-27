@@ -37,7 +37,9 @@ const utility = {
     isVideo(src){
     	const re = /(?:\.([^.]+))?$/;
     	const ext = re.exec(src)[0];
-    	return ext === ".mp4" || ext === ".mov";
+        const n = src.search('video');
+
+    	return ext === ".mp4" || ext === ".mov" || n > -1;
     }
 }
 

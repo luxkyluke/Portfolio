@@ -18,7 +18,8 @@ export default class FooterSide extends React.Component {
             <div className={"footer__side "+this.props.side}>
                 <a onClick={this.props.click.bind(this, this.props.id)}>
                     <div className="footer__side__scaler">
-                        <ProgressiveImage
+                        <div className="footer__side__img" style= { myStyle } />
+                        {/*<ProgressiveImage
                             preview={Utility.getBlurImg(this.props.background)}
                             src={this.props.background}
                             transitionTime={500}
@@ -27,7 +28,7 @@ export default class FooterSide extends React.Component {
                                 <div    className="footer__side__img" 
                                         style={Object.assign(style, { backgroundImage: `url(${src})` })} />
                             }
-                        />
+                        />*/}
                     </div>
                     <div className={"footer__side__wrapper"}>
                         <h2 className="footer__side__title">{this.props.title}</h2>  

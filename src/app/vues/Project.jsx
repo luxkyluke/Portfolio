@@ -35,66 +35,57 @@ export default class Project extends React.Component {
         if(!project)
             return;
             
+        const footer = this.getPrevAndNextProject(this.id);
+
         this.state = {
             scale : 1.1,
             id : this.id,
-            project: project
+            project: project,
+            prevArticle : footer.prev,
+            nextArticle : footer.next
         }
 
-        this.getPrevAndNextProject();
 
         this.handleScroll = this.handleScroll.bind(this);
         this.goBack = this.goBack.bind(this);
         this.scrollDown = this.scrollDown.bind(this);
         this.changeProject = this.changeProject.bind(this);
+        this.getPrevAndNextProject = this.getPrevAndNextProject.bind(this);
         //this.getProject = this.getProject.bind(this);
 
     }
 
     
     componentWillReceiveProps(newProps){
-        //console.log(newProps);
-        console.log(this.state.id);
+        // /console.log(newProps);
+        //console.log(this.state.id);
         const newId = parseInt(newProps.match.params.id, 10);
-        console.log(newId)
+        //console.log(newId)
         if(newId !== this.state.id){
             const project = this.getProject(newId)
             if(!project)
                 return;
 
-            console.log(project)
+            //console.log(project)
+
+            const footer = this.getPrevAndNextProject(newId);
 
             this.setState({
                 id: newId,
-                project: project
-            })
+                project: project,
+                prevArticle : footer.prev,
+                nextArticle : footer.next
+            });
+            document.body.scrollTop = 0;
+            
         }
     }
 
     componentDidMount() { 
-        this._isMounted = true;
-       /* history.pushState(null, null, location.href);
-        window.onpopstate = function(event) {
-            history.go(1);
-        };*/
-
-
-        window.onpopstate = ()=> {
-          if(this._isMounted) {
-            const { hash } = location;
-            console.log(location)
-          }
-        };
        window.addEventListener('wheel', this.handleScroll);
-        // window.addEventListener('DOMMouseScroll',this.handleScroll,false); // For Firefox
-        // window.addEventListener('mousewheel',this.handleScroll,false);  
-        /*if(this.error){
-            //setTimeout(function(){
-                this.context.router.history.push('/projects');
-           // }.bind(this), 100);
-        }*/
         this.scrollDist = document.querySelector('.bandeau');
         this.scrollContext = document.querySelector('body');
+
     }
     
     componentWillUnmount() {
@@ -120,14 +111,13 @@ export default class Project extends React.Component {
     }
 
     changeProject(newId){
-        const color = (newId === this.prevArticle.id) ? this.prevArticle.color : this.nextArticle.color;
-        setTimeout(function(){
-            this.context.router.history.push('/projects');
-        }.bind(this), 300);   
+        //const color = (newId === this.state.prevArticle.id) ? this.state.prevArticle.color : this.state.nextArticle.color;
+        // setTimeout(function(){
+        //     this.context.router.history.push('/projects');
+        // }.bind(this), 300);   
         Animation.switchPage(function(){
             this.context.router.history.push('/project/'+newId);
-            //window.scrollTo(0, 0)
-        }.bind(this), color);     
+        }.bind(this));     
     }
 
 
@@ -143,15 +133,15 @@ export default class Project extends React.Component {
         const delta = scrollTop/(window.innerHeight-300)*0.1;
         let scale = 1.1-delta;
         scale = (scale < 1) ? 1 : scale;
-        this.setState({scale:scale});
+        if(this.state.scale !== scale)
+            this.setState({scale:scale});
     }
 
-    getPrevAndNextProject(){
-        const prevId = (this.state.id-1 < 0) ? NB_PROJECT-1 : this.state.id-1 ;
-        const nextId = (this.state.id+1 >= NB_PROJECT) ? 0 : this.state.id+1 ;
-    
-        this.prevArticle = ProjectAPI.get(prevId);
-        this.nextArticle = ProjectAPI.get(nextId);
+    getPrevAndNextProject(id){
+        const prevId = (id-1 < 0) ? NB_PROJECT-1 : id-1 ;
+        const nextId = (id+1 >= NB_PROJECT) ? 0 : id+1 ;
+        
+        return {prev: ProjectAPI.get(prevId), next: ProjectAPI.get(nextId)};
     }
 
     scrollDown(){
@@ -164,7 +154,7 @@ export default class Project extends React.Component {
             return(<div></div>);
         }
         return(
-            <div className="project page" onScroll={this.handleScroll}>
+            <div className="project page" >
                 <Logo black={true} click={this.goBack}/>
                 <HeaderProject 
                     type                = {this.state.project.type}
@@ -189,13 +179,13 @@ export default class Project extends React.Component {
                         imgs            = {this.state.project.imgs}
                     />
                     <Footer 
-                        titlePrev       = {this.prevArticle.title}
-                        idPrev          = {this.prevArticle.id}
-                        backgroundPrev  = {this.prevArticle.background}
-                        titleNext       = {this.nextArticle.title}
+                        titlePrev       = {this.state.prevArticle.title}
+                        idPrev          = {this.state.prevArticle.id}
+                        backgroundPrev  = {this.state.prevArticle.background}
+                        titleNext       = {this.state.nextArticle.title}
                         click           = {this.changeProject}
-                        idNext          = {this.nextArticle.id}
-                        backgroundNext  = {this.nextArticle.background}
+                        idNext          = {this.state.nextArticle.id}
+                        backgroundNext  = {this.state.nextArticle.background}
                         />
                 </div>  
             </div>
