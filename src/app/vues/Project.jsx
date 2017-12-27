@@ -77,7 +77,6 @@ export default class Project extends React.Component {
                 nextArticle : footer.next
             });
             document.body.scrollTop = 0;
-            
         }
     }
 
@@ -100,8 +99,6 @@ export default class Project extends React.Component {
         const project = ProjectAPI.get(id);
         
         if(!project){
-            console.log("error");
-            console.log(id);
             this.error = true;
             this.goBack();
             return false;
@@ -119,7 +116,6 @@ export default class Project extends React.Component {
             this.context.router.history.push('/project/'+newId);
         }.bind(this));     
     }
-
 
     goBack(){
         Animation.switchPage(function(){

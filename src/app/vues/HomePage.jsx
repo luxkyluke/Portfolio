@@ -38,7 +38,7 @@ export default class HomePage extends React.Component{
 	handleScroll(e){
         const dir = e.deltaY/Math.abs(e.deltaY);
         //console.log(dir)
-        if(dir > 0 && this.state.home){
+        if(!isNaN(dir) && dir > 0 && this.state.home){
 	       	this.scrollDown();
         }
 	}

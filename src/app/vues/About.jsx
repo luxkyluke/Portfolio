@@ -23,6 +23,10 @@ export default class About extends React.Component {
         }.bind(this));
     }
 
+    componentsWillUnmount(){
+         Animation.switchPage(function(){}.bind(this));
+    }
+
     render() {
         const myStyle = {backgroundImage:'url('+this.props.background+')'};
         return(

@@ -149,7 +149,7 @@
 
 .scrollDots{
 	position: absolute;
-	right: $paddingGeneral;
+	right: 50px;
 	top: 50%;
 	@include transform(translateY(-50%));
 	width: 60px;

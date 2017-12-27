@@ -177,7 +177,6 @@ window.onload = function () {
 	initCanvas(c);
 	createPoints();
 	animCanvas(c);
-	console.log('CANVAS LOADED');
 	removeLoader();
 
 	document.getElementById('app').style.opacity = 1;
