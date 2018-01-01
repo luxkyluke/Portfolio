@@ -39,6 +39,13 @@
 		width: 100%; */
 		overflow: hidden;
 
+		.progressiveBGImgLoader{
+			&.blur{
+				@include blur(8px);
+			}
+		}
+	
+
 		&__left{
 			width: 50%;
 			height: 100vh;
