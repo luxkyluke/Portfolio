@@ -1,5 +1,6 @@
 import React from "react";
-import ProgressiveImage from "react-progressive-image-loading";
+//import ProgressiveImage from "react-progressive-image-loading";
+import ProgressiveImage from './../../utilities/ProgressiveImgLoader.jsx'
 
 import Utility from './../../utilities/utility.js';
 
@@ -24,8 +25,13 @@ export default class ImgBloc extends React.Component {
             )
         }
         return(
-            <img className="imgBloc__frame__img" src={src}/>
-            /*<ProgressiveImage
+            <ProgressiveImage
+                src = {src}
+                blur = {Utility.getBlurImg(src)}
+                className = 'imgBloc__frame__img'
+                />
+            /*<img className="imgBloc__frame__img" src={src}/>
+            <ProgressiveImage
                 preview={Utility.getBlurImg(src)}
                 src={src}
                 render={(src, style) => <img className="imgBloc__frame__img" src={src} style={style} />}
