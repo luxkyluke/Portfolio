@@ -334,27 +334,6 @@ footer{
     }
 }
 
-/***********PROGRESSIVE*LOADER**************/
-
-.progressiveImgLoader{
-	@extend .backgroundImg;
-	@include blur(0px);
-	
-	&.hide{
-		@include blur(50px);
-	}
-
-	&__image{
-		opacity: 1;
-		@include transition(opacity 300ms);
-		&.hide{
-			opacity: 0;
-		}
-	}
-
-
-}
-
 
 
 /**********RESPONSIVE*************/

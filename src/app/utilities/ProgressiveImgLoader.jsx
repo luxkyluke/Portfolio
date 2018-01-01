@@ -11,7 +11,6 @@ class ProgressiveImgLoader extends React.Component {
  
   handleImageLoaded() {
     this.setState({ imageIsLoaded: true });
-    console.log('img loaded');
   }
 
   componentWillReceiveProps(newProps){
