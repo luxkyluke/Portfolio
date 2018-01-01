@@ -216,8 +216,16 @@
 			position: relative;
 			z-index: 5;
 			overflow: hidden;
-	
-	
+		
+			// &__wrapper{
+		 //   		&:hover{
+			// 		background-color: rgba(0, 0, 0, 0);
+			//    		.footer__side__title{
+			//    			opacity: 0;
+			//    		}
+		 //   		}
+			// }
+		
 			&__scaler{
 				@include transition(transform 2s ease-out);
 				@extend .full;
@@ -273,7 +281,6 @@
 /***********PROGRESSIVE*LOADER**************/
 
 .progressiveImgLoader{
-
 	&__blur{
 		@include blur(0px);
 		opacity: 0;
@@ -298,6 +305,21 @@
 	}
 }
 
+.progressiveBGImgLoader{
+	@extend .backgroundImg;
+	@include blur(0px);
+
+	&.blur{
+		@include blur(2px);
+	}
+	
+	&__image{
+		position: absolute;
+		z-index: 0;
+		opacity: 0;
+	}
+}
+
 @media screen and (min-width: $mq-tablet){
 	.footer{
 		&__side{
@@ -307,7 +329,7 @@
 			}
 			&__wrapper{
 		   		&:hover{
-					background-color: rgba(0, 0, 0, 0);
+					background-color: rgba(0, 0, 0, 0) !important;
 			   		.footer__side__title{
 			   			opacity: 0;
 			   		}
