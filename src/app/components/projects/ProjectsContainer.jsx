@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 require ('./../../utilities/constantes.js');
 
-//var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
-
 import Project from "./ProjectMin.jsx";
 import Animation from "./../../utilities/Animation.js";
 import ScrollDots   from "../../components/projects/ScrollDots.jsx";
@@ -30,17 +28,18 @@ export default class ProjectsContainer extends React.Component {
         this.handleClickDots = this.handleClickDots.bind(this);
         this.handleResize = this.handleResize.bind(this);
         this.next = this.next.bind(this);
-        //document.documentElement.removeEventListener('scroll', this.handleScroll);
+        let id = localStorage.getItem('lastProjectId');
+        id = (id) ? id-1 : 0;
 
         this.state = {
-            'currentId':0,
+            'currentId': id,
             'isActive':this.props.isActive
         };
 
         this.projects = ProjectAPI.all();
 
         this.state = {
-            'currentId':0,
+            'currentId': id,
             'isActive':this.props.isActive,
             'allActive' : false
         };
@@ -54,7 +53,6 @@ export default class ProjectsContainer extends React.Component {
                 }.bind(this), 1500);
             }else
                 this.setState({'isActive':nextProps.isActive});
-
         }
     }
 
@@ -62,10 +60,8 @@ export default class ProjectsContainer extends React.Component {
         if(!this.state.isActive){
             return;
         }
-        //console.log(e);
 
         const dir = e.deltaY/Math.abs(e.deltaY);
-        //console.log(dir);
         this.navProject(dir);
     }
 
@@ -130,7 +126,6 @@ export default class ProjectsContainer extends React.Component {
     }
 
     render() {
-        /* */
         return(
             <div>
                 <div className="projectsContainer">

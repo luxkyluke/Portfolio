@@ -61,6 +61,9 @@ export default class HeaderProject extends React.Component {
         const backgroundStyle = {'backgroundImage' : 'url('+this.state.img+')',
             'transform':'scale('+this.state.scale+')'
         }
+        const style = {
+            'transform':'scale('+this.state.scale+')'
+        }
         const color = {color : this.state.color};
         return(
             <div className="header_project">
@@ -82,6 +85,7 @@ export default class HeaderProject extends React.Component {
                 <ProgressiveImage
                     blur={Utility.getBlurImg(this.state.img)}
                     src={this.state.img}
+                    scale={this.state.scale}
                     className="header_project__right" 
                 />
                 <ScrollArrow click={this.state.scrollClick} black={true}/>

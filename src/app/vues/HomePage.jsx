@@ -18,11 +18,9 @@ export default class HomePage extends React.Component{
 			"home": this.props.page === 'home'
 		}
 
-
 		this.handleScroll = this.handleScroll.bind(this);
 		this.scrollUp = this.scrollUp.bind(this);
 		this.scrollDown = this.scrollDown.bind(this);
-
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -37,7 +35,6 @@ export default class HomePage extends React.Component{
 
 	handleScroll(e){
         const dir = e.deltaY/Math.abs(e.deltaY);
-        //console.log(dir)
         if(!isNaN(dir) && dir > 0 && this.state.home){
 	       	this.scrollDown();
         }

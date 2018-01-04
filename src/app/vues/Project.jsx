@@ -24,10 +24,6 @@ export default class Project extends React.Component {
     constructor(props, context) {
         super(props, context);
         
-//        console.log(props.match)
-        
-//        const this.state.project = this.state.ProjectAPI.get();
-        
         this.id = parseInt(props.match.params.id, 10);
 
         const project = this.getProject(this.id);
@@ -51,22 +47,16 @@ export default class Project extends React.Component {
         this.scrollDown = this.scrollDown.bind(this);
         this.changeProject = this.changeProject.bind(this);
         this.getPrevAndNextProject = this.getPrevAndNextProject.bind(this);
-        //this.getProject = this.getProject.bind(this);
-
     }
 
     
     componentWillReceiveProps(newProps){
-        // /console.log(newProps);
-        //console.log(this.state.id);
         const newId = parseInt(newProps.match.params.id, 10);
-        //console.log(newId)
         if(newId !== this.state.id){
             const project = this.getProject(newId)
             if(!project)
                 return;
 
-            //console.log(project)
 
             const footer = this.getPrevAndNextProject(newId);
 
@@ -77,24 +67,22 @@ export default class Project extends React.Component {
                 nextArticle : footer.next
             });
             document.body.scrollTop = 0;
+            localStorage.setItem('lastProjectId', newId+1);
         }
     }
 
     componentDidMount() { 
-       window.addEventListener('wheel', this.handleScroll);
+        window.addEventListener('wheel', this.handleScroll);
         this.scrollDist = document.querySelector('.bandeau');
         this.scrollContext = document.querySelector('body');
-
+        localStorage.setItem('lastProjectId', this.state.id+1);
     }
     
     componentWillUnmount() {
-        window.removeEventListener('wheel', this.handleScroll);
-        // window.removeEventListener('DOMMouseScroll',this.handleScroll,false); // For Firefox
-        // window.removeEventListener('mousewheel',this.handleScroll,false);  
+        window.removeEventListener('wheel', this.handleScroll);    
     }
 
     getProject(id){
-        //var ret
         this.error = false;
         const project = ProjectAPI.get(id);
         
@@ -108,10 +96,6 @@ export default class Project extends React.Component {
     }
 
     changeProject(newId){
-        //const color = (newId === this.state.prevArticle.id) ? this.state.prevArticle.color : this.state.nextArticle.color;
-        // setTimeout(function(){
-        //     this.context.router.history.push('/projects');
-        // }.bind(this), 300);   
         Animation.switchPage(function(){
             this.context.router.history.push('/project/'+newId);
         }.bind(this));     
@@ -124,7 +108,6 @@ export default class Project extends React.Component {
     }
 
     handleScroll(e:Object){
-        //const scrollTop = e.nativeEvent.srcElement.scrollTop;
         const scrollTop = document.body.scrollTop;
         const delta = scrollTop/(window.innerHeight-300)*0.1;
         let scale = 1.1-delta;

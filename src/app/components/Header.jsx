@@ -24,9 +24,6 @@ export default class Header extends React.Component{
 	openMenu(){
 		const page = document.getElementsByClassName("page")[0];
 		page.classList.add('hide');
-		//	page.style.display = 'none';
-		/*setTimeout(function(){
-		}, 500);*/
 		this.setState ({
 			'open' : !this.state.open
 		});
@@ -34,13 +31,9 @@ export default class Header extends React.Component{
 
 	closeMenu(){
 		const page = document.getElementsByClassName("page")[0];
-		//page.style.display = 'block';
 		page.classList.remove('hide');
 		const menu = document.getElementById('menu');
 		menu.style.opacity = 0;
-		/*menu.style.transform = 'translateX(+100%)';
-		menu.style.border = '0px'*/
-
 		setTimeout(function(){
 			this.setState ({
 				'open' : !this.state.open

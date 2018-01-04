@@ -12,27 +12,10 @@ import Animation from '../utilities/Animation.js'
 
 export default class Main extends React.Component {
 
-	/*static propTypes = {
-		location: React.PropTypes.object.isRequired
-	}*/
-
-	componentDidUpdate(prevProps) {
-		//Animation.switchPage(function(){})
+	componentDidMount() {
+        localStorage.removeItem('lastProjectId');
 	}
 
-	
-
-	/*<Route path='/project/:id' render= {(props) =>(
-						<Project id={props.match.params.id}/>
-					)}/>
-
-				<Route exact path='/' render = {(props) =>(
-				  	<HomePage page={"home"}/>
-				  )}/>
-				  <Route path='/project/:id' component={Project}/>
-				  <Route  path='/projects' render = {(props) =>(
-				  	<HomePage page={"projects"}/>
-				  )}/>*/
     render() {   
         return(			
 			<main>

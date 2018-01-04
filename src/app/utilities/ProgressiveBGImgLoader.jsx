@@ -7,15 +7,12 @@ class ProgressiveBGImgLoader extends React.Component {
       imageIsLoaded: false,
       src: this.props.src,
       blur:this.props.blur,
-      style : {backgroundImage : `url(${this.props.blur})`}
+      scale:this.props.scale
     };
   }
  
   handleImageLoaded() {
     this.setState({imageIsLoaded: true});
-    this.setState({
-      style : {backgroundImage : `url(${this.props.src})`}
-    });
   }
 
   componentWillReceiveProps(newProps){
@@ -23,16 +20,20 @@ class ProgressiveBGImgLoader extends React.Component {
       this.setState({imageIsLoaded : false});
       this.setState({src : newProps.src});
       this.setState({blur : newProps.blur});
-      this.setState({
-        style : {backgroundImage : `url(${newProps.blur})`}
-      });
+    }
+    if(this.props.scale != newProps.scale){
+        this.setState({scale:newProps.scale });
     }
   }
  
   render() {
     const myClass = (this.state.imageIsLoaded) ? '' : ' blur ';
+    const style = {
+      'backgroundImage' : (this.state.imageIsLoaded) ? `url(${this.state.src})` : `url(${this.state.blur})`,
+      'transform': `scale(${this.state.scale})`
+    }
     return (
-      <div className={'progressiveBGImgLoader ' +  myClass + this.props.className} style={this.state.style}>
+      <div className={'progressiveBGImgLoader ' +  myClass + this.props.className} style={style}>
         <img
           className={'progressiveBGImgLoader__image'}
           src={this.state.src}
