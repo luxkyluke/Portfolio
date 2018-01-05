@@ -1,7 +1,6 @@
 import React from "react";
 
 export default class My404 extends React.Component {
-
     render() {   
         return(			
 			<div id='my404' className="page">
