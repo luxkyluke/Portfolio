@@ -24,8 +24,8 @@ export default class Main extends React.Component {
 				  <Route path='/' exact render = {(props) =>(
 				  	<HomePage page={"home"}/>
 				  )}/>
-				  <Route path='/project/:id' component={Project}/>
-				  <Route  path='/projects' render = {(props) =>(
+				  <Route path='/work/:id' component={Project}/>
+				  <Route  path='/work' render = {(props) =>(
 				  	<HomePage page={"projects"}/>
 				  )}/>
 				  <Route path='/about' component={About}/>

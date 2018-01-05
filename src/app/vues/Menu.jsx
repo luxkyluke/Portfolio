@@ -44,13 +44,11 @@ export default class Menu extends React.Component {
         return(
             <nav id="menu" className={"menu"+myClass}>
                 <ul className={"menu__list" + this.state.scale + this.state.move}>
-                    
                     <li className="menu__list__item">
                         <a  onClick={this.handleClick.bind(this, "")}>home</a>
                     </li>
-
                     <li className="menu__list__item">
-                        <a  onClick={this.handleClick.bind(this, "projects")}>projects</a>
+                        <a  onClick={this.handleClick.bind(this, "work")}>work</a>
                     </li>
                     <li className="menu__list__item">
                         <a onClick={this.handleClick.bind(this, "about")}>about me</a>

@@ -108,7 +108,7 @@ export default class ProjectsContainer extends React.Component {
 
     handleClick(id){
         Animation.openProject(this.state.currentId, this.projects[id].color, function(){
-           this.context.router.history.push("/project/"+id);
+           this.context.router.history.push("/work/"+id);
         }.bind(this))
 
         //history.push('/project');

@@ -97,13 +97,13 @@ export default class Project extends React.Component {
 
     changeProject(newId){
         Animation.switchPage(function(){
-            this.context.router.history.push('/project/'+newId);
+            this.context.router.history.push('/work/'+newId);
         }.bind(this));     
     }
 
     goBack(){
         Animation.switchPage(function(){
-            this.context.router.history.push('/projects');
+            this.context.router.history.push('/work');
         }.bind(this));
     }
 
