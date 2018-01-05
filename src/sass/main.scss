@@ -61,6 +61,18 @@ footer{
 	height: 100%;
 }
 
+#my404{
+	width : 100vw;
+	height: 100vh;
+	position: absolute;
+	z-index:2;
+
+	.title{
+		position: absolute;
+		font-size: 4em;
+		margin:0; 
+	}
+}
 
 .backgroundImg{
 	background-position: center center;

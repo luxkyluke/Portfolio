@@ -34,11 +34,11 @@ export default class About extends React.Component {
                     <div className="about__texte">
                         <div className="about__texte__wrapper">
                             <p>Hi ! I'm <span>Antoine Demière</span> a french creative developper living in Paris, France.</p>
-                            <p>I'm a student in <a target="_blank" href="https://www.ingenieur-imac.fr/">IMAC</a> a university which specializes in creative engineering.
+                            <p>I'm a student in <a target="_blank" href="https://www.ingenieur-imac.fr/"  rel="noopener">IMAC</a> a university which specializes in creative engineering.
                              It is here that I learned 3D programming, web design and filming techniques.</p>
 
                             <p>From a young age, I have been passionate about theatre and arts. I love photography, especially film.
-                            You can find some of my photos <a target="_blank" href="https://500px.com/demierea">here</a>. 
+                            You can find some of my photos <a target="_blank" href="https://500px.com/demierea"  rel="noopener">here</a>. 
                              I’m particularly fascinated by computer art, generative design and video mapping.</p>
                             
                             <p>I'm currently seeking a 6 months internship as a creative web developer 
