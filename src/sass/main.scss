@@ -15,8 +15,8 @@ html, body{
 	font-family: 'Karla', sans-serif;
 	font-weight: 300;
 	width: 100%;
-	height: 100%;
-	overflow-x: hidden;
+	//height: 100%;
+	//overflow-x: hidden;
 }
 
 a{
@@ -27,8 +27,9 @@ a{
 canvas {
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: fixed;
   top: 0; 
+  width: 100%;
 }
 
 header{
@@ -312,6 +313,20 @@ footer{
 	&.open &__list{
 		left: 10%;
 	}
+
+	&__copyright{
+		position: absolute;
+		bottom: 5vh;
+		left: 50%;
+		@include transform(translateX(-50%));
+		@include transition(opacity 500ms ease 750ms);
+		color:#fff;
+		opacity: 0;
+	}
+
+	&.open &__copyright{
+		opacity: 1;
+	}
 }
 
 /**********VEIL BLANK*************/
@@ -399,6 +414,11 @@ footer{
 			font-size: 80%;
 			&__item{
 				margin: 10vh 0;
+			}
+		}
+		&__copyright{
+			&__rights{
+				display: none;
 			}
 		}
 	}

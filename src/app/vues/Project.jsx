@@ -66,7 +66,7 @@ export default class Project extends React.Component {
                 prevArticle : footer.prev,
                 nextArticle : footer.next
             });
-            document.body.scrollTop = 0;
+            document.scrollingElement.scrollTop = 0;
             localStorage.setItem('lastProjectId', newId+1);
         }
     }
@@ -108,7 +108,7 @@ export default class Project extends React.Component {
     }
 
     handleScroll(e:Object){
-        const scrollTop = document.body.scrollTop;
+        const scrollTop = document.scrollingElement.scrollTop;
         const delta = scrollTop/(window.innerHeight-300)*0.1;
         let scale = 1.1-delta;
         scale = (scale < 1) ? 1 : scale;

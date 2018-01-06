@@ -25,7 +25,7 @@ const Animation = {
 				setTimeout(function(){
 					dark.style = null;
 					blank.style = null;
-				}, 500)
+				}, 600)
 			}, 500)
 
 			callback();
@@ -36,7 +36,7 @@ const Animation = {
 
 		//Animation.switchPage(callback, color);
 		if(Utility.isTablet()){
-			Animation.switchPage(callback, color);
+			Animation.switchPage(callback);
 			return;
 		}		
 

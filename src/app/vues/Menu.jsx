@@ -53,7 +53,10 @@ export default class Menu extends React.Component {
                     <li className="menu__list__item">
                         <a onClick={this.handleClick.bind(this, "about")}>about me</a>
                     </li>
-                </ul>
+                </ul>   
+                <div className="menu__copyright">
+                    <span className="menu__copyright__rights">All rights reserved</span> &copy; Antoine DEMIERE
+                </div>
             </nav>
         );
     }

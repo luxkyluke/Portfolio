@@ -7,6 +7,7 @@ const CONST_NB_POINTS = 0.08
 var width, height;
 var points =[];	
 var links = [];
+var gradient ;
 
 
 function Point (x, y) {
@@ -136,13 +137,18 @@ function createPoints(){
 
 function initCanvas(c){
 	resizeCanvas();
-	c.fillStyle = "#000819";
+	gradient = c.createLinearGradient(0, 0, width, height);
+	gradient.addColorStop(0, "#150026");
+	gradient.addColorStop(1, "#01001C");
+	c.fillStyle = gradient;
+	//gradient = "#000819";
 	c.fillRect(0, 0, width, height);
 }
 
 function animCanvas(c){
 	setInterval(function(){
-		c.fillStyle = "#000819";
+		//c.fillStyle = "#000819";
+		c.fillStyle = gradient;
 		c.fillRect(0, 0, width, height);
 
 		for(let i=0; i<points.length; i++){

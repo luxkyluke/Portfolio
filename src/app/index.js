@@ -1,10 +1,9 @@
-require ('../sass/main.scss');
-require ('./utilities/backgroundAnim.js')
-
-
 import React from "react";
 import ReactDOM from "react-dom";
 import { HashRouter as Router} from 'react-router-dom';
+
+import '../sass/main.scss';
+import './utilities/backgroundAnim.js';
 
 import App from "./App.jsx";
 import Main from "./components/Main.jsx";
