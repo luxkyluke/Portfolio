@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"menu",
+				"menu__copyright"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"trans",
+				"transform"
+			],
+			[
+				"s",
+				"setState"
+			],
+			[
+				"scr",
+				"scrollTop"
+			],
+			[
 				"st",
 				"style"
 			],
@@ -54,10 +74,6 @@
 			[
 				"text",
 				"text-align: "
-			],
-			[
-				"trans",
-				"transform: "
 			],
 			[
 				"bak",
@@ -498,35 +514,17 @@
 			[
 				"pa",
 				"params"
-			],
-			[
-				"COSN",
-				"console.log()"
-			],
-			[
-				"str_re",
-				"str_replace"
-			],
-			[
-				"fex",
-				"flex-direction"
-			],
-			[
-				"margni",
-				"margin-left"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "import React from \"react\";\nimport ReactDOM from \"react-dom\";\nimport { HashRouter as Router} from 'react-router-dom';\n\nimport '../sass/main.scss';\nimport './utilities/backgroundAnim.js';\n\nimport App from \"./App.jsx\";\nimport Main from \"./components/Main.jsx\";\n\nconst app = document.getElementById('app');\n\nclass Layout extends React.Component{\n    render(){\n        return(\n            <Router>\n                <App/>\n            </Router>\n        );\n    }\n}\n\nReactDOM.render(<Layout/>, app);\n",
 			"file": "src/app/index.js",
-			"file_size": 521,
-			"file_write_time": 131578301551500164,
 			"settings":
 			{
 				"buffer_size": 491,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -577,7 +575,7 @@
 			"file": "src/app/vues/Project.jsx",
 			"settings":
 			{
-				"buffer_size": 5979,
+				"buffer_size": 5977,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -612,7 +610,7 @@
 			"file": "src/app/utilities/backgroundAnim.js",
 			"settings":
 			{
-				"buffer_size": 4067,
+				"buffer_size": 4267,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -621,7 +619,25 @@
 			"file": "src/app/vues/Menu.jsx",
 			"settings":
 			{
-				"buffer_size": 1826,
+				"buffer_size": 2014,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Documents/Portfolio/antoinedemiere.github.io/sitemap.xml",
+			"settings":
+			{
+				"buffer_size": 731,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Documents/Portfolio/antoinedemiere.github.io/index.html",
+			"settings":
+			{
+				"buffer_size": 2012,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -750,16 +766,6 @@
 			}
 		},
 		{
-			"contents": "Searching 222 files for \"switchPage\"\n\nD:\\Documents\\Portfolio\\SitePorfolio\\src\\app\\App.jsx:\n   22  \t\t\tif(action == \"POP\"){\n   23  \t\t\t\tpage.classList.add('hide');\n   24: \t\t\t\tAnimation.switchPage(function(){\n   25  \t\t\t\t\tpage.classList.remove('hide');\n   26  \t    \t\t}.bind(this));\n\nD:\\Documents\\Portfolio\\SitePorfolio\\src\\app\\utilities\\Animation.js:\n    2  const Animation = {\n    3  \n    4: \tswitchPage : function(callback, color=null){\n    5  \t\tconst blank = document.getElementById('blank_veil');\n    6  \t\tconst dark = document.getElementById('dark_veil');\n    .\n   35  \topenProject(id, color, callback){\n   36  \n   37: \t\t//Animation.switchPage(callback, color);\n   38  \t\tif(Utility.isTablet()){\n   39: \t\t\tAnimation.switchPage(callback, color);\n   40  \t\t\treturn;\n   41  \t\t}\t\t\n\nD:\\Documents\\Portfolio\\SitePorfolio\\src\\app\\vues\\About.jsx:\n   19  \n   20      handleLogoClick(){\n   21:         Animation.switchPage(function(){\n   22              this.context.router.history.push('/');\n   23          }.bind(this));\n\nD:\\Documents\\Portfolio\\SitePorfolio\\src\\app\\vues\\Home.jsx:\n   19  \n   20  \thandleClickAbout(){\n   21: \t\tAnimation.switchPage(function(){\n   22              this.context.router.history.push('/about');\n   23          }.bind(this));\n\nD:\\Documents\\Portfolio\\SitePorfolio\\src\\app\\vues\\Project.jsx:\n   97  \n   98      changeProject(newId){\n   99:         Animation.switchPage(function(){\n  100              this.context.router.history.push('/work/'+newId);\n  101          }.bind(this));     \n  ...\n  103  \n  104      goBack(){\n  105:         Animation.switchPage(function(){\n  106              this.context.router.history.push('/work');\n  107          }.bind(this));\n\n8 matches across 5 files\n",
-			"settings":
-			{
-				"buffer_size": 1698,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
 			"file": "src/app/api/ProjectApi.jsx",
 			"settings":
 			{
@@ -772,7 +778,7 @@
 			"file": "webpack.config.js",
 			"settings":
 			{
-				"buffer_size": 1557,
+				"buffer_size": 1558,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -781,7 +787,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 1357,
+				"buffer_size": 1372,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -800,7 +806,7 @@
 			"file": "src/sass/main.scss",
 			"settings":
 			{
-				"buffer_size": 6282,
+				"buffer_size": 6565,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -895,19 +901,23 @@
 	"command_palette":
 	{
 		"height": 354.0,
-		"last_filter": "inst",
+		"last_filter": "ran",
 		"selected_items":
 		[
+			[
+				"ran",
+				"Text Pastry: Range (numeric)"
+			],
+			[
+				"rang",
+				"Text Pastry: Range (numeric)"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
 			],
 			[
 				"range",
-				"Text Pastry: Range (numeric)"
-			],
-			[
-				"rang",
 				"Text Pastry: Range (numeric)"
 			],
 			[
@@ -931,7 +941,7 @@
 				"Project: Save As"
 			]
 		],
-		"width": 496.0
+		"width": 464.0
 	},
 	"console":
 	{
@@ -1093,7 +1103,7 @@
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 31.0
 	},
 	"find_in_files":
 	{
@@ -1171,6 +1181,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"copy",
+			"canvas",
+			"can",
+			"menu",
 			"progre",
 			"switchPage",
 			"&bodyColor",
@@ -1294,11 +1308,7 @@
 			"title",
 			"id",
 			"prevArticle",
-			"link",
-			"Props.match.params.id",
-			"props.match.params.id",
-			"componentWillReceiveProps",
-			"NB_PROJECT"
+			"link"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1366,7 +1376,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1382,8 +1392,8 @@
 						"selection":
 						[
 							[
-								117,
-								117
+								454,
+								454
 							]
 						],
 						"settings":
@@ -1396,7 +1406,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -1412,8 +1422,8 @@
 						"selection":
 						[
 							[
-								318,
-								318
+								680,
+								680
 							]
 						],
 						"settings":
@@ -1424,7 +1434,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1453,7 +1463,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 30,
+					"stack_index": 32,
 					"type": "text"
 				},
 				{
@@ -1475,14 +1485,15 @@
 						],
 						"settings":
 						{
+							"history_list_is_closing": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 301.0,
+						"translation.y": 289.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 31,
+					"stack_index": 33,
 					"type": "text"
 				},
 				{
@@ -1511,7 +1522,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 29,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
@@ -1541,7 +1552,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1550,15 +1561,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5979,
+						"buffer_size": 5977,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3251,
-								3251
+								3290,
+								3290
 							]
 						],
 						"settings":
@@ -1569,10 +1580,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1311.0,
+						"translation.y": 2222.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1599,10 +1610,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1479.0,
+						"translation.y": 1418.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -1632,7 +1643,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 29,
 					"type": "text"
 				},
 				{
@@ -1662,7 +1673,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 30,
 					"type": "text"
 				},
 				{
@@ -1671,15 +1682,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4067,
+						"buffer_size": 4267,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3686,
-								3686
+								2922,
+								2928
 							]
 						],
 						"settings":
@@ -1688,10 +1699,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3967.0,
+						"translation.y": 2867.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1700,32 +1711,89 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1826,
+						"buffer_size": 2014,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								568,
-								568
+								1790,
+								1790
 							]
 						],
 						"settings":
 						{
+							"history_list_is_closing": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 446.0,
+						"translation.y": 630.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 34,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 12,
+					"file": "/D/Documents/Portfolio/antoinedemiere.github.io/sitemap.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 731,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								170
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/D/Documents/Portfolio/antoinedemiere.github.io/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2012,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								930,
+								930
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 372.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
 					"file": "src/app/vues/Projects.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1751,11 +1819,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 37,
+					"stack_index": 38,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 15,
 					"file": "src/app/vues/Home.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1781,11 +1849,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 36,
+					"stack_index": 37,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 16,
 					"file": "src/app/components/project/Footer.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1811,11 +1879,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 38,
+					"stack_index": 39,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 17,
 					"file": "src/app/components/project/FooterSide.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1838,14 +1906,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 57.0,
+						"translation.y": 55.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 18,
 					"file": "src/app/components/project/Images.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1871,11 +1939,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 19,
 					"file": "src/app/components/home/Banniere.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1897,14 +1965,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 179.0,
+						"translation.y": 172.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 28,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 20,
 					"file": "src/app/components/assets/Button.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1930,11 +1998,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 21,
 					"file": "src/app/vues/About.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1958,14 +2026,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 121.0,
-						"translation.y": 575.0,
+						"translation.y": 552.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 35,
+					"stack_index": 36,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 22,
 					"file": "src/app/components/about/ProfilPic.jsx",
 					"semi_transient": false,
 					"settings":
@@ -1988,14 +2056,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 808.0,
+						"translation.y": 775.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 23,
 					"file": "src/app/components/projects/ProjectsContainer.jsx",
 					"semi_transient": false,
 					"settings":
@@ -2007,8 +2075,8 @@
 						"selection":
 						[
 							[
-								3956,
-								3957
+								1342,
+								1342
 							]
 						],
 						"settings":
@@ -2018,14 +2086,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2827.0,
+						"translation.y": 743.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 24,
 					"file": "src/app/components/projects/ProjectMin.jsx",
 					"semi_transient": false,
 					"settings":
@@ -2051,11 +2119,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 25,
 					"file": "src/app/utilities/utility.js",
 					"semi_transient": false,
 					"settings":
@@ -2078,14 +2146,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 262.0,
+						"translation.y": 252.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 26,
 					"file": "src/app/utilities/Animation.js",
 					"semi_transient": false,
 					"settings":
@@ -2097,8 +2165,8 @@
 						"selection":
 						[
 							[
-								861,
-								861
+								783,
+								783
 							]
 						],
 						"settings":
@@ -2108,14 +2176,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 474.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 27,
 					"file": "src/app/utilities/ProgressiveBGImgLoader.jsx",
 					"semi_transient": false,
 					"settings":
@@ -2127,8 +2195,8 @@
 						"selection":
 						[
 							[
-								559,
-								559
+								419,
+								419
 							]
 						],
 						"settings":
@@ -2138,94 +2206,20 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 466.0,
+						"translation.y": 170.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 26,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1698,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										182,
-										192
-									],
-									[
-										389,
-										399
-									],
-									[
-										633,
-										643
-									],
-									[
-										715,
-										725
-									],
-									[
-										899,
-										909
-									],
-									[
-										1125,
-										1135
-									],
-									[
-										1370,
-										1380
-									],
-									[
-										1557,
-										1567
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								719,
-								719
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 27,
+					"buffer": 28,
 					"file": "src/app/api/ProjectApi.jsx",
 					"semi_transient": false,
 					"settings":
@@ -2253,24 +2247,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 32,
+					"stack_index": 34,
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": "webpack.config.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1557,
+						"buffer_size": 1558,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								263,
-								263
+								406,
+								406
 							]
 						],
 						"settings":
@@ -2283,24 +2277,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1357,
+						"buffer_size": 1372,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								375,
-								375
+								369,
+								369
 							]
 						],
 						"settings":
@@ -2310,15 +2304,15 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 135.0,
+						"translation.x": 117.0,
 						"translation.y": 2.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "src/data/textesProjects.txt",
 					"semi_transient": false,
 					"settings":
@@ -2343,24 +2337,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "src/sass/main.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6282,
+						"buffer_size": 6565,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								441,
-								441
+								6119,
+								6119
 							]
 						],
 						"settings":
@@ -2370,14 +2364,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 9121.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": "src/sass/_animations.scss",
 					"semi_transient": false,
 					"settings":
@@ -2404,11 +2398,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 34,
 					"file": "src/sass/_about.scss",
 					"semi_transient": false,
 					"settings":
@@ -2431,14 +2425,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 86.0,
+						"translation.y": 83.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 33,
+					"stack_index": 35,
 					"type": "text"
 				},
 				{
-					"buffer": 34,
+					"buffer": 35,
 					"file": "src/sass/_project.scss",
 					"semi_transient": false,
 					"settings":
@@ -2461,14 +2455,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6380.0,
+						"translation.y": 6115.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 35,
+					"buffer": 36,
 					"file": "src/sass/_mixins.scss",
 					"semi_transient": false,
 					"settings":
@@ -2494,11 +2488,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 39,
+					"stack_index": 40,
 					"type": "text"
 				},
 				{
-					"buffer": 36,
+					"buffer": 37,
 					"file": "src/sass/_projects.scss",
 					"semi_transient": false,
 					"settings":
@@ -2521,14 +2515,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4194.0,
+						"translation.y": 4020.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 37,
+					"buffer": 38,
 					"file": "src/sass/_home.scss",
 					"semi_transient": false,
 					"settings":
@@ -2551,14 +2545,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 521.0,
+						"translation.y": 500.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 38,
+					"buffer": 39,
 					"file": "src/sass/_homePage.scss",
 					"semi_transient": false,
 					"settings":
@@ -2583,11 +2577,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
-					"buffer": 39,
+					"buffer": 40,
 					"file": "src/sass/_constantes.scss",
 					"semi_transient": false,
 					"settings":
@@ -2611,11 +2605,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 40,
+					"buffer": 41,
 					"file": "src/sass/_utility.scss",
 					"semi_transient": false,
 					"settings":
@@ -2637,10 +2631,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3078.0,
+						"translation.y": 2951.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 40,
+					"stack_index": 41,
 					"type": "text"
 				}
 			]
@@ -2648,7 +2642,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 32.0
+		"height": 31.0
 	},
 	"input":
 	{
@@ -2674,7 +2668,7 @@
 		"cols":
 		[
 			0.0,
-			0.85372186959,
+			0.594056549336,
 			1.0
 		],
 		"rows":
@@ -2692,7 +2686,7 @@
 	"project": "folio.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 58.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -2702,16 +2696,32 @@
 		"selected_items":
 		[
 			[
+				"main",
+				"SitePorfolio\\src\\sass\\main.scss"
+			],
+			[
+				"menu",
+				"SitePorfolio\\src\\app\\vues\\Menu.jsx"
+			],
+			[
+				"anima",
+				"SitePorfolio\\src\\app\\utilities\\Animation.js"
+			],
+			[
+				"projectcon",
+				"SitePorfolio\\src\\app\\components\\projects\\ProjectsContainer.jsx"
+			],
+			[
+				"back",
+				"SitePorfolio\\src\\app\\utilities\\backgroundAnim.js"
+			],
+			[
 				"project",
 				"SitePorfolio\\src\\app\\vues\\Project.jsx"
 			],
 			[
 				"progre",
 				"SitePorfolio\\src\\app\\utilities\\ProgressiveBGImgLoader.jsx"
-			],
-			[
-				"anima",
-				"SitePorfolio\\src\\app\\utilities\\Animation.js"
 			],
 			[
 				"anim",
@@ -2734,14 +2744,6 @@
 				"SitePorfolio\\src\\app\\components\\project\\HeaderProject.jsx"
 			],
 			[
-				"main",
-				"SitePorfolio\\src\\app\\components\\Main.jsx"
-			],
-			[
-				"back",
-				"SitePorfolio\\src\\app\\utilities\\backgroundAnim.js"
-			],
-			[
 				"mixi",
 				"SitePorfolio\\src\\_mixins.scss"
 			],
@@ -2756,10 +2758,6 @@
 			[
 				"hompe",
 				"src\\app\\vues\\HomePage.jsx"
-			],
-			[
-				"menu",
-				"src\\app\\vues\\Menu.jsx"
 			],
 			[
 				"scrold",
@@ -3208,10 +3206,6 @@
 			[
 				"but.c",
 				"src/But.c"
-			],
-			[
-				"bl",
-				"include/Ballon.h"
 			]
 		],
 		"width": 0.0

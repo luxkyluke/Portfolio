@@ -33,19 +33,20 @@ export default class About extends React.Component {
                     <ProfilPic/>
                     <div className="about__texte">
                         <div className="about__texte__wrapper">
-                            <p>Hi ! I'm <span>Antoine Demière</span> a french creative developper living in Paris, France.</p>
+                            <p>Hi ! I'm <span>Antoine Demière</span> a french creative engineer living in Paris, France.</p>
                             <p>I'm a student in <a target="_blank" href="https://www.ingenieur-imac.fr/"  rel="noopener">IMAC</a> a university which specializes in creative engineering.
                              It is here that I learned 3D programming, web design and filming techniques.</p>
 
-                            <p>From a young age, I have been passionate about theatre and arts. I love photography, especially film.
-                            You can find some of my photos <a target="_blank" href="https://500px.com/demierea"  rel="noopener">here</a>. 
-                             I’m particularly fascinated by computer art, generative design and video mapping.</p>
+                            <p>From a young age, I have been passionate about theatre and arts.  
+                             I’m particularly fascinated by computer art, generative design and video mapping.
+                             I love photography, especially film.</p><p>
+                            You can find some of my photos <a target="_blank" href="https://500px.com/demierea"  rel="noopener">here</a>.</p>
                             
                             <p>I'm currently seeking a 6 months internship as a creative web developer 
                             or in the field of interactive installation.</p> 
                             <p>Feel free to contact me via mail at 
                                 <a href="mailto:demiere.a@gmail.com"> demiere.a@gmail.com</a>
-                                <br/>Or download my <a href="./data/cv.pdf" target="_blank" rel="noopener"> resume</a> 
+                                <br/>Or download my <a href="./data/cv.pdf" target="_blank" rel="noopener"> french resume</a> 
                             </p>
                         </div>
                     </div>
