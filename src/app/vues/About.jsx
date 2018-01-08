@@ -46,7 +46,7 @@ export default class About extends React.Component {
                             or in the field of interactive installation.</p> 
                             <p>Feel free to contact me via mail at 
                                 <a href="mailto:demiere.a@gmail.com"> demiere.a@gmail.com</a>
-                                <br/>Or download my <a href="./data/cv.pdf" target="_blank" rel="noopener"> french resume</a> 
+                                <br/>Or download my french<a href="./data/cv.pdf" target="_blank" rel="noopener"> resume</a> 
                             </p>
                         </div>
                     </div>

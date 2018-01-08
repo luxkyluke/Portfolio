@@ -122,7 +122,7 @@ footer{
 		width:300px;
 		height: 300px;
 		@extend .backgroundImg;
-		background-image: url('../img/loader.png');
+		background-image: url('../img/loader.svg');
 		//@include transition(transform 1s);
 		animation : 4s infinite loader;
 	}
