@@ -29,9 +29,8 @@ export default class ProjectsContainer extends React.Component {
         this.handleResize = this.handleResize.bind(this);
         this.next = this.next.bind(this);
         let id = 0;
-            console.log(localStorage)
         if(localStorage){
-            id = localStorage.getItem('lastProjectId')+1;
+            id = parseInt(localStorage.getItem('lastProjectId'))-1;
         }
         this.state = {
             'currentId': id,

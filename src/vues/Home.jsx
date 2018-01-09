@@ -1,6 +1,4 @@
 import React 	from "react";
-import { BrowserRouter as Router,
-         Link, IndexRedirect,  browserHistory } from "react-router";
 import PropTypes from 'prop-types';
 
 import Banniere	from "./../components/home/Banniere.jsx"
