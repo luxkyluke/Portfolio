@@ -10,7 +10,7 @@ import Logo             from "./../components/assets/Logo.jsx";
 import ProjectAPI       from "./../api/ProjectApi.jsx";
 import Utility          from "./../utilities/utility.js";
 import Animation        from "./../utilities/Animation.js";
-import  smoothScroll    from 'smoothscroll';
+import smoothScroll    from 'smoothscroll';
 
 //const this.state.id = 1;
 const NB_PROJECT = ProjectAPI.nbProjects();
@@ -76,7 +76,7 @@ export default class Project extends React.Component {
     componentDidMount() { 
         window.addEventListener('wheel', this.handleScroll);
         this.scrollDist = document.querySelector('.bandeau');
-        this.scrollContext = document.querySelector('body');
+        this.scrollContext = document.scrollingElement ? document.scrollingElement : document.body
         if(localStorage)
             localStorage.setItem('lastProjectId', this.state.id+1);
     }
