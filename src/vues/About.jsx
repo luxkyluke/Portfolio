@@ -39,7 +39,7 @@ export default class About extends React.Component {
 
                             <p>From a young age, I have been passionate about theatre and arts.  
                              I’m particularly fascinated by computer art, generative design and video mapping.
-                             I love photography, especially film.</p><p>
+                             I love photography, especially film.<br/>
                             You can find some of my photos <a target="_blank" href="https://500px.com/demierea"  rel="noopener">here</a>.</p>
                             
                             <p>I'm currently seeking a 6 months internship as a creative web developer 
