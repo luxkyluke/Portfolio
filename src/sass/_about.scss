@@ -134,6 +134,22 @@
 
 }
 
+@media screen and (max-height: 500px) and (max-width: 1000px) and (min-width:$mq-mobile){
+	.about{
+		&__texte{
+			margin-top: 3em;
+		}
+	}
+}
+
+@media screen and (max-height: 500px) and (max-width: 950px) and (min-width:$mq-mobile){
+	.about{
+		&__texte{
+			margin-top: 8em;
+		}
+	}
+}
+
 @include laptop{
 	.about{
 		&__texte{
