@@ -76,43 +76,7 @@ const ProjectApi = {
         ]
       },
       { 
-        id: 2,   
-        name:  "giverny_galaxy",
-        type : "Website",
-        title: "Impressionnist Galaxy",
-        desc : "<p>This project was requested by the Musée des Impressionnismes Giverny. They wanted a website to be composed of two main parts. The first part enticed visitors to click on specific impressionist pieces of art in a 3D space. Once selected, the second part of the website helps users discover the history behind the pieces through an interactive experience.</p><p>Technos : <span>HTML5</span>, <span>CSS3</span>, <span>JavaScript</span>, <span>WebGL</span>, <span>GSAP</span></p>",
-        link : "http://galaxie.mdig.fr/en/",
-        background : './data/giverny_galaxy/background.jpg',
-        role: "Developer",
-        context:'Intership at <br> <a href="http://fleurdepapier.com" target="_blank"  rel="noopener">Fleur de Papier</a>',
-        year: "2017",
-        color: "#a23435",
-        txtcolor: "#500101",
-        imgs: [
-          {
-            src : "./data/giverny_galaxy/6.jpg",
-            full: false
-          },
-          {
-            src : "./data/giverny_galaxy/2.jpg",
-            full: false
-          },
-          {
-            src : "./data/giverny_galaxy/7.jpg",
-            full: true
-          },
-          {
-            src : "./data/giverny_galaxy/4.jpg",
-            full: false
-          },
-          {
-            src : "./data/giverny_galaxy/3.jpg",
-            full: false
-          }
-        ]
-      },
-      { 
-          id: 3,   
+          id: 2,   
           name:  "delaunay_dreams",
           type : "Digital Installation",
           title: "Delaunay Dreams",
@@ -155,8 +119,65 @@ const ProjectApi = {
             }
           ]
       },
+
+      { 
+        id: 3,   
+        name:  "giverny_galaxy",
+        type : "Website",
+        title: "Impressionnist Galaxy",
+        desc : "<p>This project was requested by the Musée des Impressionnismes Giverny. They wanted a website to be composed of two main parts. The first part enticed visitors to click on specific impressionist pieces of art in a 3D space. Once selected, the second part of the website helps users discover the history behind the pieces through an interactive experience.</p><p>Technos : <span>HTML5</span>, <span>CSS3</span>, <span>JavaScript</span>, <span>WebGL</span>, <span>GSAP</span></p>",
+        link : "http://galaxie.mdig.fr/en/",
+        background : './data/giverny_galaxy/background.jpg',
+        role: "Developer",
+        context:'Intership at <br> <a href="http://fleurdepapier.com" target="_blank"  rel="noopener">Fleur de Papier</a>',
+        year: "2017",
+        color: "#a23435",
+        txtcolor: "#500101",
+        imgs: [
+          {
+            src : "./data/giverny_galaxy/6.jpg",
+            full: false
+          },
+          {
+            src : "./data/giverny_galaxy/2.jpg",
+            full: false
+          },
+          {
+            src : "./data/giverny_galaxy/7.jpg",
+            full: true
+          },
+          {
+            src : "./data/giverny_galaxy/4.jpg",
+            full: false
+          },
+          {
+            src : "./data/giverny_galaxy/3.jpg",
+            full: false
+          }
+        ]
+      },
+      
       { 
           id: 4,   
+          name:  "sinesthesie",
+          type : "Short Film",
+          title: "Sinesthésie",
+          desc : "<p>Sinesthésie is a short film about Transhumanism that I produced with friends. <br> Watch to find out more...</p>",
+          background : './data/sinesthesie/background.jpg',
+          role: "Scriptwriter, <br> Producer, <br> Actor",
+          context:'University Project',
+          year: "2017",
+          color: "#766c92",
+          txtcolor: "#060017",
+          imgs: [
+            {
+              src : "https://www.youtube.com/embed/-GIhmbULJ4M?rel=0&amp;controls=0&amp;showinfo=0",
+              full: false
+            }
+          ]
+      },
+      { 
+          id: 5,   
           name:  "the_challenger",
           type : "Website",
           title: "The Challenger",

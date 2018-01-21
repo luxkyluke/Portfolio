@@ -112,7 +112,7 @@ footer{
 
 /**********LOADER************/
 #loader{
-	position:absolute;
+	position:fixed;
 	@extend .center.middle;
 	z-index:8888;
 	opacity: 1;

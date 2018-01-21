@@ -128,18 +128,14 @@ function createPoints(){
 	let cpt=0;
 	for(let i=0; i<nbPoints; i++){
 		points[i].linkAllOtherPoint();
-		/*for(let j=0; j<nbPoints ; j++){
-			links[cpt++] = new Link(points[i], points[j]);
-		}
-		links[cpt++] = new Link(points[i], mousePointer);*/
 	}
 }
 
 function initCanvas(c){
 	resizeCanvas();
-	gradient = c.createLinearGradient(0, 0, width, height);
-	gradient.addColorStop(0, "#150026");
-	gradient.addColorStop(1, "#01001C");
+	gradient = c.createLinearGradient(width, 0, 0, height);
+	gradient.addColorStop(1, "#480E73");
+	gradient.addColorStop(0, "#011B45");
 	c.fillStyle = gradient;
 	//gradient = "#000819";
 	c.fillRect(0, 0, width, height);
@@ -147,19 +143,16 @@ function initCanvas(c){
 
 function animCanvas(c){
 	setInterval(function(){
-		//c.fillStyle = "#000819";
 		c.fillStyle = gradient;
 		c.fillRect(0, 0, width, height);
 
 		for(let i=0; i<points.length; i++){
-			//console.log("point pos "+ points[i].dx + " " + points[i].dy);
 			points[i].update(); 
 			points[i].draw(c);
 		}
 		for(let i=1; i<links.length; i++){
 			links[i].draw(c);
 		}
-		//console.log("mousePointer pos "+ mousePointer.point.x + " " +mousePointer.point.y);
 		mousePointer.draw(c);
 
 	}, 30);
