@@ -22,9 +22,6 @@ export default class ProjectMin extends React.Component {
     handleClick(){
 
     }
-
-    
-
     handleImgLoaded(){
     }
 

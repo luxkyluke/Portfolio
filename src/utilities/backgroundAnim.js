@@ -135,7 +135,7 @@ function initCanvas(c){
 	resizeCanvas();
 	gradient = c.createLinearGradient(width, 0, 0, height);
 	gradient.addColorStop(1, "#480E73");
-	gradient.addColorStop(0, "#011B45");
+	gradient.addColorStop(0, "#000F45");
 	c.fillStyle = gradient;
 	//gradient = "#000819";
 	c.fillRect(0, 0, width, height);

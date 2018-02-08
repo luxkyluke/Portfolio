@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"sin",
+				"Sinesthésie"
+			],
+			[
+				"remove",
+				"removeFirstPoint"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
 				"min",
 				"minHeight"
 			],
@@ -114,14 +130,6 @@
 			[
 				"bak",
 				"background-image: "
-			],
-			[
-				"max",
-				"max-height: "
-			],
-			[
-				"marg",
-				"margin-bottom"
 			],
 			[
 				"prject",
@@ -506,19 +514,116 @@
 			[
 				"pre",
 				"preRender"
-			],
-			[
-				"ren",
-				"renderCnt"
-			],
-			[
-				"de",
-				"default"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "src/vues/About.jsx",
+			"settings":
+			{
+				"buffer_size": 2601,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/utilities/backgroundAnim.js",
+			"settings":
+			{
+				"buffer_size": 3939,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/project/ImgBloc.jsx",
+			"settings":
+			{
+				"buffer_size": 1786,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/projects/ProjectsContainer.jsx",
+			"settings":
+			{
+				"buffer_size": 6303,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/projects/ProjectMin.jsx",
+			"settings":
+			{
+				"buffer_size": 2382,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/utilities/utility.js",
+			"settings":
+			{
+				"buffer_size": 1028,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/projects/ScrollDots.jsx",
+			"settings":
+			{
+				"buffer_size": 1566,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/project/Bandeau.jsx",
+			"settings":
+			{
+				"buffer_size": 1330,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/sass/_about.scss",
+			"settings":
+			{
+				"buffer_size": 3292,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/api/ProjectApi.jsx",
+			"settings":
+			{
+				"buffer_size": 8686,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/sass/main.scss",
+			"settings":
+			{
+				"buffer_size": 6562,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/_mixins.scss",
+			"settings":
+			{
+				"buffer_size": 1231,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -603,6 +708,9 @@
 	],
 	"file_history":
 	[
+		"/Users/antoined/Documents/Portfolio/Site_v2/src/components/project/Bandeau.jsx",
+		"/Users/antoined/Documents/Portfolio/Site_v2/node_modules/es5-ext/test/object/mixin-prototypes.js",
+		"/Users/antoined/Documents/Portfolio/Site_v2/node_modules/lodash/mixin.js",
 		"/private/tmp/touchtmp/dat_selectCenters__td_767_41.py",
 		"/private/tmp/touchtmp/dat_selectCenters__td_1732_49.py",
 		"/Users/antoined/Documents/Portfolio/Site_v2/src/sass/_about.scss",
@@ -727,10 +835,7 @@
 		"/D/wamp64/www/Challenger/src/app/components/Tag.js",
 		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-mousemap",
 		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
-		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/D/Documents/Portfolio/site/src/app/components/Header.js",
-		"/D/Documents/Portfolio/site/src/sass/main.scss",
-		"/D/Documents/Portfolio/site/src/app/components/Footer.js"
+		"/C/Users/Antoine/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
 	],
 	"find":
 	{
@@ -748,6 +853,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"height",
+			"grad",
+			"gradr",
+			"load",
+			"4",
+			"fillStyle",
+			"removeFirstPoint",
+			"CONST_NB_POINTS",
+			"createPoints",
+			"create",
+			"append",
+			"logo"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -765,8 +882,375 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/vues/About.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2601,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1802,
+								1802
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 120.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/utilities/backgroundAnim.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3939,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2909,
+								2909
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2637.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/components/project/ImgBloc.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1786,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								455,
+								462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 25.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/components/projects/ProjectsContainer.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5637,
+								5637
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 13.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/components/projects/ProjectMin.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1348,
+								1352
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 105.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/utilities/utility.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1028,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								589,
+								589
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 137.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/components/projects/ScrollDots.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1566,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								741,
+								741
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 242.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/components/project/Bandeau.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								202,
+								202
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 95.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"file": "src/sass/_about.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3292,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2325,
+								2325
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2728.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/api/ProjectApi.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8686,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4688,
+								4688
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3110.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/sass/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6562,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1492,
+								1492
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1940.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/_mixins.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								108,
+								99
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -787,11 +1271,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.744949277854,
 			1.0
 		],
 		"rows":
@@ -819,16 +1310,52 @@
 		"selected_items":
 		[
 			[
+				"main",
+				"src/sass/main.scss"
+			],
+			[
+				"ban",
+				"src/components/project/Bandeau.jsx"
+			],
+			[
+				"imgb",
+				"src/components/project/ImgBloc.jsx"
+			],
+			[
+				"utili",
+				"src/utilities/utility.js"
+			],
+			[
+				"projectcon",
+				"src/components/projects/ProjectsContainer.jsx"
+			],
+			[
+				"imblo",
+				"src/components/project/ImgBloc.jsx"
+			],
+			[
+				"apipro",
+				"src/api/ProjectApi.jsx"
+			],
+			[
+				"back",
+				"src/utilities/backgroundAnim.js"
+			],
+			[
+				"mixin",
+				"src/_mixins.scss"
+			],
+			[
+				"mixi",
+				"node_modules/lodash/mixin.js"
+			],
+			[
 				"about",
 				"src/vues/About.jsx"
 			],
 			[
 				"project",
 				"src/vues/Project.jsx"
-			],
-			[
-				"projectcon",
-				"src/components/projects/ProjectsContainer.jsx"
 			],
 			[
 				"",
@@ -863,10 +1390,6 @@
 				"Portfolio-site/src/sass/_project.scss"
 			],
 			[
-				"utili",
-				"Portfolio-site/src/sass/_utility.scss"
-			],
-			[
 				"projecfoo",
 				"Portfolio-site/src/app/components/project/Footer.jsx"
 			],
@@ -897,10 +1420,6 @@
 			[
 				"images",
 				"Portfolio-site/src/app/components/project/Images.jsx"
-			],
-			[
-				"main",
-				"Portfolio-site/src/sass/main.scss"
 			],
 			[
 				"orjectcon",
@@ -975,10 +1494,6 @@
 				"src\\app\\components\\projects\\Description.jsx"
 			],
 			[
-				"back",
-				"src\\app\\utilities\\backgroundAnim.js"
-			],
-			[
 				"bannie",
 				"src\\app\\components\\home\\Banniere.jsx"
 			],
@@ -989,10 +1504,6 @@
 			[
 				"headp",
 				"src\\app\\components\\project\\HeaderProject.jsx"
-			],
-			[
-				"mixi",
-				"src\\sass\\_mixins.scss"
 			],
 			[
 				"projec",
@@ -1309,26 +1820,6 @@
 			[
 				"poi",
 				"src/Point2D.c"
-			],
-			[
-				"s",
-				"include/sdl_tools.h"
-			],
-			[
-				"geo",
-				"include/Geometry.h"
-			],
-			[
-				"ved",
-				"include/Vector2D.h"
-			],
-			[
-				"eve",
-				"src/level.c"
-			],
-			[
-				"ter",
-				"include/Terrain.h"
 			]
 		],
 		"width": 0.0

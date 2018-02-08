@@ -40,43 +40,7 @@ const ProjectApi = {
         ]
       },
       { 
-        id: 1,   
-        name:  "the_railway_chronicles",
-        type : "Website",
-        title: "The Railway Chronicles",
-        desc : "<p>This is a project for a web design university class. Railway travel is underexposed in online publishing. There isn’t an abundance of aspirational content revolving around the tropic, therefore in a group of three, we sought to design and develop a travel webzine. </p><p>Technos : <span>HTML5</span>, <span>CSS3</span>, <span>JavaScript</span>, <span>jQuery</span></p>",
-        link : "http://luxkyluke.github.io/therailwaychronicles/",
-        background : './data/the_railway_chronicles/background.jpg',
-        role: "Developer,<br> Web Designer",
-        context:"Student Project",
-        year: "2016",
-        color: "#A4632A",
-        txtcolor: "#5A2A00",
-        imgs: [
-          {
-            src : "./data/the_railway_chronicles/1.jpg",
-            full: false
-          },
-          {
-            src : "./data/the_railway_chronicles/5.gif",
-            full: false
-          },
-          {
-            src : "./data/the_railway_chronicles/2.jpg",
-            full: true
-          },
-          {
-            src : "./data/the_railway_chronicles/4.jpg",
-            full: false
-          },
-          {
-            src : "./data/the_railway_chronicles/3.jpg",
-            full: false
-          }
-        ]
-      },
-      { 
-          id: 2,   
+          id: 1,   
           name:  "delaunay_dreams",
           type : "Digital Installation",
           title: "Delaunay Dreams",
@@ -119,7 +83,43 @@ const ProjectApi = {
             }
           ]
       },
-
+      { 
+        id: 2,   
+        name:  "the_railway_chronicles",
+        type : "Website",
+        title: "The Railway Chronicles",
+        desc : "<p>This is a project for a web design university class. Railway travel is underexposed in online publishing. There isn’t an abundance of aspirational content revolving around the tropic, therefore in a group of three, we sought to design and develop a travel webzine. </p><p>Technos : <span>HTML5</span>, <span>CSS3</span>, <span>JavaScript</span>, <span>jQuery</span></p>",
+        link : "http://luxkyluke.github.io/therailwaychronicles/",
+        background : './data/the_railway_chronicles/background.jpg',
+        role: "Developer,<br> Web Designer",
+        context:"Student Project",
+        year: "2016",
+        color: "#A4632A",
+        txtcolor: "#5A2A00",
+        imgs: [
+          {
+            src : "./data/the_railway_chronicles/1.jpg",
+            full: false
+          },
+          {
+            src : "./data/the_railway_chronicles/5.gif",
+            full: false
+          },
+          {
+            src : "./data/the_railway_chronicles/2.jpg",
+            full: true
+          },
+          {
+            src : "./data/the_railway_chronicles/4.jpg",
+            full: false
+          },
+          {
+            src : "./data/the_railway_chronicles/3.jpg",
+            full: false
+          }
+        ]
+      },
+      
       { 
         id: 3,   
         name:  "giverny_galaxy",
@@ -156,7 +156,7 @@ const ProjectApi = {
           }
         ]
       },
-      
+
       { 
           id: 4,   
           name:  "sinesthesie",

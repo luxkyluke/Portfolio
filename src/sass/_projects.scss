@@ -31,7 +31,8 @@
 	.project{
 		max-width: 1350px;
 		width: 80%;
-		height: 635px;
+		max-height: 635px;
+		height: 70vh;
 		top: 50%;
 		left: 50%;
 
@@ -69,8 +70,10 @@
 			&__img{
 				position: relative;
 				max-width: 1100px;
-	    		width: 95%;
-				height: 635px;
+	    		width: 70vw;
+				//height: 635px;
+			    max-height: 635px;
+			    height: 70vh;
 				@include transform(translateY(-150%));
 
 			  	@include transition(transform 800ms cubic-bezier(0.82, 0, 0.33, 1));
@@ -90,9 +93,12 @@
 		.desc{
 			position: absolute;
 			background-color: $bodyBG;
-			width: 325px;
-			height: 310px;
-			top: 300px;
+			bottom:  -50px;
+			max-width: 325px;
+		    width: 37vh;
+		    max-height: 310px;
+		    height: 35vh;
+
 			padding: 40px;
 		  	@include transform(translateX(-300%));	
 			box-shadow: 0px -3px 20px 5px rgba(37, 37, 37, 0.4);
