@@ -55,7 +55,7 @@ export default class About extends React.Component {
                             <p>Hi ! I'm <span>Antoine Demière</span> a french creative engineer based in Paris, France.</p>
                             <p>Graduated from a multimedia engineering school in 2018. I have a vast range of skills that include web design and development, 3D and interactive programming, photography and audio visual technology.</p>
 
-                            <p>From a young age, I’ve always had a passion for performance art, music and emerging technology. This passion drives me to create with the intent of bringing people together. This is why I want to develop digital interactive experiences for everyone through installations and/or websites. </p>
+                            <p>From a young age, I have always had a passion for performance art, music and emerging technology. This passion drives me to create with the intent of bringing people together. This is why I want to develop digital interactive experiences for everyone through installations and/or websites. </p>
                             
                             <p>I am currently seeking <a target="_blank" href="https://www.malt.fr/profile/antoinedemiere"  rel="noopener">freelance</a> work in web design and development, and interactive development. 
                             </p>
