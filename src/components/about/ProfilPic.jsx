@@ -3,8 +3,8 @@ import {Link} from "react-router-dom";
 import ProgressiveImage from "react-progressive-image-loading";
 
 
-import pp from "./../../img/pp.jpg";
-import ppBlur from "./../../img/pp.blur.jpg";
+import pp from "./../../img/antoinedemiere.jpg";
+import ppBlur from "./../../img/antoinedemiere.blur.jpg";
 import Utility from "./../../utilities/utility.js";
 import TiltFx from "./../../utilities/animPicture.js";
 
@@ -55,7 +55,7 @@ export default class ProfilPic extends React.Component {
                         <ProgressiveImage
                             preview={ppBlur}
                             src={pp}
-                            render={(src, style) => <img className="tilter__image" src={src} style={style} />}
+                            render={(src, style) => <img className="tilter__image" src={src} style={style} alt="antoine demiere" title="antoine demiere"/>}
                         />
                         {/*<img className="tilter__image" src={pp} alt="pp"/>*/}
                         <div className="tilter__deco tilter__deco--shine">

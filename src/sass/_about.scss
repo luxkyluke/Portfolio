@@ -28,24 +28,46 @@
 			//padding: 100px;
 			& > div {
 				width: 80%;
+				max-width: 500px;
+			}
+		}
+		
+		.about__texte{
+			color:#fff;
+			font-family: "Quicksand";
+			font-size: 1.25em;
+			font-weight: 400;
+		
+			a, span{
+				color: $bleuClaire;
+				font-weight: 500;
+			}
+
+			&__wrapper{
 				max-width: 600px;
 			}
 		}
 	}
 
 
-	&__texte{
-		color:#fff;
-		font-family: "Quicksand";
-		font-size: 1.25em;
-		font-weight: 400;
-	
-		a, span{
-			color: $bleuClaire;
-			font-weight: 500;
+	&__socials{
+		display: flex;
+		justify-content : space-around;
+		align-items:center;
+
+		margin: 30px 0;
+		padding:0;
+
+		&__item{
+			list-style: none;
+			&__icon{
+				width: 50px;
+				height: auto;
+				max-height: 50px;
+				opacity: 0.9;
+			}
 		}
 	}
-	
 	
 
 	.tilter {
@@ -93,7 +115,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 99%;
+			height: 99.3%;
 			overflow: hidden;
 		}
 
@@ -103,7 +125,7 @@
 			height: 200%;
 			top: -50%;
 			left: -50%;
-			background-image: linear-gradient(45deg, rgba(255, 227, 202, 0.5) 0%, rgba(255, 119, 0, 0.3) 50%, transparent 100%);
+			background-image: linear-gradient(45deg, rgba(255, 227, 202, 0.5) 0%, rgba(255, 119, 0, 0.3) 50%, rgba(255, 227, 202, 0.5) 100%);
 		}
 
 		&__deco--lines {
@@ -124,7 +146,6 @@
 		@extend .center.middle;
 		&__background{
 			@extend .backgroundImg;
-			background-image: url("./../img/pp.jpg");
 			&__filter{
 				@extend .full;
 				background-image: linear-gradient(45deg, rgba(116, 62, 13, 0.5) 0%, rgba(180, 84, 0, 0.3) 50%, transparent 100%);
@@ -134,21 +155,21 @@
 
 }
 
-@media screen and (max-height: 500px) and (max-width: 1000px) and (min-width:$mq-mobile){
-	.about{
-		&__texte{
-			margin-top: 3em;
-		}
-	}
-}
+// @media screen and (max-height: 500px) and (max-width: 1000px) and (min-width:$mq-mobile){
+// 	.about{
+// 		&__texte{
+// 			margin-top: 3em;
+// 		}
+// 	}
+// }
 
-@media screen and (max-height: 500px) and (max-width: 950px) and (min-width:$mq-mobile){
-	.about{
-		&__texte{
-			margin-top: 8em;
-		}
-	}
-}
+// @media screen and (max-height: 500px) and (max-width: 950px) and (min-width:$mq-mobile){
+// 	.about{
+// 		&__texte{
+// 			margin-top: 8em;
+// 		}
+// 	}
+// }
 
 @include laptop{
 	.about{
@@ -215,6 +236,16 @@
 		&__wrapper {
 			& > div{
 				width: 95%;
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 700px) and (min-width: 800px){
+	.about{
+		&__texte{
+			&__wrapper{
+				font-size: 2.7vh;
 			}
 		}
 	}
