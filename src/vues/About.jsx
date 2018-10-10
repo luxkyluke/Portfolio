@@ -28,20 +28,7 @@ export default class About extends React.Component {
         }.bind(this));
     }
 
-    /*
-     <p>I'm a student in <a target="_blank" href="https://www.ingenieur-imac.fr/"  rel="noopener">IMAC</a> a university which specializes in creative engineering.
-                             It is here that I learned 3D programming, web design and filming techniques.</p>
-
-                            <p>From a young age, I have been passionate about theatre and arts.  
-                             I’m particularly fascinated by computer art, generative design and video mapping.
-                             I love photography, especially film.</p><p>
-                            You can find some of my photos <a target="_blank" href="https://www.antoinedemiere.com/FilmPhotography/"  rel="noopener">here</a>.</p>
-
-                            <p>Graduated of a multimedia engineering school in 2018, I have a vast field of skill that gather web development and web design, but also 3D and interactive programming, and photography and audiovisual.</p>
-
-                            <p>From a young age, I’m passionate about performance art, music and new technology, that what drives me to create in a goal to share. That why I want to develop digitales interactives experiences for general public via installations or websites.</p>
-                            
-    */
+    
     render() {
         const myStyle = {backgroundImage:'url('+this.props.background+')'};
         return(
@@ -62,7 +49,7 @@ export default class About extends React.Component {
                             <p>So feel free to contact me ! </p> 
                             <ul className="about__socials">
                                 <li className="about__socials__item">
-                                    <a title="Email"  target='_blank' href="mailto:demiere.a@gmail.com"><img className="about__socials__item__icon" src={mailIcon}/></a>
+                                    <a title="Email"  href="mailto:demiere.a@gmail.com"><img className="about__socials__item__icon" src={mailIcon}/></a>
                                 </li>
                                 <li className="about__socials__item">
                                     <a title="Instagram" target='_blank' href="https://www.instagram.com/antoinedemiere/"><img className="about__socials__item__icon" src={instaIcon}/></a>
